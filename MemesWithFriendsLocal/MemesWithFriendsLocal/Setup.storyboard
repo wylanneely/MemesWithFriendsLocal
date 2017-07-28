@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game Setup View Controller-->
+        <!--Setup View Controller-->
         <scene sceneID="RDO-B3-3xI">
             <objects>
-                <viewController id="Z4E-fk-LVz" customClass="GameSetupViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Z4E-fk-LVz" customClass="SetupViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lfj-F5-d3t"/>
                         <viewControllerLayoutGuide type="bottom" id="2Ev-Rl-Ep2"/>
@@ -32,9 +32,6 @@
                                 <rect key="frame" x="164" y="520" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
-                                <connections>
-                                    <segue destination="B8j-Gt-loY" kind="show" id="g1j-kR-XiY"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Of Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-JN-ddt">
                                 <rect key="frame" x="141" y="307" width="93" height="20.5"/>
@@ -63,6 +60,9 @@
                             <constraint firstItem="Tdm-LM-fvc" firstAttribute="leading" secondItem="PNc-KF-IWD" secondAttribute="leadingMargin" constant="123" id="wTN-60-HO6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberOfPlayersTextField" destination="Tdm-LM-fvc" id="Mwu-RL-OKu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z85-al-s0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
