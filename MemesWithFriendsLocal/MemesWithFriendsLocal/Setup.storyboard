@@ -32,6 +32,9 @@
                                 <rect key="frame" x="164" y="520" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="B8j-Gt-loY" kind="show" identifier="segueToCreateMeme" id="oJU-JP-t1k"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Of Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-JN-ddt">
                                 <rect key="frame" x="141" y="307" width="93" height="20.5"/>
