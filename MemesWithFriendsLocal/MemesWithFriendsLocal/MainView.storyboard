@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="327" y="188"/>
         </scene>
-        <!--GameView-->
+        <!--Setup-->
         <scene sceneID="Txb-4a-kHP">
             <objects>
-                <viewControllerPlaceholder storyboardName="GameView" id="JkF-gL-WBh" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Setup" id="JkF-gL-WBh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8t7-1h-ake" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="940" y="101"/>
