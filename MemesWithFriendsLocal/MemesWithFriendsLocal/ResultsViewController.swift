@@ -20,7 +20,7 @@ class ResultsViewController: UIViewController {
     
     //MARK: - Winner
     
-    func calculateWinner() {
+    func calculateWinner() { //TODO: - This will work as long as there are no ties, How to fix so ties are represented fairly? perhaps just do arc4random?
         
         for i in MemeController.shared.memes {
             
