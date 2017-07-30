@@ -29,9 +29,11 @@ class ResultsViewController: UIViewController {
                 meme = i
             }
         }
-        firstTextLabel.text = meme?.firstText
-        secondTextLabel.text = meme?.secondText
-        winnerImageView.image = meme?.image
+        guard let meme = meme else { NSLog("Meme is Nil"); return }
+        firstTextLabel.text = meme.firstText
+        secondTextLabel.text = meme.secondText
+        winnerImageView.image = meme.image
+        votesLabel.text = "Votes: \(meme.voteCount)"
     }
     
     //MARK: - IBOutlets
@@ -39,5 +41,6 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var firstTextLabel: UILabel!
     @IBOutlet weak var secondTextLabel: UILabel!
     @IBOutlet weak var winnerImageView: UIImageView!
+    @IBOutlet weak var votesLabel: UILabel!
     
 }

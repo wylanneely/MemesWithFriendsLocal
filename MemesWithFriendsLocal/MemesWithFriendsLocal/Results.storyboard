@@ -82,6 +82,7 @@
                     <connections>
                         <outlet property="firstTextLabel" destination="mxJ-LV-kGt" id="gxL-LU-DPN"/>
                         <outlet property="secondTextLabel" destination="dwC-A1-9Zs" id="oEH-4E-O4j"/>
+                        <outlet property="votesLabel" destination="fGz-sx-AP2" id="202-zU-DC6"/>
                         <outlet property="winnerImageView" destination="zlt-mp-11N" id="Jeu-nW-t2Z"/>
                     </connections>
                 </viewController>
