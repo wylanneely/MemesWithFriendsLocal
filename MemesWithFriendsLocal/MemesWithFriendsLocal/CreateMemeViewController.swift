@@ -92,6 +92,13 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         
         MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText)
         
+        if GameController.shared.game?.numberOfMemes == 1 {
+            performSegue(withIdentifier: "gameView", sender: self)
+            
+        } else {
+            GameController.shared.game?.numberOfMemes -= 1
+        }
+        
     }
     
     

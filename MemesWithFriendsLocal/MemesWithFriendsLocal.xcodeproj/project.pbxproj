@@ -124,10 +124,10 @@
 		6BB29B751F2BE3E9009BF446 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6BB29B721F2BE3D1009BF446 /* MainViewController */,
 				6BB29B841F2BE4CE009BF446 /* SetupViewController */,
 				6BB29B7D1F2BE48C009BF446 /* CreateMemeViewController */,
 				6BB29B781F2BE436009BF446 /* GameViewController */,
-				6BB29B721F2BE3D1009BF446 /* MainViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

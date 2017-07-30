@@ -18,7 +18,7 @@ class MemeController{
     //create
     func createMeme(image: UIImage, firstText: String, secondText: String)  {
         let meme = Meme(image: image, firstText: firstText, secondText: secondText)
-        
+        memes.append(meme)
     }
     
 

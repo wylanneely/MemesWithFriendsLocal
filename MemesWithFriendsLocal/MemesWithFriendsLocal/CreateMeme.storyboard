@@ -152,6 +152,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EZ-RN-wkz">
+                                <rect key="frame" x="357" y="665" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="ClC-G7-BHk"/>
+                                    <constraint firstAttribute="height" constant="1" id="zlx-lT-WZ3"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="SBC-MN-ds9" kind="show" identifier="gameView" id="4Vr-6P-UEI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -159,9 +169,11 @@
                             <constraint firstItem="uJE-Q3-WKH" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="49J-hy-nNP"/>
                             <constraint firstItem="0fL-92-y1X" firstAttribute="width" secondItem="uJE-Q3-WKH" secondAttribute="width" multiplier="0.9" id="7BT-1c-pFa"/>
                             <constraint firstItem="5h2-75-NzI" firstAttribute="top" secondItem="Jon-OR-dYg" secondAttribute="bottom" constant="8" id="CwC-L4-lXy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3EZ-RN-wkz" secondAttribute="trailing" constant="1" id="D6D-Bt-0LF"/>
                             <constraint firstAttribute="trailing" secondItem="RAc-x9-TkC" secondAttribute="trailing" constant="28" id="JiS-wA-XzI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jon-OR-dYg" secondAttribute="trailing" constant="122.5" id="JnJ-tz-t3T"/>
                             <constraint firstItem="0fL-92-y1X" firstAttribute="bottom" secondItem="uJE-Q3-WKH" secondAttribute="bottom" multiplier="0.99" id="Jwu-yg-JBU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3EZ-RN-wkz" secondAttribute="bottom" constant="1" id="XTs-oh-PNt"/>
                             <constraint firstItem="wTD-xu-EHZ" firstAttribute="width" secondItem="uJE-Q3-WKH" secondAttribute="width" multiplier="0.9" id="b31-pu-5p7"/>
                             <constraint firstItem="Jon-OR-dYg" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="eI1-wq-9vV"/>
                             <constraint firstItem="uJE-Q3-WKH" firstAttribute="top" secondItem="RAc-x9-TkC" secondAttribute="bottom" constant="8" id="eT3-e6-Wj2"/>
@@ -189,6 +201,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6e-Fm-zUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="488.80000000000001" y="492.50374812593708"/>
+        </scene>
+        <!--GameView-->
+        <scene sceneID="Z74-Bg-kZC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameView" id="SBC-MN-ds9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDU-q4-b2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="476"/>
         </scene>
     </scenes>
 </document>

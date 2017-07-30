@@ -14,8 +14,8 @@ class Game {
     let numberOfPlayers: Int
     
     // Equal to number of players
-    let numberOfMemes: Int
-    let numberOfVotes: Int
+    var numberOfMemes: Int
+    var numberOfVotes: Int
     
     //MARK: - Initializers
     
