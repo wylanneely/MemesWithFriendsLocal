@@ -8,20 +8,40 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: - UICollection View DataSource / Delegate 
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return MemeController.shared.memes.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "memeVoteCell", for: indexPath) as? MemeVoteCollectionViewCell else { return UICollectionViewCell()}
+        
+        let meme = MemeController.shared.memes[indexPath.row]
+        
+        cell.topTextLabel.text = meme.firstText
+        cell.bottomTextLabel.text = meme.secondText
+        cell.memeImage.image = meme.image
 
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let meme = MemeController.shared.memes[indexPath.row]
+        meme.voteCount += 1
+        GameController.shared.game?.numberOfVotes -= 1
+        
+        if GameController.shared.game?.numberOfVotes == 0 {
+            NSLog("Numbers of votes 0")
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
