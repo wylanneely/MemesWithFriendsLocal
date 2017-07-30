@@ -82,6 +82,15 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     
     //MARK: - Create Meme
     
+    //MARK: - Clear Memes
+    
+    func clearMeme() {
+        firstTextField.text = ""
+        secondTextFiled.text = ""
+        firstTextLabel.text = ""
+        secondTextLabel.text = ""
+        memeImageView.image = nil
+    }
     
     //MARK: - IBActions
     
@@ -97,7 +106,7 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
             
         } else {
             GameController.shared.game?.numberOfMemes -= 1
-            
+            clearMeme()
             let alert = UIAlertController(title: "Next Person", message: "Please pass device to the next person", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
