@@ -27,6 +27,8 @@
 		6BB29B9B1F2BEDDB009BF446 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB29B9A1F2BEDDB009BF446 /* Meme.swift */; };
 		6BBE34851F2BF152000E32F4 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE34841F2BF152000E32F4 /* ColorPicker.swift */; };
 		6BE52DFE1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE52DFD1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift */; };
+		6BE52E031F2D780E0030FF39 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE52E021F2D780E0030FF39 /* Results.storyboard */; };
+		6BE52E051F2D78420030FF39 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE52E041F2D78420030FF39 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		6BB29B9A1F2BEDDB009BF446 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		6BBE34841F2BF152000E32F4 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		6BE52DFD1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeVoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		6BE52E021F2D780E0030FF39 /* Results.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
+		6BE52E041F2D78420030FF39 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 				6BB29B841F2BE4CE009BF446 /* SetupViewController */,
 				6BB29B7D1F2BE48C009BF446 /* CreateMemeViewController */,
 				6BB29B781F2BE436009BF446 /* GameViewController */,
+				6BE52E011F2D77FD0030FF39 /* Results Screen */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -137,8 +142,8 @@
 		6BB29B781F2BE436009BF446 /* GameViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6BB29B791F2BE440009BF446 /* GameView.storyboard */,
 				6BB29B7B1F2BE453009BF446 /* GameViewController.swift */,
+				6BB29B791F2BE440009BF446 /* GameView.storyboard */,
 			);
 			name = GameViewController;
 			sourceTree = "<group>";
@@ -155,8 +160,8 @@
 		6BB29B841F2BE4CE009BF446 /* SetupViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6BB29B851F2BE4DD009BF446 /* Setup.storyboard */,
 				6BB29B871F2BE4F8009BF446 /* SetupViewController.swift */,
+				6BB29B851F2BE4DD009BF446 /* Setup.storyboard */,
 			);
 			name = SetupViewController;
 			sourceTree = "<group>";
@@ -195,6 +200,15 @@
 				6BBE34841F2BF152000E32F4 /* ColorPicker.swift */,
 			);
 			name = "Helper Files";
+			sourceTree = "<group>";
+		};
+		6BE52E011F2D77FD0030FF39 /* Results Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6BE52E041F2D78420030FF39 /* ResultsViewController.swift */,
+				6BE52E021F2D780E0030FF39 /* Results.storyboard */,
+			);
+			name = "Results Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,7 @@
 				6BB29B7A1F2BE440009BF446 /* GameView.storyboard in Resources */,
 				6BB29B691F2BE332009BF446 /* LaunchScreen.storyboard in Resources */,
 				6BB29B661F2BE332009BF446 /* Assets.xcassets in Resources */,
+				6BE52E031F2D780E0030FF39 /* Results.storyboard in Resources */,
 				6BB29B861F2BE4DD009BF446 /* Setup.storyboard in Resources */,
 				6BB29B771F2BE402009BF446 /* MainView.storyboard in Resources */,
 				6BB29B831F2BE4BC009BF446 /* CreateMeme.storyboard in Resources */,
@@ -277,6 +292,7 @@
 				6BB29B7F1F2BE4A1009BF446 /* CreateMemeViewController.swift in Sources */,
 				6BB29B961F2BECEC009BF446 /* MemeImagesCollectionViewCell.swift in Sources */,
 				6BE52DFE1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift in Sources */,
+				6BE52E051F2D78420030FF39 /* ResultsViewController.swift in Sources */,
 				6BB29B8A1F2BE6E2009BF446 /* Game.swift in Sources */,
 				6BB29B5F1F2BE332009BF446 /* AppDelegate.swift in Sources */,
 				6BB29B7C1F2BE453009BF446 /* GameViewController.swift in Sources */,

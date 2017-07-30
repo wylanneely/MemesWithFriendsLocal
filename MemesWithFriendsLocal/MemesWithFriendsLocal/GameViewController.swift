@@ -39,9 +39,10 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         if GameController.shared.game?.numberOfVotes == 0 {
             NSLog("Numbers of votes 0")
+            performSegue(withIdentifier: "resultsSegue", sender: self)
         }
     }
-    
+
     /*
     // MARK: - Navigation
 

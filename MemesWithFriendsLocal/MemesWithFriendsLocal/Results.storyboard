@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U0C-SW-BzN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Results View Controller-->
+        <scene sceneID="05H-2z-RKh">
+            <objects>
+                <viewController id="U0C-SW-BzN" customClass="ResultsViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d3B-Sd-bP5"/>
+                        <viewControllerLayoutGuide type="bottom" id="I5I-Mr-P2W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ox5-Gt-CZS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zlt-mp-11N">
+                                <rect key="frame" x="28" y="184" width="319" height="319"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="319" id="ANG-qn-2MH"/>
+                                    <constraint firstAttribute="width" constant="319" id="RlX-h2-ftQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-A1-9Zs">
+                                <rect key="frame" x="44" y="458" width="287" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ix7-9h-thr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxJ-LV-kGt">
+                                <rect key="frame" x="44" y="183" width="287" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0Ks-zp-pCz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rb3-wr-6AK">
+                                <rect key="frame" x="16" y="130.5" width="343" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGz-sx-AP2">
+                                <rect key="frame" x="16" y="511" width="343" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dwC-A1-9Zs" firstAttribute="width" secondItem="zlt-mp-11N" secondAttribute="width" multiplier="0.9" id="01U-4k-hbb"/>
+                            <constraint firstItem="Rb3-wr-6AK" firstAttribute="leading" secondItem="Ox5-Gt-CZS" secondAttribute="leadingMargin" id="EP1-2W-Avo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fGz-sx-AP2" secondAttribute="trailing" id="HwC-2l-J7t"/>
+                            <constraint firstItem="mxJ-LV-kGt" firstAttribute="top" secondItem="zlt-mp-11N" secondAttribute="top" multiplier="0.99" id="Jhb-0k-Y0F"/>
+                            <constraint firstItem="fGz-sx-AP2" firstAttribute="top" secondItem="zlt-mp-11N" secondAttribute="bottom" constant="8" id="KE5-RY-HUT"/>
+                            <constraint firstItem="mxJ-LV-kGt" firstAttribute="width" secondItem="zlt-mp-11N" secondAttribute="width" multiplier="0.9" id="QJB-bD-lDO"/>
+                            <constraint firstItem="dwC-A1-9Zs" firstAttribute="bottom" secondItem="zlt-mp-11N" secondAttribute="bottom" multiplier="0.99" id="YbW-Yh-YYs"/>
+                            <constraint firstItem="mxJ-LV-kGt" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="c5B-ga-1Zv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rb3-wr-6AK" secondAttribute="trailing" id="gCC-Uv-dCz"/>
+                            <constraint firstItem="mxJ-LV-kGt" firstAttribute="top" secondItem="Rb3-wr-6AK" secondAttribute="bottom" constant="8" id="lUz-54-zvv"/>
+                            <constraint firstItem="dwC-A1-9Zs" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="mvk-ev-G6e"/>
+                            <constraint firstItem="mxJ-LV-kGt" firstAttribute="top" secondItem="d3B-Sd-bP5" secondAttribute="bottom" constant="163" id="qhu-wj-T31"/>
+                            <constraint firstItem="zlt-mp-11N" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="yoF-fe-p2l"/>
+                            <constraint firstItem="fGz-sx-AP2" firstAttribute="leading" secondItem="Ox5-Gt-CZS" secondAttribute="leadingMargin" id="zyC-aO-VHc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstTextLabel" destination="mxJ-LV-kGt" id="gxL-LU-DPN"/>
+                        <outlet property="secondTextLabel" destination="dwC-A1-9Zs" id="oEH-4E-O4j"/>
+                        <outlet property="winnerImageView" destination="zlt-mp-11N" id="Jeu-nW-t2Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUA-Jw-OD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488.80000000000001" y="492.50374812593708"/>
+        </scene>
+    </scenes>
+</document>
