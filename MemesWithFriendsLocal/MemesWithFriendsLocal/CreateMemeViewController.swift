@@ -97,6 +97,12 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
             
         } else {
             GameController.shared.game?.numberOfMemes -= 1
+            
+            let alert = UIAlertController(title: "Next Person", message: "Please pass device to the next person", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true)
         }
         
     }
