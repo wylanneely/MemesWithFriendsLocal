@@ -16,8 +16,8 @@ class MemeController{
     var memes: [Meme] = []
     
     //create
-    func createMeme(image: UIImage, firstText: String, secondText: String)  {
-        let meme = Meme(image: image, firstText: firstText, secondText: secondText)
+    func createMeme(image: UIImage, firstText: String, secondText: String, voteCount: Int)  {
+        let meme = Meme(image: image, firstText: firstText, secondText: secondText, voteCount: voteCount)
         memes.append(meme)
     }
     

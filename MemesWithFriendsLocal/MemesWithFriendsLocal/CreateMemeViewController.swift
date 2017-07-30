@@ -88,9 +88,9 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     @IBAction func createMemeButtonTapped(_ sender: Any) {
         guard let firstText = firstTextField.text,
             let secondText = secondTextFiled.text,
-            let image = memeImageView.image else {return}
+            let image = memeImageView.image else { return }
         
-        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText)
+        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0)
         
         if GameController.shared.game?.numberOfMemes == 1 {
             performSegue(withIdentifier: "gameView", sender: self)
