@@ -11,8 +11,8 @@ import UIKit
 
 class MemeController{
     
+    // MARK: - Properties
     static var shared = MemeController()
-
     var memes: [Meme] = []
     
     //create

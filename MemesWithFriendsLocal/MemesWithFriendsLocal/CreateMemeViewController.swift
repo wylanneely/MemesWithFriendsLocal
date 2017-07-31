@@ -10,10 +10,19 @@ import UIKit
 
 class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, ColorDelegate, MemeImageSelectedDelegate {
     
+    //MARK: - Lifecycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorPicker.delegate = self
+    }
+    
+    //MARK: - Properties
+    static var currentPlayerArray: [String] = [] {
+        didSet {
+            print(currentPlayerArray.count)
+        }
     }
     
     //MARK: - ColorDelegate Stuff
@@ -40,8 +49,8 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     //MARK: - TextField Delegates
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        firstTextLabel.text = firstTextField.text
-        secondTextLabel.text = secondTextFiled.text
+        firstTextLabel.text = firstTextField.text?.uppercased()
+        secondTextLabel.text = secondTextFiled.text?.uppercased()
         return true
     }
     
@@ -100,6 +109,7 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
             let secondText = secondTextFiled.text,
             let image = memeImageView.image else { return }
         
+        // FIX-ME
         MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor)
         
         if GameController.shared.game?.numberOfMemes == 1 {

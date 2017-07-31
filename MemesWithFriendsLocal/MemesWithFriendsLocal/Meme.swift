@@ -20,6 +20,7 @@ class Meme {
     var secondText: String
     var voteCount: Int
     var memeTextColor: UIColor?
+
     
     //MARK: -Inits
     init(image: UIImage, firstText: String, secondText: String, voteCount: Int, memeTextColor: UIColor) {

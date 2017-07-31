@@ -12,6 +12,7 @@ class Game {
     
     //MARK: - Properties
     let numberOfPlayers: Int
+    var currentPlayers: [String]?
     
     // Equal to number of players
     var numberOfMemes: Int

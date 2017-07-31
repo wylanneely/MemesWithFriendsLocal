@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z4E-fk-LVz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z4E-fk-LVz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,54 +21,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7f-cG-fpm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7f-cG-fpm">
                                 <rect key="frame" x="24" y="28" width="327" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLC-x7-tke">
-                                <rect key="frame" x="164" y="520" width="46" height="30"/>
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <segue destination="B8j-Gt-loY" kind="show" identifier="segueToCreateMeme" id="oJU-JP-t1k"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Of Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-JN-ddt">
-                                <rect key="frame" x="141" y="307" width="93" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3 or more..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdm-LM-fvc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3 or more..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tdm-LM-fvc">
                                 <rect key="frame" x="139" y="329" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzF-a3-pnL">
+                                <rect key="frame" x="16" y="380" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecj-R5-cqE">
+                                <rect key="frame" x="16" y="418" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Third player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-M6-wla">
+                                <rect key="frame" x="16" y="456" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fourth player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vr7-2s-5e6">
+                                <rect key="frame" x="16" y="494" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fifth player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDC-Ct-zIe">
+                                <rect key="frame" x="15" y="532" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sixth player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JrZ-lR-s7B">
+                                <rect key="frame" x="16" y="570" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ux-Dw-OO5">
+                                <rect key="frame" x="91" y="123" width="193" height="139"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Z4E-fk-LVz" id="JLZ-WX-3S0"/>
+                                    <outlet property="delegate" destination="Z4E-fk-LVz" id="drT-PE-Gmn"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# Of Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-JN-ddt">
+                                <rect key="frame" x="135" y="94" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="nTO-JN-ddt" firstAttribute="centerX" secondItem="PNc-KF-IWD" secondAttribute="centerX" id="7vI-hG-XrP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L7f-cG-fpm" secondAttribute="trailing" constant="8" id="DYj-eE-rOd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tdm-LM-fvc" secondAttribute="trailing" constant="124" id="Deb-nz-6Ut"/>
-                            <constraint firstItem="L7f-cG-fpm" firstAttribute="leading" secondItem="PNc-KF-IWD" secondAttribute="leadingMargin" constant="8" id="GAw-5V-Kcl"/>
-                            <constraint firstItem="L7f-cG-fpm" firstAttribute="top" secondItem="Lfj-F5-d3t" secondAttribute="bottom" constant="8" id="JTV-81-HuL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nTO-JN-ddt" secondAttribute="trailing" constant="125" id="QAA-6e-htu"/>
-                            <constraint firstItem="nTO-JN-ddt" firstAttribute="top" secondItem="L7f-cG-fpm" secondAttribute="bottom" constant="250" id="fEH-Eh-aCT"/>
-                            <constraint firstItem="nTO-JN-ddt" firstAttribute="leading" secondItem="PNc-KF-IWD" secondAttribute="leadingMargin" constant="125" id="lcX-0h-KGI"/>
-                            <constraint firstItem="Tdm-LM-fvc" firstAttribute="top" secondItem="nTO-JN-ddt" secondAttribute="bottom" constant="2" id="uqO-X3-KCW"/>
-                            <constraint firstItem="Tdm-LM-fvc" firstAttribute="leading" secondItem="PNc-KF-IWD" secondAttribute="leadingMargin" constant="123" id="wTN-60-HO6"/>
-                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="fifthPlayerTextField" destination="PDC-Ct-zIe" id="JFO-ws-AT7"/>
+                        <outlet property="firstPlayerTextField" destination="IzF-a3-pnL" id="iUi-qO-3Bw"/>
+                        <outlet property="fourthPlayerTextField" destination="vr7-2s-5e6" id="XcV-24-m8l"/>
                         <outlet property="numberOfPlayersTextField" destination="Tdm-LM-fvc" id="Mwu-RL-OKu"/>
+                        <outlet property="secondPlayerTextField" destination="ecj-R5-cqE" id="Lef-vi-1B6"/>
+                        <outlet property="sixthPlayerTextField" destination="JrZ-lR-s7B" id="pVU-yh-S0m"/>
+                        <outlet property="thirdPlayerTextField" destination="P7e-M6-wla" id="2BJ-ft-Mo3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z85-al-s0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322" y="147"/>
+            <point key="canvasLocation" x="-322.39999999999998" y="146.17691154422789"/>
         </scene>
         <!--CreateMeme-->
         <scene sceneID="mEj-MV-Gkg">

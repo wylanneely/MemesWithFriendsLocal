@@ -10,10 +10,8 @@ import Foundation
 
 class GameController {
     
-    static let shared = GameController()
-    
     //MARK: - Properties
-    
+    static let shared = GameController()
     var game: Game?
     
     //MARK: - CRUD
