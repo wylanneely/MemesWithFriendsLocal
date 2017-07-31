@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Ql-l4-Flk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,77 +9,303 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="KO1-tU-beI">
+        <!--First Instruction Screen View Controller-->
+        <scene sceneID="23o-Mp-JTR">
             <objects>
-                <viewController id="iWx-ZJ-CoM" sceneMemberID="viewController">
+                <viewController id="7Ql-l4-Flk" customClass="FirstInstructionScreenViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q9W-4u-xMW"/>
-                        <viewControllerLayoutGuide type="bottom" id="eJe-YQ-oIV"/>
+                        <viewControllerLayoutGuide type="top" id="g9L-41-jDQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="maf-4C-8AR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="x26-E9-mmm">
+                    <view key="view" contentMode="scaleToFill" id="9ZT-Iu-C8a" customClass="InstructionBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- then -" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRM-Jm-DlH">
+                                <rect key="frame" x="64" y="312" width="247" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="0.5" height="0.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To create the funniest meme for your topic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWe-Gz-K7N">
+                                <rect key="frame" x="88" y="193" width="198" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will then be voted on by your friends to see who can capture the title . . . " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkD-t1-btb">
+                                <rect key="frame" x="88" y="412" width="198" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal of Memes with Friends:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hay-6X-QUO">
+                                <rect key="frame" x="64" y="61" width="247" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="0.5" height="0.5"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFJ-Jz-Jda">
+                                <rect key="frame" x="262" y="610" width="30" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zMu-Db-n39" kind="presentation" modalTransitionStyle="flipHorizontal" id="tzs-dm-fxd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX3-1j-3sX">
+                                <rect key="frame" x="131" y="617" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <state key="normal" title="Back To Home">
+                                    <color key="titleColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XHU-NQ-bL2" kind="show" id="Dth-SR-ASN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VFJ-Jz-Jda" secondAttribute="trailing" constant="83" id="6fQ-Qy-ISq"/>
+                            <constraint firstItem="maf-4C-8AR" firstAttribute="top" secondItem="VFJ-Jz-Jda" secondAttribute="bottom" constant="13" id="YMW-4A-Sev"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="backToHomeButton" destination="NX3-1j-3sX" id="AFl-vD-EZg"/>
+                        <outlet property="goalOneLabel" destination="nWe-Gz-K7N" id="emi-x4-9e3"/>
+                        <outlet property="goalTwoLabel" destination="YkD-t1-btb" id="Q9m-h2-xZM"/>
+                        <outlet property="goalsTitleLabel" destination="hay-6X-QUO" id="d7B-7n-lL1"/>
+                        <outlet property="nextButton" destination="VFJ-Jz-Jda" id="32q-10-muS"/>
+                        <outlet property="thenLabel" destination="jRM-Jm-DlH" id="CU9-PZ-JkV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HEG-Jb-cSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nr0-UN-Bxo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="-230"/>
+            <point key="canvasLocation" x="-410.39999999999998" y="4.9475262368815596"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="trO-PQ-hAI">
+        <!--MainView-->
+        <scene sceneID="Heu-eB-x63">
             <objects>
-                <viewController id="WX3-uG-1mS" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J4r-HM-OB1"/>
-                        <viewControllerLayoutGuide type="bottom" id="uly-pt-Zya"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Exj-Cl-gsp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WMy-mO-88e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="MainView" id="XHU-NQ-bL2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m66-JK-eb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="-231"/>
+            <point key="canvasLocation" x="-354" y="569"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="zaO-d1-UUx">
+        <!--Second Instruction Screen View Controller-->
+        <scene sceneID="Ot0-7D-iDS">
             <objects>
-                <viewController id="Gm2-UT-hha" sceneMemberID="viewController">
+                <viewController id="zMu-Db-n39" customClass="SecondInstructionScreenViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2si-fP-VbO"/>
-                        <viewControllerLayoutGuide type="bottom" id="gkC-LE-EMG"/>
+                        <viewControllerLayoutGuide type="top" id="SJ5-Vi-PMS"/>
+                        <viewControllerLayoutGuide type="bottom" id="VRa-Af-KaF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vXG-pW-Cw0">
+                    <view key="view" contentMode="scaleToFill" id="K83-cX-aoO" customClass="InstructionBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 1:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiT-TV-zvF">
+                                <rect key="frame" x="64" y="28" width="247" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="0.5" height="0.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a game of your own!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olk-oc-LTR">
+                                <rect key="frame" x="97" y="117" width="181" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-QL-wT2">
+                                <rect key="frame" x="262" y="610" width="30" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Bbc-Wy-RTf" kind="presentation" modalTransitionStyle="flipHorizontal" id="A1f-2a-vPC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycV-Ev-rpg">
+                                <rect key="frame" x="83" y="610" width="30" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Ql-l4-Flk" kind="presentation" modalTransitionStyle="flipHorizontal" id="sbK-UR-Ai3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 3:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-Px-lCL">
+                                <rect key="frame" x="64" y="389" width="247" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="0.5" height="0.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wait for all your friends to join the game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTS-LS-Q0M">
+                                <rect key="frame" x="97" y="452" width="181" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 2:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulT-sq-qAb">
+                                <rect key="frame" x="64" y="226" width="247" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="0.5" height="0.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join a game made by friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6So-CO-KIH">
+                                <rect key="frame" x="80" y="277" width="214" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VRa-Af-KaF" firstAttribute="top" secondItem="3gc-QL-wT2" secondAttribute="bottom" constant="13" id="9eL-Mr-rVp"/>
+                            <constraint firstAttribute="trailing" secondItem="3gc-QL-wT2" secondAttribute="trailing" constant="83" id="hUk-ng-BYd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pRC-Ht-Pk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xo2-IJ-tR8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1571" y="-240"/>
+            <point key="canvasLocation" x="489" y="5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="aET-DB-xnS">
+        <!--Third Instruction Screen View Controller-->
+        <scene sceneID="p27-Lt-Qac">
             <objects>
-                <viewController id="1DC-Fg-ymL" sceneMemberID="viewController">
+                <viewController id="Bbc-Wy-RTf" customClass="ThirdInstructionScreenViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jVI-G4-W05"/>
-                        <viewControllerLayoutGuide type="bottom" id="hul-bJ-0Ja"/>
+                        <viewControllerLayoutGuide type="top" id="CMt-WT-Kh7"/>
+                        <viewControllerLayoutGuide type="bottom" id="vLN-cU-BhD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dn2-0g-DHc">
+                    <view key="view" contentMode="scaleToFill" id="t6C-d4-8Fk" customClass="InstructionBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 4:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNO-R7-Hz2">
+                                <rect key="frame" x="64" y="52" width="247" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="0.5" height="0.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a meme that will wow your friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seb-MW-cTj">
+                                <rect key="frame" x="97" y="106" width="181" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-sD-TzG">
+                                <rect key="frame" x="262" y="610" width="30" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Ql-l4-Flk" kind="presentation" modalTransitionStyle="flipHorizontal" id="dSc-IA-rKh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcS-e5-pof">
+                                <rect key="frame" x="83" y="610" width="30" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zMu-Db-n39" kind="presentation" modalTransitionStyle="flipHorizontal" id="2Uu-Tl-cvC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Once everyone has submitted their meme’s, you will vote on which of your friend’s meme is the funniest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrD-jM-5Qh">
+                                <rect key="frame" x="87" y="309" width="201" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 5:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unr-JN-P91">
+                                <rect key="frame" x="64" y="239" width="247" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="0.5" height="0.5"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vLN-cU-BhD" firstAttribute="top" secondItem="ybT-sD-TzG" secondAttribute="bottom" constant="13" id="bPH-aU-GDH"/>
+                            <constraint firstAttribute="trailing" secondItem="ybT-sD-TzG" secondAttribute="trailing" constant="83" id="bfG-8J-iZp"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="NO"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Icl-v6-WmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22z-YK-pHd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2223" y="-241"/>
+            <point key="canvasLocation" x="1470" y="5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dSc-IA-rKh"/>
+        <segue reference="tzs-dm-fxd"/>
+    </inferredMetricsTieBreakers>
 </document>

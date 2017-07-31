@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D98D04A1F2F888400D37B9A /* InstructionBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98D0491F2F888400D37B9A /* InstructionBackgroundView.swift */; };
+		2D98D04E1F2F89A700D37B9A /* FirstInstructionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98D04D1F2F89A700D37B9A /* FirstInstructionScreenViewController.swift */; };
+		2D98D0501F2F8ABE00D37B9A /* SecondInstructionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98D04F1F2F8ABE00D37B9A /* SecondInstructionScreenViewController.swift */; };
+		2D98D0521F2F8B4E00D37B9A /* ThirdInstructionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98D0511F2F8B4E00D37B9A /* ThirdInstructionScreenViewController.swift */; };
 		6B1010F81F2F866A00D5C40E /* Instructions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1010F71F2F866A00D5C40E /* Instructions.storyboard */; };
-		6B1010FA1F2F868300D5C40E /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1010F91F2F868300D5C40E /* InstructionsViewController.swift */; };
 		6BB29B5F1F2BE332009BF446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB29B5E1F2BE332009BF446 /* AppDelegate.swift */; };
 		6BB29B641F2BE332009BF446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB29B621F2BE332009BF446 /* Main.storyboard */; };
 		6BB29B661F2BE332009BF446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BB29B651F2BE332009BF446 /* Assets.xcassets */; };
@@ -34,8 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D98D0491F2F888400D37B9A /* InstructionBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionBackgroundView.swift; sourceTree = "<group>"; };
+		2D98D04D1F2F89A700D37B9A /* FirstInstructionScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstInstructionScreenViewController.swift; sourceTree = "<group>"; };
+		2D98D04F1F2F8ABE00D37B9A /* SecondInstructionScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondInstructionScreenViewController.swift; sourceTree = "<group>"; };
+		2D98D0511F2F8B4E00D37B9A /* ThirdInstructionScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdInstructionScreenViewController.swift; sourceTree = "<group>"; };
 		6B1010F71F2F866A00D5C40E /* Instructions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Instructions.storyboard; sourceTree = "<group>"; };
-		6B1010F91F2F868300D5C40E /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		6BB29B5B1F2BE332009BF446 /* MemesWithFriendsLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemesWithFriendsLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB29B5E1F2BE332009BF446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BB29B631F2BE332009BF446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,11 +79,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D98D0481F2F886300D37B9A /* Design Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D98D0491F2F888400D37B9A /* InstructionBackgroundView.swift */,
+			);
+			name = "Design Files";
+			sourceTree = "<group>";
+		};
 		6B1010F61F2F865000D5C40E /* InstructionsViewController */ = {
 			isa = PBXGroup;
 			children = (
 				6B1010F71F2F866A00D5C40E /* Instructions.storyboard */,
-				6B1010F91F2F868300D5C40E /* InstructionsViewController.swift */,
+				2D98D04D1F2F89A700D37B9A /* FirstInstructionScreenViewController.swift */,
+				2D98D04F1F2F8ABE00D37B9A /* SecondInstructionScreenViewController.swift */,
+				2D98D0511F2F8B4E00D37B9A /* ThirdInstructionScreenViewController.swift */,
 			);
 			name = InstructionsViewController;
 			sourceTree = "<group>";
@@ -102,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				6BB29B5E1F2BE332009BF446 /* AppDelegate.swift */,
+				2D98D0481F2F886300D37B9A /* Design Files */,
 				6BBE34831F2BF13F000E32F4 /* Helper Files */,
 				6BB29B971F2BEDA9009BF446 /* ModelController */,
 				6BB29B901F2BEC0F009BF446 /* Views */,
@@ -305,19 +322,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB29B7F1F2BE4A1009BF446 /* CreateMemeViewController.swift in Sources */,
+				2D98D0521F2F8B4E00D37B9A /* ThirdInstructionScreenViewController.swift in Sources */,
 				6BB29B961F2BECEC009BF446 /* MemeImagesCollectionViewCell.swift in Sources */,
 				6BE52DFE1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift in Sources */,
 				6BE52E051F2D78420030FF39 /* ResultsViewController.swift in Sources */,
 				6BB29B8A1F2BE6E2009BF446 /* Game.swift in Sources */,
 				6BB29B5F1F2BE332009BF446 /* AppDelegate.swift in Sources */,
 				6BB29B7C1F2BE453009BF446 /* GameViewController.swift in Sources */,
+				2D98D04A1F2F888400D37B9A /* InstructionBackgroundView.swift in Sources */,
 				6BBE34851F2BF152000E32F4 /* ColorPicker.swift in Sources */,
 				6BB29B991F2BEDBC009BF446 /* MemeController.swift in Sources */,
-				6B1010FA1F2F868300D5C40E /* InstructionsViewController.swift in Sources */,
 				6BB29B8F1F2BEA9F009BF446 /* StoredImages.swift in Sources */,
 				6BB29B9B1F2BEDDB009BF446 /* Meme.swift in Sources */,
 				6BB29B741F2BE3E4009BF446 /* MainViewController.swift in Sources */,
 				6BB29B881F2BE4F8009BF446 /* SetupViewController.swift in Sources */,
+				2D98D04E1F2F89A700D37B9A /* FirstInstructionScreenViewController.swift in Sources */,
+				2D98D0501F2F8ABE00D37B9A /* SecondInstructionScreenViewController.swift in Sources */,
 				6BB29B8D1F2BE895009BF446 /* GameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
