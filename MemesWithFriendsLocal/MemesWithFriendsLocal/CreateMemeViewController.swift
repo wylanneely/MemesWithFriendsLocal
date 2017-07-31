@@ -34,6 +34,7 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     func pickedColor(color: UIColor) {
         firstTextLabel.textColor = color
         secondTextLabel.textColor = color
+        currentColor = color// I added this, good addition?
     }
     
     //MARK: - TextField Delegates
@@ -99,7 +100,7 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
             let secondText = secondTextFiled.text,
             let image = memeImageView.image else { return }
         
-        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0)
+        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor)
         
         if GameController.shared.game?.numberOfMemes == 1 {
             performSegue(withIdentifier: "gameView", sender: self)

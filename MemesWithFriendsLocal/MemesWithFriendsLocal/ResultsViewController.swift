@@ -32,6 +32,8 @@ class ResultsViewController: UIViewController {
         
         guard let meme = meme else { NSLog("Meme is Nil"); return }
         firstTextLabel.text = meme.firstText
+        firstTextLabel.textColor = meme.memeTextColor
+        secondTextLabel.textColor = meme.memeTextColor
         secondTextLabel.text = meme.secondText
         winnerImageView.image = meme.image
         votesLabel.text = "Votes: \(meme.voteCount)"

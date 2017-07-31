@@ -28,6 +28,8 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.topTextLabel.text = meme.firstText
         cell.bottomTextLabel.text = meme.secondText
         cell.memeImage.image = meme.image
+        cell.topTextLabel.textColor = meme.memeTextColor
+        cell.bottomTextLabel.textColor = meme.memeTextColor
         
         return cell
     }
