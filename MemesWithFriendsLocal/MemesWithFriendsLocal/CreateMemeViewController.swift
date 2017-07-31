@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, ColorDelegate, MemeImageSelectedDelegate {
     
@@ -16,6 +17,16 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         super.viewDidLoad()
         
         colorPicker.delegate = self
+        
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (_) in
+            
+            let alert = UIAlertController(title: "\(CreateMemeViewController.currentPlayerArray[0])'s turn", message: "Please pass device to the next person", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
+        
     }
     
     //MARK: - Properties
@@ -102,6 +113,10 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         memeImageView.image = nil
     }
     
+    var counter = 0
+    
+    var person: String = ""
+    
     //MARK: - IBActions
     
     @IBAction func createMemeButtonTapped(_ sender: Any) {
@@ -109,8 +124,25 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
             let secondText = secondTextFiled.text,
             let image = memeImageView.image else { return }
         
-        // FIX-ME
-        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor)
+        if counter == 0 {
+            self.person = CreateMemeViewController.currentPlayerArray[0]
+            
+            if let personIndex = CreateMemeViewController.currentPlayerArray.index(of: person) {
+                CreateMemeViewController.currentPlayerArray.remove(at: personIndex)
+                counter += 1
+            }
+            MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor, playerName: person)
+
+        } else {
+        
+         self.person = randomWinner()
+        
+        if let personIndex = CreateMemeViewController.currentPlayerArray.index(of: person) {
+            CreateMemeViewController.currentPlayerArray.remove(at: personIndex)
+        }
+            MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor, playerName: person)
+
+        }
         
         if GameController.shared.game?.numberOfMemes == 1 {
             performSegue(withIdentifier: "gameView", sender: self)
@@ -118,7 +150,8 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         } else {
             GameController.shared.game?.numberOfMemes -= 1
             clearMeme()
-            let alert = UIAlertController(title: "Next Person", message: "Please pass device to the next person", preferredStyle: .alert)
+            
+            let alert = UIAlertController(title: "\(self.person)'s turn", message: "Please pass device to the next person", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(okAction)
@@ -127,5 +160,10 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         
     }
     
-    
+    func randomWinner() -> String {
+        //FIXME: - Cleanup
+        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: CreateMemeViewController.currentPlayerArray.count)
+        return CreateMemeViewController.currentPlayerArray[randomNumber]
+    }
+
 }

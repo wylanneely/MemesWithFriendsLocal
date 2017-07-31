@@ -30,6 +30,7 @@ class ResultsViewController: UIViewController {
             secondTextLabel.text = meme.secondText
             winnerImageView.image = meme.image
             votesLabel.text = "Votes: \(meme.voteCount)"
+            playerLabel.text = meme.playerName
         }
     }
     var memes: [Meme] = []
@@ -65,6 +66,7 @@ class ResultsViewController: UIViewController {
     
     //MARK: - IBOutlets
     
+    @IBOutlet weak var playerLabel: UILabel!
     @IBOutlet weak var firstTextLabel: UILabel!
     @IBOutlet weak var secondTextLabel: UILabel!
     @IBOutlet weak var winnerImageView: UIImageView!

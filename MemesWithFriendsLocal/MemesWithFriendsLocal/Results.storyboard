@@ -69,6 +69,13 @@
                                     <segue destination="aZe-sa-wGq" kind="show" id="U6G-Hi-TbA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-aE-upa">
+                                <rect key="frame" x="170" y="70" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -90,6 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="firstTextLabel" destination="mxJ-LV-kGt" id="gxL-LU-DPN"/>
+                        <outlet property="playerLabel" destination="pfP-aE-upa" id="gqW-9v-I4m"/>
                         <outlet property="secondTextLabel" destination="dwC-A1-9Zs" id="oEH-4E-O4j"/>
                         <outlet property="votesLabel" destination="fGz-sx-AP2" id="202-zU-DC6"/>
                         <outlet property="winnerImageView" destination="zlt-mp-11N" id="Jeu-nW-t2Z"/>
