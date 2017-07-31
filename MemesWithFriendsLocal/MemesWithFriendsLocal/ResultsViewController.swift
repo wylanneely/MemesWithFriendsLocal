@@ -29,6 +29,7 @@ class ResultsViewController: UIViewController {
                 meme = i
             }
         }
+        
         guard let meme = meme else { NSLog("Meme is Nil"); return }
         firstTextLabel.text = meme.firstText
         secondTextLabel.text = meme.secondText
@@ -43,4 +44,9 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var winnerImageView: UIImageView!
     @IBOutlet weak var votesLabel: UILabel!
     
+    @IBAction func restartGameButtonTapped(_ sender: Any) {
+        
+        GameController.shared.game = nil
+        MemeController.shared.memes = []
+    }
 }

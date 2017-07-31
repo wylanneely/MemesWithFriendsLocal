@@ -170,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				6BB29B891F2BE6E2009BF446 /* Game.swift */,
-				6BB29B8C1F2BE895009BF446 /* GameController.swift */,
 				6BB29B9A1F2BEDDB009BF446 /* Meme.swift */,
 			);
 			name = Models;
@@ -189,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				6BB29B981F2BEDBC009BF446 /* MemeController.swift */,
+				6BB29B8C1F2BE895009BF446 /* GameController.swift */,
 			);
 			name = ModelController;
 			sourceTree = "<group>";

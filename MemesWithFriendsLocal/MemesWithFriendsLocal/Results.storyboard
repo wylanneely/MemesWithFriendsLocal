@@ -60,6 +60,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-nO-50B">
+                                <rect key="frame" x="162" y="617" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartGameButtonTapped:" destination="U0C-SW-BzN" eventType="touchUpInside" id="EQk-ML-DlP"/>
+                                    <segue destination="aZe-sa-wGq" kind="show" id="U6G-Hi-TbA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -89,6 +98,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FUA-Jw-OD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="488.80000000000001" y="492.50374812593708"/>
+        </scene>
+        <!--Setup-->
+        <scene sceneID="fai-8A-66k">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setup" id="aZe-sa-wGq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y71-iH-Nzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190" y="493"/>
         </scene>
     </scenes>
 </document>
