@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1010F81F2F866A00D5C40E /* Instructions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1010F71F2F866A00D5C40E /* Instructions.storyboard */; };
+		6B1010FA1F2F868300D5C40E /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1010F91F2F868300D5C40E /* InstructionsViewController.swift */; };
 		6BB29B5F1F2BE332009BF446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB29B5E1F2BE332009BF446 /* AppDelegate.swift */; };
 		6BB29B641F2BE332009BF446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB29B621F2BE332009BF446 /* Main.storyboard */; };
 		6BB29B661F2BE332009BF446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BB29B651F2BE332009BF446 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B1010F71F2F866A00D5C40E /* Instructions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Instructions.storyboard; sourceTree = "<group>"; };
+		6B1010F91F2F868300D5C40E /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		6BB29B5B1F2BE332009BF446 /* MemesWithFriendsLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemesWithFriendsLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB29B5E1F2BE332009BF446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BB29B631F2BE332009BF446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B1010F61F2F865000D5C40E /* InstructionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6B1010F71F2F866A00D5C40E /* Instructions.storyboard */,
+				6B1010F91F2F868300D5C40E /* InstructionsViewController.swift */,
+			);
+			name = InstructionsViewController;
+			sourceTree = "<group>";
+		};
 		6BB29B521F2BE332009BF446 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +143,7 @@
 		6BB29B751F2BE3E9009BF446 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6B1010F61F2F865000D5C40E /* InstructionsViewController */,
 				6BB29B721F2BE3D1009BF446 /* MainViewController */,
 				6BB29B841F2BE4CE009BF446 /* SetupViewController */,
 				6BB29B7D1F2BE48C009BF446 /* CreateMemeViewController */,
@@ -275,6 +289,7 @@
 				6BB29B691F2BE332009BF446 /* LaunchScreen.storyboard in Resources */,
 				6BB29B661F2BE332009BF446 /* Assets.xcassets in Resources */,
 				6BE52E031F2D780E0030FF39 /* Results.storyboard in Resources */,
+				6B1010F81F2F866A00D5C40E /* Instructions.storyboard in Resources */,
 				6BB29B861F2BE4DD009BF446 /* Setup.storyboard in Resources */,
 				6BB29B771F2BE402009BF446 /* MainView.storyboard in Resources */,
 				6BB29B831F2BE4BC009BF446 /* CreateMeme.storyboard in Resources */,
@@ -298,6 +313,7 @@
 				6BB29B7C1F2BE453009BF446 /* GameViewController.swift in Sources */,
 				6BBE34851F2BF152000E32F4 /* ColorPicker.swift in Sources */,
 				6BB29B991F2BEDBC009BF446 /* MemeController.swift in Sources */,
+				6B1010FA1F2F868300D5C40E /* InstructionsViewController.swift in Sources */,
 				6BB29B8F1F2BEA9F009BF446 /* StoredImages.swift in Sources */,
 				6BB29B9B1F2BEDDB009BF446 /* Meme.swift in Sources */,
 				6BB29B741F2BE3E4009BF446 /* MainViewController.swift in Sources */,
