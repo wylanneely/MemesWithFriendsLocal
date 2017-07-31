@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class ResultsViewController: UIViewController {
 
@@ -15,28 +16,51 @@ class ResultsViewController: UIViewController {
         calculateWinner()
     }
     
-    var winnerCount: Int = 0
-    var meme: Meme?
+    var winnerCount: Int = 0 {
+        didSet {
+            NSLog("Winner count: \(winnerCount)")
+        }
+    }
+    var meme: Meme? {
+        didSet{
+            guard let meme = meme else { NSLog("Meme is Nil"); return }
+            firstTextLabel.text = meme.firstText
+            firstTextLabel.textColor = meme.memeTextColor
+            secondTextLabel.textColor = meme.memeTextColor
+            secondTextLabel.text = meme.secondText
+            winnerImageView.image = meme.image
+            votesLabel.text = "Votes: \(meme.voteCount)"
+        }
+    }
+    var memes: [Meme] = []
     
     //MARK: - Winner
     
-    func calculateWinner() { //TODO: - This will work as long as there are no ties, How to fix so ties are represented fairly? perhaps just do arc4random?
+    func calculateWinner() {
         
         for i in MemeController.shared.memes {
             
             if i.voteCount > winnerCount {
                 winnerCount = i.voteCount
-                meme = i
+            }
+            
+        }
+        
+        for i in MemeController.shared.memes {
+            if i.voteCount == winnerCount {
+                self.memes.append(i)
             }
         }
         
-        guard let meme = meme else { NSLog("Meme is Nil"); return }
-        firstTextLabel.text = meme.firstText
-        firstTextLabel.textColor = meme.memeTextColor
-        secondTextLabel.textColor = meme.memeTextColor
-        secondTextLabel.text = meme.secondText
-        winnerImageView.image = meme.image
-        votesLabel.text = "Votes: \(meme.voteCount)"
+        meme = randomWinner()
+    }
+    
+    // Random Winner
+    
+    func randomWinner() -> Meme {
+        //FIXME: - Cleanup
+        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: memes.count)
+        return memes[randomNumber]
     }
     
     //MARK: - IBOutlets
