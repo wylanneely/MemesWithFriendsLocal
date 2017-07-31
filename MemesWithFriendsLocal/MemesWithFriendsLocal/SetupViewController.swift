@@ -28,7 +28,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     
     //MARK: - Properties
-    var numberOfPlayersForGame: String?
+    var numberOfPlayersForGame: String = "3"
     var playerArray: [String] = []
     
     //MARK: - IBOutlets
@@ -121,7 +121,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             
         }
         
-        guard let numberAsString = numberOfPlayersForGame else { NSLog("Text is nil"); return }
+        let numberAsString = numberOfPlayersForGame
         guard let number = Int(numberAsString) else { NSLog("NumberAsString is nil"); return }
         GameController.shared.createGameWith(numberOfPlayers: number)
         GameController.shared.game?.currentPlayers = playerArray
