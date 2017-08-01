@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -25,11 +26,21 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var fourthPlayerTextField: UITextField!
     @IBOutlet weak var fifthPlayerTextField: UITextField!
     @IBOutlet weak var sixthPlayerTextField: UITextField!
+    @IBOutlet weak var randomTopicButton: UIButton!
+    
+    //MARK: - IBActions
+    
+    @IBAction func randomTopicButtonTapped(_ sender: Any) {
+        
+        self.topic = randomTopic()
+        randomTopicButton.setTitle("\(self.topic)", for: .normal)
+    }
     
     
     //MARK: - Properties
     var numberOfPlayersForGame: String = "3"
     var playerArray: [String] = []
+    var topic: String = "No Topic"
     
     //MARK: - IBOutlets
     @IBOutlet weak var numberOfPlayersTextField: UITextField!
@@ -123,7 +134,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         let numberAsString = numberOfPlayersForGame
         guard let number = Int(numberAsString) else { NSLog("NumberAsString is nil"); return }
-        GameController.shared.createGameWith(numberOfPlayers: number)
+        GameController.shared.createGameWith(numberOfPlayers: number, topic: self.topic)
         GameController.shared.game?.currentPlayers = playerArray
         CreateMemeViewController.currentPlayerArray = playerArray
         
@@ -168,6 +179,13 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             self.sixthPlayerTextField.alpha = 0
         }
     }
+    
+    //MARK: - Randomizer
+    func randomTopic() -> String {
+        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: StoredTopics.topics.count)
+        return StoredTopics.topics[randomNumber]
+    }
+
     
     //MARK: - Navigation
     

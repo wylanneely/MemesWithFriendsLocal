@@ -17,13 +17,15 @@ class Game {
     // Equal to number of players
     var numberOfMemes: Int
     var numberOfVotes: Int
+    var topic: String = ""
     
     //MARK: - Initializers
     
-    init(numberOfPlayers: Int) {
+    init(numberOfPlayers: Int, topic: String) {
         
         self.numberOfPlayers = numberOfPlayers
         self.numberOfMemes = numberOfPlayers
         self.numberOfVotes = numberOfPlayers
+        self.topic = topic
     }
 }
