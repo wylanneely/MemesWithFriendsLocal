@@ -16,9 +16,9 @@ class GameController {
     
     //MARK: - CRUD
     
-    func createGameWith(numberOfPlayers: Int) {
+    func createGameWith(numberOfPlayers: Int, topic: String) {
         
-        game = Game(numberOfPlayers: numberOfPlayers)
+        game = Game(numberOfPlayers: numberOfPlayers, topic: topic)
     }
     
 }

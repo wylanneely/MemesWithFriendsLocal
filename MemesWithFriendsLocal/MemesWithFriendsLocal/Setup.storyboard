@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z4E-fk-LVz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z4E-fk-LVz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -132,9 +133,8 @@
                                     <outlet property="delegate" destination="Z4E-fk-LVz" id="drT-PE-Gmn"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose between 3 - 6 players." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-JN-ddt">
-                                <rect key="frame" x="69" y="176" width="236" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose between 3 - 6 players." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-JN-ddt">
+                                <rect key="frame" x="69" y="172" width="236" height="19.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -150,12 +150,29 @@
                                     <segue destination="noL-Ns-358" kind="show" id="vAz-J5-YML"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Game Setup" translatesAutoresizingMaskIntoConstraints="NO" id="5U5-cA-mMO">
-                                <rect key="frame" x="43" y="36" width="288" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Game Setup" translatesAutoresizingMaskIntoConstraints="NO" id="5U5-cA-mMO">
+                                <rect key="frame" x="43" y="36" width="288" height="76"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vff-96-aSB">
+                                <rect key="frame" x="98" y="127" width="179" height="30"/>
+                                <state key="normal" title="Tap Me For Random Topic"/>
+                                <connections>
+                                    <action selector="randomTopicButtonTapped:" destination="Z4E-fk-LVz" eventType="touchUpInside" id="qTb-DF-c9a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5U5-cA-mMO" secondAttribute="trailing" constant="28" id="Gmv-gM-wey"/>
+                            <constraint firstItem="5U5-cA-mMO" firstAttribute="leading" secondItem="PNc-KF-IWD" secondAttribute="leadingMargin" constant="27" id="Jyy-ff-7Rn"/>
+                            <constraint firstItem="5U5-cA-mMO" firstAttribute="top" secondItem="Lfj-F5-d3t" secondAttribute="bottom" constant="16" id="NnO-mb-0QU"/>
+                            <constraint firstItem="vff-96-aSB" firstAttribute="top" secondItem="5U5-cA-mMO" secondAttribute="bottom" constant="15" id="Zeh-bQ-Tj3"/>
+                            <constraint firstItem="nTO-JN-ddt" firstAttribute="top" secondItem="vff-96-aSB" secondAttribute="bottom" constant="15" id="g3h-oq-Sl0"/>
+                            <constraint firstItem="vff-96-aSB" firstAttribute="leading" secondItem="PNc-KF-IWD" secondAttribute="leadingMargin" constant="82" id="le6-tj-VE5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vff-96-aSB" secondAttribute="trailing" constant="82" id="nIA-Eo-vwy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nTO-JN-ddt" secondAttribute="trailing" constant="54" id="qbt-Ba-gSz"/>
+                            <constraint firstItem="nTO-JN-ddt" firstAttribute="leading" secondItem="PNc-KF-IWD" secondAttribute="leadingMargin" constant="53" id="xuv-WG-396"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                 <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
@@ -169,6 +186,7 @@
                         <outlet property="fifthPlayerTextField" destination="PDC-Ct-zIe" id="JFO-ws-AT7"/>
                         <outlet property="firstPlayerTextField" destination="IzF-a3-pnL" id="iUi-qO-3Bw"/>
                         <outlet property="fourthPlayerTextField" destination="vr7-2s-5e6" id="XcV-24-m8l"/>
+                        <outlet property="randomTopicButton" destination="vff-96-aSB" id="Uoq-4r-wJN"/>
                         <outlet property="secondPlayerTextField" destination="ecj-R5-cqE" id="Lef-vi-1B6"/>
                         <outlet property="sixthPlayerTextField" destination="JrZ-lR-s7B" id="pVU-yh-S0m"/>
                         <outlet property="thirdPlayerTextField" destination="P7e-M6-wla" id="2BJ-ft-Mo3"/>
