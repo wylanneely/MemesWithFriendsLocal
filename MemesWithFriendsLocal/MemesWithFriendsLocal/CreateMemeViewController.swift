@@ -18,6 +18,8 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         
         colorPicker.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLabelFromTextfield), name: Notification.Name.UITextFieldTextDidChange, object: nil)
+        
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (_) in
             self.person = CreateMemeViewController.currentPlayerArray[0]
             self.presentAlertController()
@@ -56,12 +58,11 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     
     //MARK: - TextField Delegates
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func updateLabelFromTextfield() {
         firstTextLabel.text = firstTextField.text?.uppercased()
         secondTextLabel.text = secondTextFiled.text?.uppercased()
-        return true
     }
-    
+
     func dismissKeyboard() {
         view.endEditing(true)
         self.firstTextLabel.text = self.firstTextField.text
