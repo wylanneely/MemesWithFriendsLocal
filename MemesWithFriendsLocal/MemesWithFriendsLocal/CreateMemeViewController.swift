@@ -43,8 +43,8 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     
     fileprivate var currentColor = UIColor.white {
         didSet {
-            firstTextField.textColor = currentColor
-            secondTextFiled.textColor = currentColor
+            //firstTextField.textColor = currentColor
+            //secondTextFiled.textColor = currentColor
         }
     }
     
