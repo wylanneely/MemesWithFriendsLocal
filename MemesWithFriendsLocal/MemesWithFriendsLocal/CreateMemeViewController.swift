@@ -71,7 +71,7 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         let firstNumber = Int(firstText.characters.count)
         let secondNumber = Int(secondText.characters.count)
         
-        if firstNumber >= 28 {
+        if firstNumber >= 24 {
             
             
         } else {
@@ -108,7 +108,7 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
                 return true
             }
             
-            if text.characters.count >= 28 {
+            if text.characters.count >= 24 {
                 return false
             } else {
                 return true
