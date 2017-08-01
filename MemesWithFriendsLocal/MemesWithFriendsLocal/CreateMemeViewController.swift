@@ -187,7 +187,6 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     
     //MARK: - Randomizer
     func randomWinner() -> String {
-        //FIXME: - Cleanup
         let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: CreateMemeViewController.currentPlayerArray.count)
         return CreateMemeViewController.currentPlayerArray[randomNumber]
     }
