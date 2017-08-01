@@ -37,6 +37,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Impact.ttf</string>
+		<string>Scriptorama Tradeshow JF Regular.ttf</string>
 	</array>
 </dict>
 </plist>

@@ -9,41 +9,125 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="5Kz-3m-3EQ">
             <objects>
-                <viewController id="NbT-DK-aOc" sceneMemberID="viewController">
+                <viewController id="NbT-DK-aOc" customClass="MainViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VSa-Kj-lZA"/>
                         <viewControllerLayoutGuide type="bottom" id="coC-YV-vmh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iX5-fD-zdB">
+                    <view key="view" contentMode="scaleToFill" id="iX5-fD-zdB" customClass="AppBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO7-dB-vd4">
-                                <rect key="frame" x="147" y="431" width="81" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO7-dB-vd4" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                                <rect key="frame" x="147" y="501" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Instructions"/>
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="14"/>
+                                <state key="normal" title="Instructions">
+                                    <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animate" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animateDelay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animateFrom">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="l9Q-lT-Qzf" kind="show" id="jg4-UP-nbc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-w5-Ufl">
-                                <rect key="frame" x="172" y="220" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Meme’s with Friends Copy 4" translatesAutoresizingMaskIntoConstraints="NO" id="ary-cQ-8Sr">
+                                <rect key="frame" x="67" y="46" width="240" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-w5-Ufl" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                                <rect key="frame" x="142" y="313" width="90" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animate" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animateFrom">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animateDelay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="popIn" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="popInDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="JkF-gL-WBh" kind="show" id="RIl-zx-pxi"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="instructionsButton" destination="OO7-dB-vd4" id="zey-ek-9af"/>
+                        <outlet property="logoImageView" destination="ary-cQ-8Sr" id="oxT-pj-WjU"/>
+                        <outlet property="playButton" destination="zaR-w5-Ufl" id="ESn-3y-n7m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGl-8y-d1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="327" y="188"/>
+            <point key="canvasLocation" x="325.60000000000002" y="187.55622188905548"/>
         </scene>
         <!--Setup-->
         <scene sceneID="Txb-4a-kHP">
@@ -62,4 +146,7 @@
             <point key="canvasLocation" x="969" y="354"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Meme’s with Friends Copy 4" width="231" height="203"/>
+    </resources>
 </document>

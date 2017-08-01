@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Scriptorama Tradeshow JF Regular.ttf">
+            <string>ScriptoramaTradeshowJF</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--First Instruction Screen View Controller-->
         <scene sceneID="23o-Mp-JTR">
@@ -22,32 +27,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- then -" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRM-Jm-DlH">
-                                <rect key="frame" x="64" y="312" width="247" height="81"/>
+                                <rect key="frame" x="64" y="293" width="247" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="36"/>
                                 <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To create the funniest meme for your topic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWe-Gz-K7N">
-                                <rect key="frame" x="88" y="193" width="198" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
-                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will then be voted on by your friends to see who can capture the title . . . " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkD-t1-btb">
-                                <rect key="frame" x="88" y="412" width="198" height="182"/>
+                                <rect key="frame" x="88" y="171" width="198" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal of Memes with Friends:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hay-6X-QUO">
-                                <rect key="frame" x="64" y="61" width="247" height="81"/>
+                                <rect key="frame" x="16" y="20" width="343" height="143"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="38"/>
                                 <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
@@ -75,6 +73,13 @@
                                     <segue destination="XHU-NQ-bL2" kind="show" id="Dth-SR-ASN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will then be voted on by your friends to see who can capture the title . . . " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkD-t1-btb">
+                                <rect key="frame" x="88" y="382" width="198" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -127,14 +132,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 1:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiT-TV-zvF">
                                 <rect key="frame" x="64" y="28" width="247" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="42"/>
                                 <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a game of your own!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olk-oc-LTR">
-                                <rect key="frame" x="97" y="117" width="181" height="78"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter in the number of players in your game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olk-oc-LTR">
+                                <rect key="frame" x="80" y="95" width="214" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -162,32 +167,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 3:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-Px-lCL">
-                                <rect key="frame" x="64" y="389" width="247" height="55"/>
+                                <rect key="frame" x="64" y="446" width="247" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="38"/>
                                 <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wait for all your friends to join the game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTS-LS-Q0M">
-                                <rect key="frame" x="97" y="452" width="181" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Begin the battle!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTS-LS-Q0M">
+                                <rect key="frame" x="97" y="509" width="181" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 2:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulT-sq-qAb">
-                                <rect key="frame" x="64" y="226" width="247" height="43"/>
+                                <rect key="frame" x="64" y="272" width="247" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="36"/>
                                 <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join a game made by friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6So-CO-KIH">
-                                <rect key="frame" x="80" y="277" width="214" height="83"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter in your friends names" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6So-CO-KIH">
+                                <rect key="frame" x="80" y="311" width="214" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -212,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xo2-IJ-tR8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489" y="5"/>
+            <point key="canvasLocation" x="488.80000000000001" y="4.9475262368815596"/>
         </scene>
         <!--Third Instruction Screen View Controller-->
         <scene sceneID="p27-Lt-Qac">
@@ -227,16 +232,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 4:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNO-R7-Hz2">
-                                <rect key="frame" x="64" y="52" width="247" height="46"/>
+                                <rect key="frame" x="64" y="28" width="247" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="42"/>
                                 <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a meme that will wow your friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seb-MW-cTj">
-                                <rect key="frame" x="97" y="106" width="181" height="106"/>
+                                <rect key="frame" x="97" y="109" width="181" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -263,21 +268,21 @@
                                     <segue destination="zMu-Db-n39" kind="presentation" modalTransitionStyle="flipHorizontal" id="2Uu-Tl-cvC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Once everyone has submitted their meme’s, you will vote on which of your friend’s meme is the funniest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrD-jM-5Qh">
-                                <rect key="frame" x="87" y="309" width="201" height="220"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
-                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Step 5:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unr-JN-P91">
-                                <rect key="frame" x="64" y="239" width="247" height="62"/>
+                                <rect key="frame" x="62" y="268" width="247" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="42"/>
                                 <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.64798266270000004" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="0.5" height="0.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Once everyone has submitted their meme’s, you will vote on which of your friend’s meme is the funniest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrD-jM-5Qh">
+                                <rect key="frame" x="87" y="334" width="201" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.92549019610000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -301,11 +306,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22z-YK-pHd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="5"/>
+            <point key="canvasLocation" x="1469.5999999999999" y="4.9475262368815596"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="2Uu-Tl-cvC"/>
         <segue reference="dSc-IA-rKh"/>
-        <segue reference="tzs-dm-fxd"/>
     </inferredMetricsTieBreakers>
 </document>
