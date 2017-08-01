@@ -61,8 +61,27 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     //MARK: - TextField Delegates
     
     func updateLabelFromTextfield() {
-        firstTextLabel.text = firstTextField.text?.uppercased()
-        secondTextLabel.text = secondTextFiled.text?.uppercased()
+        
+        guard let firstText = firstTextField.text,
+            let secondText = secondTextFiled.text else { NSLog("Label from textfield is nil"); return }
+        
+        let firstNumber = Int(firstText.characters.count)
+        let secondNumber = Int(secondText.characters.count)
+        
+        if firstNumber >= 25 {
+            
+            
+        } else {
+            firstCounter.text = "\(firstNumber)"
+            firstTextLabel.text = firstTextField.text?.uppercased()
+        }
+        
+        if secondNumber >= 25 {
+            
+        } else {
+            secondCounter.text = "\(secondNumber)"
+            secondTextLabel.text = secondTextFiled.text?.uppercased()
+        }
     }
 
     func dismissKeyboard() {
@@ -72,6 +91,20 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     //MARK: - CollectionView Delegate / DataSource
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        
+        if text.characters.count >= 25 {
+            
+            return false
+            
+        } else {
+            
+            return true
+        }
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return StoredImages.images.count
@@ -100,6 +133,8 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var secondTextFiled: UITextField!
     @IBOutlet weak var firstTextLabel: UILabel!
     @IBOutlet weak var secondTextLabel: UILabel!
+    @IBOutlet weak var firstCounter: UILabel!
+    @IBOutlet weak var secondCounter: UILabel!
     
     //MARK: - Create Meme
     
@@ -187,7 +222,6 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     
     //MARK: - Randomizer
     func randomWinner() -> String {
-        //FIXME: - Cleanup
         let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: CreateMemeViewController.currentPlayerArray.count)
         return CreateMemeViewController.currentPlayerArray[randomNumber]
     }

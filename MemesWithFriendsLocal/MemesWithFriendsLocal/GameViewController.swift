@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import GameKit
 
 class GameViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getNamesFromMemes()
+        
+        // Need this to make sure everything in view is loaded, crashes if there is no timer
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (_) in
+            self.person = self.playersArray[0]
+            self.presentAlertController()
+            self.playersArray.remove(at: 0)
+        }
     }
+    
+    //MARK: - Properties
+    
+    var playersArray: [String] = []
+    var person: String = ""
     
     //MARK: - UICollection View DataSource / Delegate
     
@@ -43,22 +58,51 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
             NSLog("Numbers of votes 0")
             performSegue(withIdentifier: "resultsSegue", sender: self)
         } else {
-            let alert = UIAlertController(title: "Next Person", message: "Please pass device to the next person", preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alert.addAction(okAction)
-            present(alert, animated: true)
+            self.person = randomWinner()
+            presentAlertController()
+            clearPerson()
         }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    //MARK: - Generic Alert Controller
+    
+    func presentAlertController() {
+        let alert = UIAlertController(title: "\(self.person)'s turn", message: "Please pass device to this person", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+    //MARK: - Randomizer
+    
+    func clearPerson() {
+        if let personIndex = playersArray.index(of: self.person) {
+            playersArray.remove(at: personIndex)
+        }
+        
+        self.person = ""
+    }
+    
+    func randomWinner() -> String {
+        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: self.playersArray.count)
+        return self.playersArray[randomNumber]
+    }
+    
+    func getNamesFromMemes() {
+        for i in MemeController.shared.memes {
+            guard let player = i.playerName else { NSLog("PlayerName was nil"); return }
+            playersArray.append(player)
+        }
+    }
+    
     
 }
+
+
+
+
+
+
+
+
