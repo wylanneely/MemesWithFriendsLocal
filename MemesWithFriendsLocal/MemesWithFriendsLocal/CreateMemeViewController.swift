@@ -18,8 +18,10 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         
         colorPicker.delegate = self
         
+        // Gets called anytime the textField changes
         NotificationCenter.default.addObserver(self, selector: #selector(updateLabelFromTextfield), name: Notification.Name.UITextFieldTextDidChange, object: nil)
         
+        // Need this to make sure everything in view is loaded, crashes if there is no timer
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (_) in
             self.person = CreateMemeViewController.currentPlayerArray[0]
             self.presentAlertController()
