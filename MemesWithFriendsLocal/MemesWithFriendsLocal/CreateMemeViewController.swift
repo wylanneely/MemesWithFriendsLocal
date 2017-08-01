@@ -18,6 +18,9 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         
         colorPicker.delegate = self
         
+        firstTextField.tag = 1
+        secondTextFiled.tag = 2
+        
         // Gets called anytime the textField changes
         NotificationCenter.default.addObserver(self, selector: #selector(updateLabelFromTextfield), name: Notification.Name.UITextFieldTextDidChange, object: nil)
         
@@ -68,7 +71,7 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         let firstNumber = Int(firstText.characters.count)
         let secondNumber = Int(secondText.characters.count)
         
-        if firstNumber >= 25 {
+        if firstNumber >= 28 {
             
             
         } else {
@@ -76,7 +79,7 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
             firstTextLabel.text = firstTextField.text?.uppercased()
         }
         
-        if secondNumber >= 25 {
+        if secondNumber >= 16 {
             
         } else {
             secondCounter.text = "\(secondNumber)"
@@ -93,17 +96,35 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     //MARK: - CollectionView Delegate / DataSource
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         guard let text = textField.text else { return true }
         
-        if text.characters.count >= 25 {
+        // First Text Field
+        if textField.tag == 1 {
             
-            return false
+            if text.characters.count >= 28 {
+                return false
+            } else {
+                return true
+            }
             
-        } else {
-            
-            return true
         }
         
+        // Second Text Field
+        
+        if textField.tag == 2 {
+            
+            if text.characters.count >= 16 {
+                return false
+            } else {
+                return true
+            }
+            
+        }
+        
+        // Default
+        
+        return true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -146,6 +167,8 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         firstTextLabel.text = ""
         secondTextLabel.text = ""
         memeImageView.image = nil
+        firstCounter.text = "0"
+        secondCounter.text = "0"
     }
     
     var counter = 0
