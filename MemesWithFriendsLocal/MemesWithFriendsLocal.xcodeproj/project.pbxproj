@@ -12,6 +12,8 @@
 		2D98D0501F2F8ABE00D37B9A /* SecondInstructionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98D04F1F2F8ABE00D37B9A /* SecondInstructionScreenViewController.swift */; };
 		2D98D0521F2F8B4E00D37B9A /* ThirdInstructionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98D0511F2F8B4E00D37B9A /* ThirdInstructionScreenViewController.swift */; };
 		2D98D0541F2F95F500D37B9A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98D0531F2F95F500D37B9A /* Player.swift */; };
+		2DD383E91F30D48000B3967B /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD383E81F30D48000B3967B /* Impact.ttf */; };
+		2DD383EB1F30D6F900B3967B /* CustomMemeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD383EA1F30D6F900B3967B /* CustomMemeLabel.swift */; };
 		6B1010F81F2F866A00D5C40E /* Instructions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1010F71F2F866A00D5C40E /* Instructions.storyboard */; };
 		6BB29B5F1F2BE332009BF446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB29B5E1F2BE332009BF446 /* AppDelegate.swift */; };
 		6BB29B641F2BE332009BF446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB29B621F2BE332009BF446 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		2D98D04F1F2F8ABE00D37B9A /* SecondInstructionScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondInstructionScreenViewController.swift; sourceTree = "<group>"; };
 		2D98D0511F2F8B4E00D37B9A /* ThirdInstructionScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdInstructionScreenViewController.swift; sourceTree = "<group>"; };
 		2D98D0531F2F95F500D37B9A /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		2DD383E81F30D48000B3967B /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
+		2DD383EA1F30D6F900B3967B /* CustomMemeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMemeLabel.swift; sourceTree = "<group>"; };
 		6B1010F71F2F866A00D5C40E /* Instructions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Instructions.storyboard; sourceTree = "<group>"; };
 		6BB29B5B1F2BE332009BF446 /* MemesWithFriendsLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemesWithFriendsLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB29B5E1F2BE332009BF446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,9 +88,19 @@
 		2D98D0481F2F886300D37B9A /* Design Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DD383E71F30D44E00B3967B /* Fonts */,
 				2D98D0491F2F888400D37B9A /* InstructionBackgroundView.swift */,
+				2DD383EA1F30D6F900B3967B /* CustomMemeLabel.swift */,
 			);
 			name = "Design Files";
+			sourceTree = "<group>";
+		};
+		2DD383E71F30D44E00B3967B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2DD383E81F30D48000B3967B /* Impact.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		6B1010F61F2F865000D5C40E /* InstructionsViewController */ = {
@@ -309,6 +323,7 @@
 				6BB29B691F2BE332009BF446 /* LaunchScreen.storyboard in Resources */,
 				6BB29B661F2BE332009BF446 /* Assets.xcassets in Resources */,
 				6BE52E031F2D780E0030FF39 /* Results.storyboard in Resources */,
+				2DD383E91F30D48000B3967B /* Impact.ttf in Resources */,
 				6B1010F81F2F866A00D5C40E /* Instructions.storyboard in Resources */,
 				6BB29B861F2BE4DD009BF446 /* Setup.storyboard in Resources */,
 				6BB29B771F2BE402009BF446 /* MainView.storyboard in Resources */,
@@ -331,6 +346,7 @@
 				6BE52E051F2D78420030FF39 /* ResultsViewController.swift in Sources */,
 				6BB29B8A1F2BE6E2009BF446 /* Game.swift in Sources */,
 				6BB29B5F1F2BE332009BF446 /* AppDelegate.swift in Sources */,
+				2DD383EB1F30D6F900B3967B /* CustomMemeLabel.swift in Sources */,
 				6BB29B7C1F2BE453009BF446 /* GameViewController.swift in Sources */,
 				2D98D04A1F2F888400D37B9A /* InstructionBackgroundView.swift in Sources */,
 				6BBE34851F2BF152000E32F4 /* ColorPicker.swift in Sources */,
