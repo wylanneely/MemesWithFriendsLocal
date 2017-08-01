@@ -69,7 +69,7 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //MARK: - Generic Alert Controller
     
     func presentAlertController() {
-        let alert = UIAlertController(title: "\(self.person)'s turn", message: "Please pass device to this person", preferredStyle: .alert)
+        let alert = UIAlertController(title: "\(self.person)'s turn to vote", message: "Please pass device to this person", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okAction)
