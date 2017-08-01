@@ -102,6 +102,12 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         // First Text Field
         if textField.tag == 1 {
             
+            let  char = string.cString(using: .utf8)!
+            let isBackSpace = strcmp(char, "\\b")
+            if (isBackSpace == -92) {
+                return true
+            }
+            
             if text.characters.count >= 28 {
                 return false
             } else {
@@ -113,6 +119,12 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         // Second Text Field
         
         if textField.tag == 2 {
+            
+            let  char = string.cString(using: .utf8)!
+            let isBackSpace = strcmp(char, "\\b")
+            if (isBackSpace == -92) {
+                return true
+            }
             
             if text.characters.count >= 16 {
                 return false
