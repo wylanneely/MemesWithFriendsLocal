@@ -77,6 +77,7 @@
 		6BB29B981F2BEDBC009BF446 /* MemeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeController.swift; sourceTree = "<group>"; };
 		6BB29B9A1F2BEDDB009BF446 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		6BBE34841F2BF152000E32F4 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		6BCF0AB11F31360A00419FD9 /* MemesWithFriendsLocal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemesWithFriendsLocal.entitlements; sourceTree = "<group>"; };
 		6BE52DFD1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeVoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		6BE52E021F2D780E0030FF39 /* Results.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		6BE52E041F2D78420030FF39 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 		6BB29B701F2BE3C0009BF446 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BCF0AB11F31360A00419FD9 /* MemesWithFriendsLocal.entitlements */,
 				6BB29B711F2BE3C8009BF446 /* Storyboards */,
 				6BB29B651F2BE332009BF446 /* Assets.xcassets */,
 				6BB29B671F2BE332009BF446 /* LaunchScreen.storyboard */,
@@ -305,6 +307,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = N8EMAYLL43;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
