@@ -24,10 +24,10 @@ class ResultsViewController: UIViewController {
     var meme: Meme? {
         didSet{
             guard let meme = meme else { NSLog("Meme is Nil"); return }
-            firstTextLabel.text = meme.firstText
+            firstTextLabel.text = meme.firstText.uppercased()
             firstTextLabel.textColor = meme.memeTextColor
             secondTextLabel.textColor = meme.memeTextColor
-            secondTextLabel.text = meme.secondText
+            secondTextLabel.text = meme.secondText.uppercased()
             winnerImageView.image = meme.image
             votesLabel.text = "Votes: \(meme.voteCount)"
             playerLabel.text = meme.playerName

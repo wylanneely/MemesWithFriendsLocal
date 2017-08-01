@@ -40,11 +40,13 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let meme = MemeController.shared.memes[indexPath.row]
         
-        cell.topTextLabel.text = meme.firstText
-        cell.bottomTextLabel.text = meme.secondText
+        cell.topTextLabel.text = meme.firstText.uppercased()
+        cell.bottomTextLabel.text = meme.secondText.uppercased()
         cell.memeImage.image = meme.image
         cell.topTextLabel.textColor = meme.memeTextColor
         cell.bottomTextLabel.textColor = meme.memeTextColor
+    
+        
         
         return cell
     }
