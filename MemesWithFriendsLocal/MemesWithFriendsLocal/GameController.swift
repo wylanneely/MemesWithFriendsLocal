@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GameKit
 
 class GameController {
     
@@ -14,11 +15,20 @@ class GameController {
     static let shared = GameController()
     var game: Game?
     
+    var person: String = ""
+    var currentPlayerArray: [String] = []
+    
     //MARK: - CRUD
     
     func createGameWith(numberOfPlayers: Int, topic: String) {
         
         game = Game(numberOfPlayers: numberOfPlayers, topic: topic)
+    }
+    
+    //MARK: - Randomizer
+    func randomWinner() -> String {
+        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: CreateMemeViewController.currentPlayerArray.count)
+        return CreateMemeViewController.currentPlayerArray[randomNumber]
     }
     
 }

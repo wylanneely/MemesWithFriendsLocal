@@ -23,18 +23,9 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
         firstTextField.tag = 1
         secondTextFiled.tag = 2
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
-        
         // Gets called anytime the textField changes
         NotificationCenter.default.addObserver(self, selector: #selector(updateLabelFromTextfield), name: Notification.Name.UITextFieldTextDidChange, object: nil)
         
-        // Need this to make sure everything in view is loaded, crashes if there is no timer
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (_) in
-            self.person = CreateMemeViewController.currentPlayerArray[0]
-            self.presentAlertController()
-            CreateMemeViewController.currentPlayerArray.remove(at: 0)
-        }
         
     }
     
@@ -164,31 +155,9 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
         return true
     }
     
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return StoredImages.images.count
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "memeImageCell", for: indexPath) as? MemeImagesCollectionViewCell else { return UICollectionViewCell()}
-//        cell.delegate = self
-//        let image = StoredImages.images[indexPath.row]
-//        cell.image.image = image
-//        
-//        return cell
-//    }
-//    
-//    func memeImageButtonTappped(cell: MemeImagesCollectionViewCell) {
-//        guard let image = cell.image.image else {return}
-//        self.memeImageView.image = image
-//        self.firstTextField.isEnabled = true
-//        self.secondTextFiled.isEnabled = true
-//        self.firstTextField.becomeFirstResponder()
-//    }
-    
     //MARK: - IBOutlets
     
     @IBOutlet weak var colorPicker: ColorPicker!
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var memeImageView: UIImageView!
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextFiled: UITextField!
@@ -241,22 +210,22 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
         } else {
             GameController.shared.game?.numberOfMemes -= 1
             clearMeme()
-            
+            // Segue Back
+            performSegue(withIdentifier: "backToMemeSelection", sender: self)
         }
         
-        self.person = randomWinner()
-        presentAlertController()
     }
     
     //MARK: - Create Meme Functions
     
     func createMemeWithRemoval() {
-        
+        print("With removal called")
+
         guard let firstText = firstTextField.text,
             let secondText = secondTextFiled.text,
             let image = memeImageView.image else { return }
         
-        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor, playerName: self.person)
+        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor, playerName: GameController.shared.person)
         
         // Removes person from array
         if let personIndex = CreateMemeViewController.currentPlayerArray.index(of: self.person) {
@@ -268,32 +237,16 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     }
     
     func createMemeWithoutRemoval() {
-        
+        print("Without removal called")
         guard let firstText = firstTextField.text,
             let secondText = secondTextFiled.text,
             let image = memeImageView.image else { return }
         
-        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor, playerName: self.person)
+        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor, playerName: GameController.shared.person)
 
-        self.person = ""
+        
         self.counter += 1
         clearMeme()
-    }
-    
-    //MARK: - Generic Alert Controller
-    
-    func presentAlertController() {
-        let alert = UIAlertController(title: "\(self.person)'s turn", message: "Please pass device to this person", preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
-    //MARK: - Randomizer
-    func randomWinner() -> String {
-        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: CreateMemeViewController.currentPlayerArray.count)
-        return CreateMemeViewController.currentPlayerArray[randomNumber]
     }
 
 }
