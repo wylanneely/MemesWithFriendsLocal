@@ -13,6 +13,8 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     
     //MARK: - Lifecycle Methods
     
+    var keyboardIsShown = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,8 +25,11 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
         firstTextField.tag = 1
         secondTextFiled.tag = 2
         
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        
         // Gets called anytime the textField changes
-        NotificationCenter.default.addObserver(self, selector: #selector(updateLabelFromTextfield), name: Notification.Name.UITextFieldTextDidChange, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(updateLabelFromTextfield), name: Notification.Name.UITextFieldTextDidChange, object: nil)
         
         
     }
@@ -38,11 +43,28 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     
     //MARK: - Spencer's Keyboard Functions
     
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        resignFirstResponder()
+//        let notification = NSNotification(name: Notification.Name.UIKeyboardWillHide, object: self)
+//        keyboardWillHide(notification: notification)
+//    }
+    
+    //MARK: - Keyboard Functions
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    
     func keyboardWillShow(notification: NSNotification) {
         
+        guard !keyboardIsShown else { return }
+        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0{
+            if self.view.frame.origin.y == 0 {
                 self.view.frame.origin.y -= keyboardSize.height
+                keyboardIsShown = true
             }
         }
         
@@ -50,8 +72,9 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0{
+            if self.view.frame.origin.y != 0 {
                 self.view.frame.origin.y += keyboardSize.height
+                keyboardIsShown = false
             }
         }
     }
@@ -72,41 +95,43 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     }
     
     func pickedColor(color: UIColor) {
-        firstTextLabel.textColor = color
-        secondTextLabel.textColor = color
+//        firstTextLabel.textColor = color
+//        secondTextLabel.textColor = color
+        firstTextField.textColor = color
+        secondTextFiled.textColor = color
         currentColor = color// I added this, good addition?
     }
     
     //MARK: - TextField Delegates
     
-    func updateLabelFromTextfield() {
-        
-        guard let firstText = firstTextField.text,
-            let secondText = secondTextFiled.text else { NSLog("Label from textfield is nil"); return }
-        
-        let firstNumber = Int(firstText.characters.count)
-        let secondNumber = Int(secondText.characters.count)
-        
-        if firstNumber >= 24 {
-            
-            
-        } else {
-            firstCounter.text = "\(firstNumber)"
-            firstTextLabel.text = firstTextField.text?.uppercased()
-        }
-        
-        if secondNumber >= 16 {
-            
-        } else {
-            secondCounter.text = "\(secondNumber)"
-            secondTextLabel.text = secondTextFiled.text?.uppercased()
-        }
-    }
+//    func updateLabelFromTextfield() {
+//        
+//        guard let firstText = firstTextField.text,
+//            let secondText = secondTextFiled.text else { NSLog("Label from textfield is nil"); return }
+//        
+//        let firstNumber = Int(firstText.characters.count)
+//        let secondNumber = Int(secondText.characters.count)
+//        
+//        if firstNumber >= 24 {
+//            
+//            
+//        } else {
+//            firstCounter.text = "\(firstNumber)"
+//            firstTextLabel.text = firstTextField.text?.uppercased()
+//        }
+//        
+//        if secondNumber >= 16 {
+//            
+//        } else {
+//            secondCounter.text = "\(secondNumber)"
+//            secondTextLabel.text = secondTextFiled.text?.uppercased()
+//        }
+//    }
 
     func dismissKeyboard() {
         view.endEditing(true)
-        self.firstTextLabel.text = self.firstTextField.text
-        self.secondTextLabel.text = self.secondTextFiled.text
+//        self.firstTextLabel.text = self.firstTextField.text
+//        self.secondTextLabel.text = self.secondTextFiled.text
     }
     
     //MARK: - CollectionView Delegate / DataSource
@@ -161,10 +186,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     @IBOutlet weak var memeImageView: UIImageView!
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextFiled: UITextField!
-    @IBOutlet weak var firstTextLabel: UILabel!
-    @IBOutlet weak var secondTextLabel: UILabel!
-    @IBOutlet weak var firstCounter: UILabel!
-    @IBOutlet weak var secondCounter: UILabel!
+
     
     var image: UIImage?
     
@@ -173,11 +195,9 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     func clearMeme() {
         firstTextField.text = ""
         secondTextFiled.text = ""
-        firstTextLabel.text = ""
-        secondTextLabel.text = ""
+//        firstTextLabel.text = ""
+//        secondTextLabel.text = ""
         memeImageView.image = nil
-        firstCounter.text = "0"
-        secondCounter.text = "0"
     }
     
     var counter = 0
@@ -188,8 +208,8 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     
     @IBAction func tapGestureButtonTapped(_ sender: Any) {
         
-//        firstTextField.resignFirstResponder()
-//        secondTextFiled.resignFirstResponder()
+        firstTextField.resignFirstResponder()
+        secondTextFiled.resignFirstResponder()
     }
     
     

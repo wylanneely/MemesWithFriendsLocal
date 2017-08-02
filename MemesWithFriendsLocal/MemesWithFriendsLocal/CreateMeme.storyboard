@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -47,96 +46,45 @@
                                     <segue destination="SBC-MN-ds9" kind="show" identifier="gameView" id="4Vr-6P-UEI"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uJE-Q3-WKH">
-                                <rect key="frame" x="28" y="29" width="319" height="319"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kbg-0i-6tg" customClass="ColorPicker" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                                <rect key="frame" x="50" y="342" width="275" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="319" id="0Gn-tC-2ym"/>
-                                    <constraint firstAttribute="height" constant="319" id="1he-T4-wcf"/>
+                                    <constraint firstAttribute="width" secondItem="Kbg-0i-6tg" secondAttribute="height" multiplier="11:2" id="dGG-KG-VKi"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uJE-Q3-WKH">
+                                <rect key="frame" x="37" y="20" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="SS4-Bi-gec"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fL-92-y1X">
-                                <rect key="frame" x="44" y="294" width="287" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Top text..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBp-GM-BRh">
+                                <rect key="frame" x="61" y="28" width="253" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="b27-4c-j7R"/>
+                                    <constraint firstAttribute="width" secondItem="sBp-GM-BRh" secondAttribute="height" multiplier="253:56" id="tz4-DJ-eDM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.81977739729999999" colorSpace="custom" customColorSpace="displayP3"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Z4t-8m-9d1">
-                                <rect key="frame" x="50" y="368" width="275" height="147.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="9dR-Sm-jdL">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="29"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Top text..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBp-GM-BRh">
-                                                <rect key="frame" x="0.0" y="0.0" width="242.5" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="sBp-GM-BRh" secondAttribute="height" multiplier="261:31" id="JKr-Wh-rul"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="pGo-br-6Pq" id="z7J-t4-sl6"/>
-                                                </connections>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJe-ju-uqQ">
-                                                <rect key="frame" x="264.5" y="0.0" width="10.5" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="laq-iu-ovX">
-                                        <rect key="frame" x="0.0" y="49" width="275" height="28.5"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bottom text..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pzf-Q1-7DR">
-                                                <rect key="frame" x="0.0" y="0.0" width="241.5" height="28.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Pzf-Q1-7DR" secondAttribute="height" multiplier="261:31" id="sTW-dT-qie"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="pGo-br-6Pq" id="RO7-DQ-Hap"/>
-                                                </connections>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkp-1l-MI2">
-                                                <rect key="frame" x="264.5" y="0.0" width="10.5" height="28.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kbg-0i-6tg" customClass="ColorPicker" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="97.5" width="275" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Kbg-0i-6tg" secondAttribute="height" multiplier="11:2" id="Ty3-p1-rJl"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTD-xu-EHZ">
-                                <rect key="frame" x="44" y="28" width="287" height="95"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pGo-br-6Pq" id="z7J-t4-sl6"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bottom text..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pzf-Q1-7DR">
+                                <rect key="frame" x="67" y="260" width="242" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="0ub-88-9B2"/>
+                                    <constraint firstAttribute="width" secondItem="Pzf-Q1-7DR" secondAttribute="height" multiplier="242:51" id="bAE-rZ-nlf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.81977739726027399" colorSpace="custom" customColorSpace="displayP3"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jon-OR-dYg" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                                <rect key="frame" x="144" y="536" width="87" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pGo-br-6Pq" id="RO7-DQ-Hap"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jon-OR-dYg" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                                <rect key="frame" x="116" y="418" width="143" height="30"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -179,20 +127,25 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="0fL-92-y1X" firstAttribute="width" secondItem="uJE-Q3-WKH" secondAttribute="width" multiplier="0.9" id="7BT-1c-pFa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kbg-0i-6tg" secondAttribute="trailing" constant="34" id="4Gb-7b-o7B"/>
+                            <constraint firstItem="uJE-Q3-WKH" firstAttribute="top" secondItem="c68-Q4-JaG" secondAttribute="bottom" id="993-dL-j6g"/>
+                            <constraint firstItem="Kbg-0i-6tg" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="34" id="AGV-a5-FZ1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jon-OR-dYg" secondAttribute="trailing" constant="100" id="Bmm-Zg-Chq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3EZ-RN-wkz" secondAttribute="trailing" constant="1" id="D6D-Bt-0LF"/>
-                            <constraint firstItem="0fL-92-y1X" firstAttribute="bottom" secondItem="uJE-Q3-WKH" secondAttribute="bottom" multiplier="0.99" id="Jwu-yg-JBU"/>
+                            <constraint firstItem="Jon-OR-dYg" firstAttribute="top" secondItem="Kbg-0i-6tg" secondAttribute="bottom" constant="26" id="Gil-e2-ebD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pzf-Q1-7DR" secondAttribute="trailing" constant="50" id="Gx2-ap-Lwg"/>
+                            <constraint firstItem="uJE-Q3-WKH" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="H0S-m0-fhI"/>
+                            <constraint firstItem="sBp-GM-BRh" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="45" id="RJS-Aa-fP8"/>
+                            <constraint firstItem="Pzf-Q1-7DR" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="51" id="SeL-nU-AbZ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="3EZ-RN-wkz" secondAttribute="bottom" constant="1" id="XTs-oh-PNt"/>
-                            <constraint firstItem="wTD-xu-EHZ" firstAttribute="width" secondItem="uJE-Q3-WKH" secondAttribute="width" multiplier="0.9" id="b31-pu-5p7"/>
-                            <constraint firstItem="uJE-Q3-WKH" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="12" id="edc-i7-51H"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uJE-Q3-WKH" secondAttribute="trailing" constant="12" id="elQ-8r-dZd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Z4t-8m-9d1" secondAttribute="trailing" constant="34" id="khU-sS-h3F"/>
-                            <constraint firstItem="Z4t-8m-9d1" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="34" id="nox-R0-OSN"/>
-                            <constraint firstItem="0fL-92-y1X" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="oez-i2-YwO"/>
-                            <constraint firstItem="wTD-xu-EHZ" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="qcx-9Y-FfI"/>
-                            <constraint firstItem="wTD-xu-EHZ" firstAttribute="top" secondItem="uJE-Q3-WKH" secondAttribute="top" multiplier="0.99" id="sZy-Vf-D2B"/>
-                            <constraint firstItem="Z4t-8m-9d1" firstAttribute="top" secondItem="uJE-Q3-WKH" secondAttribute="bottom" constant="20" id="t4u-SF-kNg"/>
-                            <constraint firstItem="uJE-Q3-WKH" firstAttribute="top" secondItem="c68-Q4-JaG" secondAttribute="bottom" constant="9" id="yJx-As-heU"/>
+                            <constraint firstItem="Pzf-Q1-7DR" firstAttribute="top" secondItem="HQl-r7-9yc" secondAttribute="top" constant="260" id="ZmP-6D-Jbo"/>
+                            <constraint firstItem="Pzf-Q1-7DR" firstAttribute="centerX" secondItem="Jon-OR-dYg" secondAttribute="centerX" id="c3n-Cq-yJ9"/>
+                            <constraint firstItem="uJE-Q3-WKH" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="21" id="c76-X7-1aH"/>
+                            <constraint firstItem="sBp-GM-BRh" firstAttribute="top" secondItem="c68-Q4-JaG" secondAttribute="bottom" constant="8" id="g3y-bG-bFl"/>
+                            <constraint firstItem="Kbg-0i-6tg" firstAttribute="top" secondItem="Pzf-Q1-7DR" secondAttribute="bottom" constant="31" id="iVQ-if-vSV"/>
+                            <constraint firstItem="Pzf-Q1-7DR" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="iuc-En-w9L"/>
+                            <constraint firstItem="Jon-OR-dYg" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="100" id="tHm-jq-yDf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sBp-GM-BRh" secondAttribute="trailing" constant="45" id="wIo-d6-awG"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
@@ -208,13 +161,9 @@
                     </view>
                     <connections>
                         <outlet property="colorPicker" destination="Kbg-0i-6tg" id="dSv-yY-rPi"/>
-                        <outlet property="firstCounter" destination="yJe-ju-uqQ" id="BvF-j6-zDa"/>
                         <outlet property="firstTextField" destination="sBp-GM-BRh" id="3dE-cK-gH9"/>
-                        <outlet property="firstTextLabel" destination="wTD-xu-EHZ" id="EZI-Wj-dJI"/>
                         <outlet property="memeImageView" destination="uJE-Q3-WKH" id="V3e-HF-xcO"/>
-                        <outlet property="secondCounter" destination="Vkp-1l-MI2" id="UPK-I5-Tf9"/>
                         <outlet property="secondTextFiled" destination="Pzf-Q1-7DR" id="vmk-lb-d3X"/>
-                        <outlet property="secondTextLabel" destination="0fL-92-y1X" id="8KI-Wm-VdW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6e-Fm-zUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
