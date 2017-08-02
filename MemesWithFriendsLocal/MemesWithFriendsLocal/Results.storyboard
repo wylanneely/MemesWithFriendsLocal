@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U0C-SW-BzN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U0C-SW-BzN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,7 +39,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-A1-9Zs">
                                 <rect key="frame" x="44" y="448" width="287" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ix7-9h-thr"/>
+                                    <constraint firstAttribute="width" secondItem="dwC-A1-9Zs" secondAttribute="height" multiplier="287:50" id="gT9-s3-GXh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="31"/>
                                 <nil key="textColor"/>
@@ -47,7 +48,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxJ-LV-kGt">
                                 <rect key="frame" x="44" y="183" width="287" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="0Ks-zp-pCz"/>
+                                    <constraint firstAttribute="width" secondItem="mxJ-LV-kGt" secondAttribute="height" multiplier="287:95" id="epc-Aa-j8J"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="31"/>
                                 <nil key="textColor"/>
@@ -65,18 +66,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-nO-50B">
-                                <rect key="frame" x="162" y="617" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-nO-50B">
+                                <rect key="frame" x="162.5" y="617" width="50" height="30"/>
                                 <state key="normal" title="Restart"/>
                                 <connections>
                                     <action selector="restartGameButtonTapped:" destination="U0C-SW-BzN" eventType="touchUpInside" id="EQk-ML-DlP"/>
                                     <segue destination="aZe-sa-wGq" kind="show" id="U6G-Hi-TbA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-aE-upa">
-                                <rect key="frame" x="170" y="70" width="56" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-aE-upa">
+                                <rect key="frame" x="8" y="70" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,17 +84,24 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dwC-A1-9Zs" firstAttribute="width" secondItem="zlt-mp-11N" secondAttribute="width" multiplier="0.9" id="01U-4k-hbb"/>
+                            <constraint firstItem="I5I-Mr-P2W" firstAttribute="top" secondItem="EhL-nO-50B" secondAttribute="bottom" constant="20" id="25W-63-6vO"/>
+                            <constraint firstItem="EhL-nO-50B" firstAttribute="leading" secondItem="Ox5-Gt-CZS" secondAttribute="leadingMargin" constant="146.59999999999999" id="A7I-6n-ooh"/>
                             <constraint firstItem="Rb3-wr-6AK" firstAttribute="leading" secondItem="Ox5-Gt-CZS" secondAttribute="leadingMargin" id="EP1-2W-Avo"/>
+                            <constraint firstAttribute="trailing" secondItem="pfP-aE-upa" secondAttribute="trailing" constant="8" id="FCn-Ns-cbD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fGz-sx-AP2" secondAttribute="trailing" id="HwC-2l-J7t"/>
                             <constraint firstItem="mxJ-LV-kGt" firstAttribute="top" secondItem="zlt-mp-11N" secondAttribute="top" multiplier="0.99" id="Jhb-0k-Y0F"/>
+                            <constraint firstItem="pfP-aE-upa" firstAttribute="leading" secondItem="Ox5-Gt-CZS" secondAttribute="leading" constant="8" id="K19-zZ-Hhi"/>
                             <constraint firstItem="fGz-sx-AP2" firstAttribute="top" secondItem="zlt-mp-11N" secondAttribute="bottom" constant="8" id="KE5-RY-HUT"/>
                             <constraint firstItem="mxJ-LV-kGt" firstAttribute="width" secondItem="zlt-mp-11N" secondAttribute="width" multiplier="0.9" id="QJB-bD-lDO"/>
                             <constraint firstItem="dwC-A1-9Zs" firstAttribute="bottom" secondItem="zlt-mp-11N" secondAttribute="bottom" multiplier="0.99" id="YbW-Yh-YYs"/>
+                            <constraint firstItem="pfP-aE-upa" firstAttribute="top" secondItem="d3B-Sd-bP5" secondAttribute="bottom" constant="50" id="YnB-l5-w68"/>
                             <constraint firstItem="mxJ-LV-kGt" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="c5B-ga-1Zv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rb3-wr-6AK" secondAttribute="trailing" id="gCC-Uv-dCz"/>
                             <constraint firstItem="mxJ-LV-kGt" firstAttribute="top" secondItem="Rb3-wr-6AK" secondAttribute="bottom" constant="8" id="lUz-54-zvv"/>
                             <constraint firstItem="dwC-A1-9Zs" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="mvk-ev-G6e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EhL-nO-50B" secondAttribute="trailing" constant="146.5" id="pxE-DT-J4g"/>
                             <constraint firstItem="mxJ-LV-kGt" firstAttribute="top" secondItem="d3B-Sd-bP5" secondAttribute="bottom" constant="163" id="qhu-wj-T31"/>
+                            <constraint firstItem="pfP-aE-upa" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="tny-4K-rW9"/>
                             <constraint firstItem="zlt-mp-11N" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="yoF-fe-p2l"/>
                             <constraint firstItem="fGz-sx-AP2" firstAttribute="leading" secondItem="Ox5-Gt-CZS" secondAttribute="leadingMargin" id="zyC-aO-VHc"/>
                         </constraints>
