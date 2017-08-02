@@ -225,7 +225,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         if segue.identifier == "segueToCreateMeme" {
             
-            if let createMemeVC = segue.destination as? CreateMemeViewController {
+            if let createMemeVC = segue.destination as? PickMemeViewController {
                 createPlayersForGame()
             }
         }

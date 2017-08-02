@@ -206,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="-322.39999999999998" y="146.17691154422789"/>
         </scene>
-        <!--CreateMeme-->
+        <!--PickMeme-->
         <scene sceneID="mEj-MV-Gkg">
             <objects>
-                <viewControllerPlaceholder storyboardName="CreateMeme" id="B8j-Gt-loY" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PickMeme" id="B8j-Gt-loY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w20-ms-0ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="297" y="146"/>

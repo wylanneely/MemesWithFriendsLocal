@@ -9,17 +9,22 @@
 import UIKit
 import GameKit
 
-class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, ColorDelegate, MemeImageSelectedDelegate {
+class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDelegate {
     
     //MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.memeImageView.image = image
+        
         colorPicker.delegate = self
         
         firstTextField.tag = 1
         secondTextFiled.tag = 2
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
         
         // Gets called anytime the textField changes
         NotificationCenter.default.addObserver(self, selector: #selector(updateLabelFromTextfield), name: Notification.Name.UITextFieldTextDidChange, object: nil)
@@ -37,6 +42,26 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     static var currentPlayerArray: [String] = [] {
         didSet {
             print(currentPlayerArray.count)
+        }
+    }
+    
+    //MARK: - Spencer's Keyboard Functions
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
         }
     }
     
@@ -139,23 +164,26 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
         return true
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return StoredImages.images.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "memeImageCell", for: indexPath) as? MemeImagesCollectionViewCell else { return UICollectionViewCell()}
-        cell.delegate = self
-        let image = StoredImages.images[indexPath.row]
-        cell.image.image = image
-        
-        return cell
-    }
-    
-    func memeImageButtonTappped(cell: MemeImagesCollectionViewCell) {
-        guard let image = cell.image.image else {return}
-        self.memeImageView.image = image
-    }
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return StoredImages.images.count
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "memeImageCell", for: indexPath) as? MemeImagesCollectionViewCell else { return UICollectionViewCell()}
+//        cell.delegate = self
+//        let image = StoredImages.images[indexPath.row]
+//        cell.image.image = image
+//        
+//        return cell
+//    }
+//    
+//    func memeImageButtonTappped(cell: MemeImagesCollectionViewCell) {
+//        guard let image = cell.image.image else {return}
+//        self.memeImageView.image = image
+//        self.firstTextField.isEnabled = true
+//        self.secondTextFiled.isEnabled = true
+//        self.firstTextField.becomeFirstResponder()
+//    }
     
     //MARK: - IBOutlets
     
@@ -169,7 +197,7 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var firstCounter: UILabel!
     @IBOutlet weak var secondCounter: UILabel!
     
-    //MARK: - Create Meme
+    var image: UIImage?
     
     //MARK: - Clear Memes
     
@@ -188,6 +216,13 @@ class CreateMemeViewController: UIViewController, UICollectionViewDataSource, UI
     var person: String = ""
     
     //MARK: - IBActions
+    
+    @IBAction func tapGestureButtonTapped(_ sender: Any) {
+        
+//        firstTextField.resignFirstResponder()
+//        secondTextFiled.resignFirstResponder()
+    }
+    
     
     @IBAction func createMemeButtonTapped(_ sender: Any) {
 

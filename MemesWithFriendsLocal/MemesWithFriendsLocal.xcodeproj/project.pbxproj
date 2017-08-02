@@ -41,6 +41,8 @@
 		6BE52DFE1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE52DFD1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift */; };
 		6BE52E031F2D780E0030FF39 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE52E021F2D780E0030FF39 /* Results.storyboard */; };
 		6BE52E051F2D78420030FF39 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE52E041F2D78420030FF39 /* ResultsViewController.swift */; };
+		6BFA85DD1F32288F00732AC2 /* PickMeme.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFA85DC1F32288F00732AC2 /* PickMeme.storyboard */; };
+		6BFA85DF1F32289D00732AC2 /* PickMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA85DE1F32289D00732AC2 /* PickMemeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		6BE52DFD1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeVoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		6BE52E021F2D780E0030FF39 /* Results.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		6BE52E041F2D78420030FF39 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		6BFA85DC1F32288F00732AC2 /* PickMeme.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PickMeme.storyboard; sourceTree = "<group>"; };
+		6BFA85DE1F32289D00732AC2 /* PickMemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickMemeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,7 @@
 				6B1010F61F2F865000D5C40E /* InstructionsViewController */,
 				6BB29B721F2BE3D1009BF446 /* MainViewController */,
 				6BB29B841F2BE4CE009BF446 /* SetupViewController */,
+				6BFA85DB1F32286700732AC2 /* PickMemeViewController */,
 				6BB29B7D1F2BE48C009BF446 /* CreateMemeViewController */,
 				6BB29B781F2BE436009BF446 /* GameViewController */,
 				6BE52E011F2D77FD0030FF39 /* Results Screen */,
@@ -273,6 +278,15 @@
 			name = "Results Screen";
 			sourceTree = "<group>";
 		};
+		6BFA85DB1F32286700732AC2 /* PickMemeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA85DC1F32288F00732AC2 /* PickMeme.storyboard */,
+				6BFA85DE1F32289D00732AC2 /* PickMemeViewController.swift */,
+			);
+			name = PickMemeViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +361,7 @@
 				6BB29B861F2BE4DD009BF446 /* Setup.storyboard in Resources */,
 				6BB29B771F2BE402009BF446 /* MainView.storyboard in Resources */,
 				6BB29B831F2BE4BC009BF446 /* CreateMeme.storyboard in Resources */,
+				6BFA85DD1F32288F00732AC2 /* PickMeme.storyboard in Resources */,
 				2DD383F11F30E6E700B3967B /* Scriptorama Tradeshow JF Regular.ttf in Resources */,
 				6BB29B641F2BE332009BF446 /* Main.storyboard in Resources */,
 			);
@@ -360,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB29B7F1F2BE4A1009BF446 /* CreateMemeViewController.swift in Sources */,
+				6BFA85DF1F32289D00732AC2 /* PickMemeViewController.swift in Sources */,
 				2D98D0521F2F8B4E00D37B9A /* ThirdInstructionScreenViewController.swift in Sources */,
 				6BB29B961F2BECEC009BF446 /* MemeImagesCollectionViewCell.swift in Sources */,
 				6BE52DFE1F2D73710030FF39 /* MemeVoteCollectionViewCell.swift in Sources */,
