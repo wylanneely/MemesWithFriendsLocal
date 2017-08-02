@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-nO-50B">
-                                <rect key="frame" x="162" y="617" width="50" height="30"/>
+                                <rect key="frame" x="162.5" y="617" width="50" height="30"/>
                                 <state key="normal" title="Restart"/>
                                 <connections>
                                     <action selector="restartGameButtonTapped:" destination="U0C-SW-BzN" eventType="touchUpInside" id="EQk-ML-DlP"/>
