@@ -56,7 +56,6 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
         return true
     }
     
-    
     func keyboardWillShow(notification: NSNotification) {
         
         guard !keyboardIsShown else { return }
