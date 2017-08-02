@@ -13,6 +13,10 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        
         fourthPlayerTextField.alpha = 0
         fifthPlayerTextField.alpha = 0
         sixthPlayerTextField.alpha = 0
@@ -27,8 +31,19 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var fifthPlayerTextField: UITextField!
     @IBOutlet weak var sixthPlayerTextField: UITextField!
     @IBOutlet weak var randomTopicButton: UIButton!
+    @IBOutlet weak var numberOfPlayersTextField: UITextField!
     
     //MARK: - IBActions
+    
+    @IBAction func tapGestureTapped(_ sender: Any) {
+        
+        self.firstPlayerTextField.resignFirstResponder()
+        self.secondPlayerTextField.resignFirstResponder()
+        self.thirdPlayerTextField.resignFirstResponder()
+        self.fourthPlayerTextField.resignFirstResponder()
+        self.fifthPlayerTextField.resignFirstResponder()
+        self.sixthPlayerTextField.resignFirstResponder()
+    }
     
     @IBAction func randomTopicButtonTapped(_ sender: Any) {
         
@@ -42,8 +57,25 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var playerArray: [String] = []
     var topic: String = "No Topic"
     
-    //MARK: - IBOutlets
-    @IBOutlet weak var numberOfPlayersTextField: UITextField!
+    //MARK: - Spencer's Keyboard Functions
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
     
     //MARK: - Picker Methods / Data Source
     
