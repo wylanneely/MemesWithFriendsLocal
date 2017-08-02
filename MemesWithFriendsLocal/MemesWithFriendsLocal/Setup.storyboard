@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z4E-fk-LVz">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTh-xR-y6Y">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,7 +16,7 @@
                 <viewControllerPlaceholder storyboardName="MainView" id="noL-Ns-358" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wa1-01-twU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-945" y="372"/>
+            <point key="canvasLocation" x="-401" y="767"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="RDO-B3-3xI">
@@ -27,42 +27,39 @@
                         <viewControllerLayoutGuide type="bottom" id="2Ev-Rl-Ep2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PNc-KF-IWD" customClass="AppBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRt-s1-gWb">
-                                <rect key="frame" x="23" y="681" width="40" height="40"/>
+                                <rect key="frame" x="23" y="513" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <state key="normal" title="&lt;">
                                     <color key="titleColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <segue destination="noL-Ns-358" kind="show" id="vAz-J5-YML"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fp0-BS-xPn">
-                                <rect key="frame" x="14" y="28" width="386" height="584.66666666666663"/>
+                                <rect key="frame" x="10" y="28" width="300" height="416.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tVM-K2-ps7">
-                                        <rect key="frame" x="0.0" y="0.0" width="386" height="107.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="107.5"/>
                                         <subviews>
                                             <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Game Setup" translatesAutoresizingMaskIntoConstraints="NO" id="5U5-cA-mMO">
-                                                <rect key="frame" x="43" y="0.0" width="300" height="65"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="65"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="baq-r7-mnb"/>
                                                     <constraint firstAttribute="height" constant="65" id="hAb-nh-QBn"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vff-96-aSB">
-                                                <rect key="frame" x="103.66666666666669" y="65" width="179" height="25.666666666666671"/>
+                                                <rect key="frame" x="60.5" y="65" width="179" height="25.5"/>
                                                 <state key="normal" title="Tap Me For Random Topic"/>
                                                 <connections>
                                                     <action selector="randomTopicButtonTapped:" destination="Z4E-fk-LVz" eventType="touchUpInside" id="qTb-DF-c9a"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose between 3 - 6 players." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-JN-ddt">
-                                                <rect key="frame" x="89" y="90.666666666666657" width="208.33333333333331" height="16.666666666666671"/>
+                                                <rect key="frame" x="46" y="90.5" width="208.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -70,7 +67,7 @@
                                         </subviews>
                                     </stackView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ux-Dw-OO5">
-                                        <rect key="frame" x="0.0" y="107.33333333333334" width="386" height="95"/>
+                                        <rect key="frame" x="0.0" y="107.5" width="300" height="95"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="95" id="FPX-o4-xZk"/>
                                         </constraints>
@@ -80,13 +77,13 @@
                                         </connections>
                                     </pickerView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U4p-ud-V4h">
-                                        <rect key="frame" x="0.0" y="202.33333333333337" width="386" height="382.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="202.5" width="300" height="214"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5mk-on-t0z">
-                                                <rect key="frame" x="0.0" y="0.0" width="386" height="382.33333333333326"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="214"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IzF-a3-pnL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="386" height="63.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="35.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -94,7 +91,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecj-R5-cqE">
-                                                        <rect key="frame" x="0.0" y="63.666666666666657" width="386" height="63.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="35.5" width="300" height="35.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -102,7 +99,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Third player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-M6-wla">
-                                                        <rect key="frame" x="0.0" y="127.33333333333334" width="386" height="63.666666666666629"/>
+                                                        <rect key="frame" x="0.0" y="71" width="300" height="36"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -110,7 +107,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fourth player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vr7-2s-5e6">
-                                                        <rect key="frame" x="0.0" y="190.99999999999997" width="386" height="63.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="107" width="300" height="35.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -118,7 +115,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fifth player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDC-Ct-zIe">
-                                                        <rect key="frame" x="0.0" y="254.66666666666669" width="386" height="63.666666666666629"/>
+                                                        <rect key="frame" x="0.0" y="142.5" width="300" height="36"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -126,7 +123,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sixth player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JrZ-lR-s7B">
-                                                        <rect key="frame" x="0.0" y="318.33333333333326" width="386" height="64"/>
+                                                        <rect key="frame" x="0.0" y="178.5" width="300" height="35.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -152,7 +149,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLC-x7-tke" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                                <rect key="frame" x="191" y="681" width="32" height="27"/>
+                                <rect key="frame" x="144" y="513" width="32" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
                                 <state key="normal" title="Start">
@@ -188,9 +185,6 @@
                                         <color key="value" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="B8j-Gt-loY" kind="show" identifier="segueToCreateMeme" id="oJU-JP-t1k"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -231,7 +225,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-322.5" y="145.77464788732394"/>
+            <point key="canvasLocation" x="-401" y="119"/>
         </scene>
         <!--PickMeme-->
         <scene sceneID="mEj-MV-Gkg">
@@ -239,7 +233,224 @@
                 <viewControllerPlaceholder storyboardName="PickMeme" id="B8j-Gt-loY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w20-ms-0ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="146"/>
+            <point key="canvasLocation" x="1337" y="501"/>
+        </scene>
+        <!--Setup View Controller-->
+        <scene sceneID="K3J-J1-eK7">
+            <objects>
+                <viewController id="qTh-xR-y6Y" customClass="SetupViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZAJ-iJ-eVv"/>
+                        <viewControllerLayoutGuide type="bottom" id="5uC-Bi-NXs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HdK-1Y-kum" customClass="AppBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsV-yL-qEz">
+                                <rect key="frame" x="23" y="513" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="noL-Ns-358" kind="show" id="plS-1o-dI9"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g50-VV-w4M">
+                                <rect key="frame" x="0.0" y="74.5" width="320" height="419.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-jA-o5e">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="419.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o4D-MD-3UD">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="114.5"/>
+                                                <subviews>
+                                                    <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Game Setup" translatesAutoresizingMaskIntoConstraints="NO" id="Dyz-KU-3sr">
+                                                        <rect key="frame" x="10" y="0.0" width="300" height="65"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="65" id="Bhg-bZ-Fvc"/>
+                                                            <constraint firstAttribute="width" constant="300" id="ttR-oJ-Kz8"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlY-jN-6Tq">
+                                                        <rect key="frame" x="70.5" y="65" width="179" height="30"/>
+                                                        <state key="normal" title="Tap Me For Random Topic"/>
+                                                        <connections>
+                                                            <action selector="randomTopicButtonTapped:" destination="qTh-xR-y6Y" eventType="touchUpInside" id="UuG-mV-bah"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose between 3 - 6 players." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3G9-PH-49u">
+                                                        <rect key="frame" x="56" y="95" width="208.5" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jgT-w1-fGJ">
+                                                <rect key="frame" x="0.0" y="124.5" width="320" height="295"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFL-jk-VcY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="95" id="hvC-pr-Krx"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="qTh-xR-y6Y" id="KIo-tX-MI1"/>
+                                                            <outlet property="delegate" destination="qTh-xR-y6Y" id="ZB4-KU-1Xy"/>
+                                                        </connections>
+                                                    </pickerView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ass-iN-qmk">
+                                                        <rect key="frame" x="0.0" y="115" width="320" height="180"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rgu-ZG-0BL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7j-r1-UNA">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0X8-2W-qX8">
+                                                                        <rect key="frame" x="0.0" y="30" width="320" height="30"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Third player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="shD-gI-h5Y">
+                                                                        <rect key="frame" x="0.0" y="60" width="320" height="30"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fourth player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rG-3q-8PN">
+                                                                        <rect key="frame" x="0.0" y="90" width="320" height="30"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fifth player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGv-aT-jhP">
+                                                                        <rect key="frame" x="0.0" y="120" width="320" height="30"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sixth player..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N7Z-NF-Qdd">
+                                                                        <rect key="frame" x="0.0" y="150" width="320" height="30"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        <color key="tintColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="Rgu-ZG-0BL" secondAttribute="trailing" id="Q12-j7-rYI"/>
+                                                            <constraint firstItem="Rgu-ZG-0BL" firstAttribute="leading" secondItem="ass-iN-qmk" secondAttribute="leadingMargin" id="ZRa-wS-Wlp"/>
+                                                            <constraint firstItem="Rgu-ZG-0BL" firstAttribute="centerY" secondItem="ass-iN-qmk" secondAttribute="centerY" id="u5V-YU-elK"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-9m-YhV" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                                <rect key="frame" x="144" y="502" width="32" height="27"/>
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animate" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animateDelay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animateFrom">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="B8j-Gt-loY" kind="show" identifier="segueToCreateMeme" id="MZ3-8D-KTI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="2Vk-9m-YhV" firstAttribute="centerX" secondItem="HdK-1Y-kum" secondAttribute="centerX" id="8zk-QH-vZj"/>
+                            <constraint firstItem="g50-VV-w4M" firstAttribute="centerX" secondItem="HdK-1Y-kum" secondAttribute="centerX" id="QS0-Rg-xPe"/>
+                            <constraint firstItem="2Vk-9m-YhV" firstAttribute="top" secondItem="g50-VV-w4M" secondAttribute="bottom" constant="8" id="Wpq-0y-C15"/>
+                            <constraint firstItem="g50-VV-w4M" firstAttribute="centerY" secondItem="HdK-1Y-kum" secondAttribute="centerY" id="gOX-P2-K7L"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="d5D-6o-Fla" appends="YES" id="i5E-f3-cbU"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="fifthPlayerTextField" destination="HGv-aT-jhP" id="Rz1-32-8n9"/>
+                        <outlet property="firstPlayerTextField" destination="H7j-r1-UNA" id="ZaM-BY-bhZ"/>
+                        <outlet property="fourthPlayerTextField" destination="1rG-3q-8PN" id="Jeo-0q-8Dy"/>
+                        <outlet property="randomTopicButton" destination="NlY-jN-6Tq" id="bst-Uk-RBH"/>
+                        <outlet property="secondPlayerTextField" destination="0X8-2W-qX8" id="bpR-Lo-dcb"/>
+                        <outlet property="sixthPlayerTextField" destination="N7Z-NF-Qdd" id="ELu-23-nVl"/>
+                        <outlet property="thirdPlayerTextField" destination="shD-gI-h5Y" id="v2Z-fc-zbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJC-QU-i5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="d5D-6o-Fla">
+                    <connections>
+                        <action selector="tapGestureTapped:" destination="qTh-xR-y6Y" id="agr-lB-7DB"/>
+                        <outlet property="delegate" destination="qTh-xR-y6Y" id="7eH-6q-mdk"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="500" y="501"/>
         </scene>
     </scenes>
     <resources>
