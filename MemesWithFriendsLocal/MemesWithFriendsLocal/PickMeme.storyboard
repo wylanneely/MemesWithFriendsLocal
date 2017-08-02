@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LWz-lU-e08">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LWz-lU-e08">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,13 +18,13 @@
                         <viewControllerLayoutGuide type="top" id="5p3-zC-aAL"/>
                         <viewControllerLayoutGuide type="bottom" id="Kpr-9H-e7n"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Tri-lR-gY5">
+                    <view key="view" contentMode="scaleToFill" id="Tri-lR-gY5" customClass="AppBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kx2-wz-HkB">
                                 <rect key="frame" x="16" y="133" width="343" height="400"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n7N-cd-sv7">
                                     <size key="itemSize" width="315" height="378"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -93,6 +93,15 @@
                             <constraint firstItem="Kx2-wz-HkB" firstAttribute="top" secondItem="5p3-zC-aAL" secondAttribute="bottom" constant="113" id="iKU-VF-CGz"/>
                             <constraint firstItem="Kx2-wz-HkB" firstAttribute="leading" secondItem="Tri-lR-gY5" secondAttribute="leadingMargin" id="sPA-ES-IZI"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwM-2u-2dO" userLabel="First Responder" sceneMemberID="firstResponder"/>
