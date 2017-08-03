@@ -23,6 +23,8 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         sixthPlayerTextField.alpha = 0
     }
     
+    
+    
     //MARK: - Properties
     
     var numberOfPlayersForGame: String = "3"

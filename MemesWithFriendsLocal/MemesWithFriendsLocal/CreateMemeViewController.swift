@@ -210,7 +210,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
             let secondText = secondTextFiled.text,
             let image = memeImageView.image else { return }
         
-        MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor, playerName: GameController.shared.person)
+        MemeController.shared.createMeme(image: image, firstText: firstText.uppercased(), secondText: secondText.uppercased(), voteCount: 0, memeTextColor: currentColor, playerName: GameController.shared.person)
         
         
         self.counter += 1
