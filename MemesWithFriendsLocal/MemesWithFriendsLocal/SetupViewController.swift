@@ -14,9 +14,13 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+        
         // Keyboard Notifications for pushup view
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        
+        startButton.setImage(#imageLiteral(resourceName: "StartButtonHighlighted"), for: .highlighted)
         
         fourthPlayerTextField.alpha = 0
         fifthPlayerTextField.alpha = 0
@@ -31,6 +35,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var playerArray: [String] = []
     var topic: String = "No Topic"
     let pickerArray: [String] = ["3", "4", "5", "6"]
+    var feedbackGenerator: UIImpactFeedbackGenerator? = nil
     
     //MARK: - IBOutlets
     
@@ -43,6 +48,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var randomTopicButton: UIButton!
     @IBOutlet weak var numberOfPlayersTextField: UITextField!//FIXME: - We Can delete this right?
     @IBOutlet weak var playerPicker: UIPickerView!
+    @IBOutlet weak var startButton: UIButton!
     
     //MARK: - IBActions
     
@@ -61,6 +67,11 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         self.topic = randomTopic()
         randomTopicButton.setTitle("\(self.topic)", for: .normal)
     }
+    
+    @IBAction func startButtonTapped(_ sender: UIButton) {
+        feedbackGenerator?.impactOccurred()
+    }
+    
     
     
     //MARK: - Spencer's Keyboard Functions

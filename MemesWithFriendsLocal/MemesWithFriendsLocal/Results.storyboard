@@ -83,12 +83,11 @@
                                 <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-nO-50B" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                                <rect key="frame" x="125" y="518" width="70" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-nO-50B">
+                                <rect key="frame" x="113" y="510" width="95" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Restart">
+                                <state key="normal" image="RestartButtonNatural">
                                     <color key="titleColor" red="0.71333747719999996" green="0.56217588399999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.50347816780821919" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -151,6 +150,7 @@
                     <connections>
                         <outlet property="firstTextLabel" destination="mxJ-LV-kGt" id="gxL-LU-DPN"/>
                         <outlet property="playerLabel" destination="pfP-aE-upa" id="gqW-9v-I4m"/>
+                        <outlet property="restartButton" destination="EhL-nO-50B" id="ldA-9v-MmU"/>
                         <outlet property="secondTextLabel" destination="dwC-A1-9Zs" id="oEH-4E-O4j"/>
                         <outlet property="votesLabel" destination="fGz-sx-AP2" id="202-zU-DC6"/>
                         <outlet property="winnerImageView" destination="zlt-mp-11N" id="Jeu-nW-t2Z"/>
@@ -169,4 +169,7 @@
             <point key="canvasLocation" x="1190" y="493"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RestartButtonNatural" width="95" height="46"/>
+    </resources>
 </document>
