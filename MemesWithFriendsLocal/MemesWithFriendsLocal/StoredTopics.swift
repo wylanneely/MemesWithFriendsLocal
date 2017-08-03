@@ -132,128 +132,128 @@ class StoredTopics {
     ]
     
     static let movieTopics: [String] = [
-        "The lord Of The rings",
-        "The Dark Knight",
-        "Cabin In The Woods",
-        "The Beach",
-        "The Road",
-        "Gangs Of New York",
-        "28 Days Later",
-        "This Is The End",
-        "Little Miss Sunshine",
-        "500 Days Of Summer",
-        "Avengers",
-        "Guardians Of The Galazy",
-        "Captain America The Winter Soldier",
-        "Kill Bill",
-        "Super bad",
-        "American Pie",
-        "Into The Wild",
-        "Batman Begins",
-        "The Wolf Of Wall Street",
-        "Anchor Man",
-        "Iron Man",
-        "Iron Man 2",
-        "Get Out",
-        "All About Eve",
-        "Modern Times",
-        "It Happened One Night",
-        "Singin' in the Rain",
-        "A Hard Day's Night",
-        "Toy Story 3",
-        "Toy Story 2",
-        "Zootopia",
-        "The Philadelphia Story",
-        "Up",
-        "Baby Driver",
-        "Dr. Strangelove Or How I Learned to Stop Worrying and Love the Bomb",
-        "The Big Sick",
-        "Finding Nemo",
-        "La La Land",
-        "Roman Holiday",
-        "Toy Story",
-        "Cool Hand Luke",
-        "Monty Python and the Holy Grail",
-        "The LEGO Movie",
-        "The Gold Rush",
-        "La Dolce Vita",
-        "It's a Wonderful Life",
-        "Before Midnight",
-        "Shaun the Sheep Movie",
-        "The Artist",
-        "Love & Friendship",
-        "To Be or Not to Be",
-        "Playtime",
-        "Annie Hall",
-        "Mary Poppins",
-        "City Lights",
-        "The Rules of the Game",
-        "His Girl Friday",
-        "Ratatouille",
-        "The Discreet Charm Of The Bourgeoisie",
-        "Paterson",
-        "Gentlemen Prefer Blondes",
-        "The Incredibles",
-        "Tampopo",
-        "8 1/2",
-        "Hunt for the Wilderpeople",
-        "Don't Think Twice",
-        "Chicken Run",
-        "Airplane!",
-        "Ghostbusters",
-        "Big",
-        "Paddington",
-        "101 Dalmatians",
-        "Duck Soup",
-        "Birdman",
-        "The Grand Budapest Hotel",
-        "Spy",
-        "Before Sunrise",
-        "Some Like It Hot",
-        "Moonrise Kingdom",
-        "Bringing Up Baby",
-        "The Princess Bride",
-        "Back to the Future",
-        "Sideways",
-        "Monsters, Inc.",
-        "Enough Said",
-        "The Muppets",
-        "Amadeus",
-        "The Nice Guys",
-        "Bull Durham",
-        "The Player",
-        "Truman",
-        "Who Framed Roger Rabbit",
-        "Tangerine",
-        "Anomalisa",
-        "What We Do In The Shadows",
-        "Sense and Sensibility",
-        "Le goût des autres (The Taste of Others)",
-        "Brazil",
-        "Todo sobre mi madre (All About My Mother)",
-        "Repo Man",
-        "We Are the Best!",
-        "The Band's Visit",
-        "Lost In Translation",
-        "The Lego Batman Movie",
-        "The Truman Show",
-        "Monty Python's Life of Brian",
-        "Manhattan",
-        "Broadcast News",
-        "Say Anything...",
-        "The Edge of Seventeen",
-        "Le Havre",
-        "The Apartment",
-        "Groundhog Day",
-        "Antz",
-        "Hairspray",
-        "Mafioso",
-        "Yellow Submarine",
-        "Juno",
-        "Monsieur Lazhar",
-        "Wallace & Gromit: The Curse of the Were-Rabbit",
-        "Silver Linings Playbook",
-        "My Fair Lady"
+        "The lord Of The rings", // 0
+        "The Dark Knight", // 1
+        "Cabin In The Woods", // 2
+        "The Beach", // 3
+        "The Road", // 4
+        "Gangs Of New York", // 5
+        "28 Days Later", // 6
+        "This Is The End", // 7
+        "Little Miss Sunshine", // 8
+        "500 Days Of Summer", // 9
+        "Avengers", // 10
+        "Guardians Of The Galazy", // 11
+        "Captain America The Winter Soldier", // 12
+        "Kill Bill", // 13
+        "Super bad", // 14
+        "American Pie", // 15
+        "Into The Wild", // 16
+        "Batman Begins", // 17
+        "The Wolf Of Wall Street", // 18
+        "Anchor Man", // 19
+        "Iron Man", // 20
+        "Iron Man 2", // 21
+        "Get Out", // 22
+        "All About Eve", // 23
+        "Modern Times", // 24
+        "It Happened One Night", // 25
+        "Singin' in the Rain", // 26
+        "A Hard Day's Night", // 27
+        "Toy Story 3", // 28
+        "Toy Story 2", // 29
+        "Zootopia", // 30
+        "The Philadelphia Story", // 31
+        "Up", // 32
+        "Baby Driver", // 33
+        "Dr. Strangelove Or How I Learned to Stop Worrying and Love the Bomb", // 34
+        "The Big Sick", // 35
+        "Finding Nemo", // 36
+        "La La Land", // 37
+        "Roman Holiday", // 38
+        "Toy Story", // 39
+        "Cool Hand Luke", // 40
+        "Monty Python and the Holy Grail", // 41
+        "The LEGO Movie", // 42
+        "The Gold Rush", // 43
+        "La Dolce Vita", // 44
+        "It's a Wonderful Life", // 45
+        "Before Midnight", // 46
+        "Shaun the Sheep Movie", // 47
+        "The Artist", // 48
+        "Love & Friendship", // 49
+        "To Be or Not to Be", // 50
+        "Playtime", // 51
+        "Annie Hall", // 52
+        "Mary Poppins", // 53
+        "City Lights", // 54
+        "The Rules of the Game", // 55
+        "His Girl Friday", // 56
+        "Ratatouille", // 57
+        "The Discreet Charm Of The Bourgeoisie", // 58
+        "Paterson", // 59
+        "Gentlemen Prefer Blondes", // 60
+        "The Incredibles", // 61
+        "Tampopo", // 62
+        "8 1/2", // 63
+        "Hunt for the Wilderpeople", // 64
+        "Don't Think Twice", // 65
+        "Chicken Run", // 66
+        "Airplane!", // 67
+        "Ghostbusters", // 68
+        "Big",  // 69
+        "Paddington", // 70
+        "101 Dalmatians", // 71
+        "Duck Soup", // 72
+        "Birdman", // 73
+        "The Grand Budapest Hotel", // 74
+        "Spy", // 75
+        "Before Sunrise", // 76
+        "Some Like It Hot", // 77
+        "Moonrise Kingdom", // 78
+        "Bringing Up Baby", // 79
+        "The Princess Bride", // 80
+        "Back to the Future", // 81
+        "Sideways", // 82
+        "Monsters, Inc.", // 83
+        "Enough Said", // 84
+        "The Muppets", // 85
+        "Amadeus", // 86
+        "The Nice Guys", // 87
+        "Bull Durham", // 88
+        "The Player", // 89
+        "Truman", // 90
+        "Who Framed Roger Rabbit", // 91
+        "Tangerine", // 92
+        "Anomalisa", // 93
+        "What We Do In The Shadows", // 94
+        "Sense and Sensibility", // 95
+        "Le goût des autres (The Taste of Others)", // 96
+        "Brazil", // 97
+        "Todo sobre mi madre (All About My Mother)", // 98
+        "Repo Man", // 99
+        "We Are the Best!", // 100
+        "The Band's Visit", // 101
+        "Lost In Translation", // 102
+        "The Lego Batman Movie", // 103
+        "The Truman Show", // 104
+        "Monty Python's Life of Brian", // 105
+        "Manhattan", // 106
+        "Broadcast News", // 107
+        "Say Anything...", // 108
+        "The Edge of Seventeen", // 109
+        "Le Havre", // 110
+        "The Apartment", // 111
+        "Groundhog Day", // 112
+        "Antz", // 113
+        "Hairspray", // 114
+        "Mafioso", // 115
+        "Yellow Submarine", // 116
+        "Juno", // 117
+        "Monsieur Lazhar", // 118
+        "Wallace & Gromit: The Curse of the Were-Rabbit", // 119
+        "Silver Linings Playbook", // 120
+        "My Fair Lady" // 121
     ]
     
 }
