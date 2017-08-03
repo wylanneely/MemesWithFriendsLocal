@@ -10,6 +10,21 @@ import Foundation
 
 class StoredTopics {
     
+    /*********************************************************
+     * Topics -                                              *
+     *          Comics                                       *
+     *          Movies                                       *
+     *          Video Games                                  *
+     *                                                       *
+     *                                                       *
+     *                                                       *
+     *                                                       *
+     *                                                       *
+     *                                                       *
+     *                                                       *
+     *                                                       *
+     *********************************************************/
+    
     static let topics: [String] = [
         "Comics", // 0
         "Art", // 1
@@ -306,7 +321,12 @@ class StoredTopics {
         "Devil May Cry", // 46
         "Call of Duty 4: Modern Warfare", // 47
         "Madden NFL 2002", // 48
-        "Chrono Cross" // 49
+        "Chrono Cross", // 49
+        "World Of Warcraft", // 50
+        "Heroes of the Storm", // 51
+        "Warcraft", // 52
+        "Starcraft", // 53
+        "Hearthstone", // 54
     ]
     
 }
