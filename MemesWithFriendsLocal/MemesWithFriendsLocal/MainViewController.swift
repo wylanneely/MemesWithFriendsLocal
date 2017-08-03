@@ -10,21 +10,21 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        logoImageView.alpha = 0
+        
+        showLogo()
+    }
+    
+    //MARK: - IBOutlets
+    
     @IBOutlet weak var playButton: AppButton!
     @IBOutlet weak var instructionsButton: AppButton!
     @IBOutlet weak var logoImageView: UILabel!
     
+    //MARK: - Animate Methods
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        logoImageView.alpha = 0
-
-        showLogo()
-    }
-    
-    
-    //MARK: - Methods
     func showLogo() {
         
         UIView.animate(withDuration: 2, delay: 0.0, options: [.transitionCrossDissolve], animations: {

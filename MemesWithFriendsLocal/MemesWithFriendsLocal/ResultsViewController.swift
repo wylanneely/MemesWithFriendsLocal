@@ -16,6 +16,8 @@ class ResultsViewController: UIViewController {
         calculateWinner()
     }
     
+    //MARK: - Properties
+    
     var winnerCount: Int = 0 {
         didSet {
             NSLog("Winner count: \(winnerCount)")
@@ -59,7 +61,6 @@ class ResultsViewController: UIViewController {
     // Random Winner
     
     func randomWinner() -> Meme {
-        //FIXME: - Cleanup
         let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: memes.count)
         return memes[randomNumber]
     }
@@ -71,6 +72,8 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var secondTextLabel: UILabel!
     @IBOutlet weak var winnerImageView: UIImageView!
     @IBOutlet weak var votesLabel: UILabel!
+    
+    //MARK: - IBActions
     
     @IBAction func restartGameButtonTapped(_ sender: Any) {
         

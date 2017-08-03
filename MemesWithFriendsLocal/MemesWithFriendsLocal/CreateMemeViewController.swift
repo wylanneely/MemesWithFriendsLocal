@@ -13,8 +13,6 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     
     //MARK: - Lifecycle Methods
     
-    var keyboardIsShown = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +22,6 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
         
         firstTextField.tag = 1
         secondTextFiled.tag = 2
-        
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
-        
-        // Gets called anytime the textField changes
-//        NotificationCenter.default.addObserver(self, selector: #selector(updateLabelFromTextfield), name: Notification.Name.UITextFieldTextDidChange, object: nil)
-        
-        
     }
     
     //MARK: - Properties
@@ -40,15 +30,11 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
             print(currentPlayerArray.count)
         }
     }
-    
-    //MARK: - Spencer's Keyboard Functions
-    
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        resignFirstResponder()
-//        let notification = NSNotification(name: Notification.Name.UIKeyboardWillHide, object: self)
-//        keyboardWillHide(notification: notification)
-//    }
-    
+    var keyboardIsShown = false
+    var image: UIImage?
+    var counter = 0
+    var person: String = ""
+
     //MARK: - Keyboard Functions
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -94,43 +80,15 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     }
     
     func pickedColor(color: UIColor) {
-//        firstTextLabel.textColor = color
-//        secondTextLabel.textColor = color
         firstTextField.textColor = color
         secondTextFiled.textColor = color
         currentColor = color// I added this, good addition?
     }
     
     //MARK: - TextField Delegates
-    
-//    func updateLabelFromTextfield() {
-//        
-//        guard let firstText = firstTextField.text,
-//            let secondText = secondTextFiled.text else { NSLog("Label from textfield is nil"); return }
-//        
-//        let firstNumber = Int(firstText.characters.count)
-//        let secondNumber = Int(secondText.characters.count)
-//        
-//        if firstNumber >= 24 {
-//            
-//            
-//        } else {
-//            firstCounter.text = "\(firstNumber)"
-//            firstTextLabel.text = firstTextField.text?.uppercased()
-//        }
-//        
-//        if secondNumber >= 16 {
-//            
-//        } else {
-//            secondCounter.text = "\(secondNumber)"
-//            secondTextLabel.text = secondTextFiled.text?.uppercased()
-//        }
-//    }
 
     func dismissKeyboard() {
         view.endEditing(true)
-//        self.firstTextLabel.text = self.firstTextField.text
-//        self.secondTextLabel.text = self.secondTextFiled.text
     }
     
     //MARK: - CollectionView Delegate / DataSource
@@ -185,23 +143,14 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     @IBOutlet weak var memeImageView: UIImageView!
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextFiled: UITextField!
-
-    
-    var image: UIImage?
     
     //MARK: - Clear Memes
     
     func clearMeme() {
         firstTextField.text = ""
         secondTextFiled.text = ""
-//        firstTextLabel.text = ""
-//        secondTextLabel.text = ""
         memeImageView.image = nil
     }
-    
-    var counter = 0
-    
-    var person: String = ""
     
     //MARK: - IBActions
     
@@ -232,7 +181,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
             // Segue Back
             performSegue(withIdentifier: "backToMemeSelection", sender: self)
         }
-        
+
     }
     
     //MARK: - Create Meme Functions

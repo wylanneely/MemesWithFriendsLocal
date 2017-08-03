@@ -14,6 +14,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Keyboard Notifications for pushup view
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
         
@@ -22,7 +23,14 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         sixthPlayerTextField.alpha = 0
     }
     
-    //MARK: - Outlets
+    //MARK: - Properties
+    
+    var numberOfPlayersForGame: String = "3"
+    var playerArray: [String] = []
+    var topic: String = "No Topic"
+    let pickerArray: [String] = ["3", "4", "5", "6"]
+    
+    //MARK: - IBOutlets
     
     @IBOutlet weak var firstPlayerTextField: UITextField!
     @IBOutlet weak var secondPlayerTextField: UITextField!
@@ -31,7 +39,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var fifthPlayerTextField: UITextField!
     @IBOutlet weak var sixthPlayerTextField: UITextField!
     @IBOutlet weak var randomTopicButton: UIButton!
-    @IBOutlet weak var numberOfPlayersTextField: UITextField!
+    @IBOutlet weak var numberOfPlayersTextField: UITextField!//FIXME: - We Can delete this right?
     
     //MARK: - IBActions
     
@@ -52,11 +60,6 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     
-    //MARK: - Properties
-    var numberOfPlayersForGame: String = "3"
-    var playerArray: [String] = []
-    var topic: String = "No Topic"
-    
     //MARK: - Spencer's Keyboard Functions
     
     func keyboardWillShow(notification: NSNotification) {
@@ -66,7 +69,6 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 self.view.frame.origin.y -= keyboardSize.height
             }
         }
-        
     }
     
     func keyboardWillHide(notification: NSNotification) {
@@ -78,8 +80,6 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     //MARK: - Picker Methods / Data Source
-    
-    let pickerArray: [String] = ["3", "4", "5", "6"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -115,7 +115,8 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
     }
     
-    //MARK: - Methods
+    //MARK: - Player Creation
+    
     func createPlayersForGame() {
         
         if numberOfPlayersForGame == "3" {
@@ -218,7 +219,6 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return StoredTopics.topics[randomNumber]
     }
 
-    
     //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -22,15 +22,14 @@ class PickMemeViewController: UIViewController, UICollectionViewDelegate, UIColl
             if let personIndex = CreateMemeViewController.currentPlayerArray.index(of: GameController.shared.person) {
                 CreateMemeViewController.currentPlayerArray.remove(at: personIndex)
             }
-
         }
-
     }
 
     //MARK: - Properties
     var image: UIImage?
     
     //MARK: - CollectionView Methods
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return StoredImages.images.count
     }
@@ -44,6 +43,7 @@ class PickMemeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     //MARK: - Custom Methods
+    
     func memeImageButtonTappped(cell: MemeImagesCollectionViewCell) {
         guard let image = cell.image.image else { NSLog("Cell Image Nil"); return }
         self.image = image
@@ -58,8 +58,8 @@ class PickMemeViewController: UIViewController, UICollectionViewDelegate, UIColl
         present(alert, animated: true)
     }
     
-    
     //MARK: - Segue Methods
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "createMemeSegue" {
             if let createVC = segue.destination as? CreateMemeViewController {
@@ -68,5 +68,4 @@ class PickMemeViewController: UIViewController, UICollectionViewDelegate, UIColl
             }
         }
     }
-
 }

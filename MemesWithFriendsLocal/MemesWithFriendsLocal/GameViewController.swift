@@ -46,8 +46,6 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.topTextLabel.textColor = meme.memeTextColor
         cell.bottomTextLabel.textColor = meme.memeTextColor
     
-        
-        
         return cell
     }
     
@@ -97,7 +95,6 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
             playersArray.append(player)
         }
     }
-    
     
 }
 
