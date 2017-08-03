@@ -17,6 +17,9 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
         super.viewDidLoad()
         
         self.memeImageView.image = image
+        feedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+        
+        submitButton.setImage(#imageLiteral(resourceName: "SubmitHighlighted Copy"), for: .highlighted)
         
         colorPicker.delegate = self
         
@@ -34,6 +37,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     var image: UIImage?
     var counter = 0
     var person: String = ""
+    var feedbackGenerator: UIImpactFeedbackGenerator? = nil
     
     //MARK: - Keyboard Functions
     
@@ -143,6 +147,8 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     @IBOutlet weak var memeImageView: UIImageView!
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextFiled: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
+    
     
     //MARK: - Clear Memes
     
@@ -164,8 +170,10 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     @IBAction func createMemeButtonTapped(_ sender: Any) {
         
         if counter == 0 {
+            feedbackGenerator?.prepare()
             createMemeWithoutRemoval()
         } else {
+            feedbackGenerator?.prepare()
             createMemeWithRemoval()
         }
         
@@ -181,6 +189,8 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
             // Segue Back
             performSegue(withIdentifier: "backToMemeSelection", sender: self)
         }
+        
+        feedbackGenerator?.impactOccurred()
         
     }
     

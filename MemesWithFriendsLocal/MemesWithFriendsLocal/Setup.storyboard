@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTh-xR-y6Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTh-xR-y6Y">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -371,11 +371,10 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-9m-YhV" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                                <rect key="frame" x="135" y="520" width="50" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
-                                <state key="normal" title="Start">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-9m-YhV">
+                                <rect key="frame" x="131" y="523" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="StartButtonNatural">
                                     <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -409,6 +408,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="startButtonTapped:" destination="qTh-xR-y6Y" eventType="touchUpInside" id="lFz-jr-hAs"/>
                                     <segue destination="B8j-Gt-loY" kind="show" identifier="segueToCreateMeme" id="MZ3-8D-KTI"/>
                                 </connections>
                             </button>
@@ -439,6 +439,7 @@
                         <outlet property="randomTopicButton" destination="NlY-jN-6Tq" id="bst-Uk-RBH"/>
                         <outlet property="secondPlayerTextField" destination="0X8-2W-qX8" id="bpR-Lo-dcb"/>
                         <outlet property="sixthPlayerTextField" destination="N7Z-NF-Qdd" id="ELu-23-nVl"/>
+                        <outlet property="startButton" destination="2Vk-9m-YhV" id="7ES-NI-57V"/>
                         <outlet property="thirdPlayerTextField" destination="shD-gI-h5Y" id="v2Z-fc-zbb"/>
                     </connections>
                 </viewController>
@@ -455,5 +456,6 @@
     </scenes>
     <resources>
         <image name="Game Setup" width="379" height="76"/>
+        <image name="StartButtonNatural" width="95" height="46"/>
     </resources>
 </document>

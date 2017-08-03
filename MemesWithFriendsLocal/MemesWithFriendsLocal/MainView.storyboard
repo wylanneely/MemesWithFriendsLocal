@@ -26,11 +26,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO7-dB-vd4" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                                <rect key="frame" x="147" y="501" width="81" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO7-dB-vd4">
+                                <rect key="frame" x="140" y="493" width="95" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                <state key="normal" title="Instructions">
+                                <state key="normal" image="InstructionButtonNatural">
                                     <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -64,6 +63,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="instructionButtonTapped:" destination="NbT-DK-aOc" eventType="touchUpInside" id="3f7-KX-ilZ"/>
                                     <segue destination="l9Q-lT-Qzf" kind="show" id="jg4-UP-nbc"/>
                                 </connections>
                             </button>
@@ -78,11 +78,12 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-w5-Ufl">
                                 <rect key="frame" x="146" y="252" width="83" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <state key="normal" image="StartButtonNatural">
                                     <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="startButtonTapped:" destination="NbT-DK-aOc" eventType="touchUpInside" id="RZ8-Xq-P3W"/>
                                     <segue destination="JkF-gL-WBh" kind="show" id="RIl-zx-pxi"/>
                                 </connections>
                             </button>
@@ -98,9 +99,9 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="instructionsButton" destination="OO7-dB-vd4" id="zey-ek-9af"/>
+                        <outlet property="instructionsButton" destination="OO7-dB-vd4" id="cLw-eX-5jx"/>
                         <outlet property="logoImageView" destination="czi-lY-dkY" id="ivU-PI-7H6"/>
-                        <outlet property="playButton" destination="zaR-w5-Ufl" id="ESn-3y-n7m"/>
+                        <outlet property="playButton" destination="zaR-w5-Ufl" id="Sim-JN-gPB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGl-8y-d1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,6 +126,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="InstructionButtonNatural" width="95" height="46"/>
         <image name="StartButtonNatural" width="95" height="46"/>
     </resources>
 </document>
