@@ -256,6 +256,59 @@ class StoredTopics {
         "My Fair Lady" // 121
     ]
     
+    static let videoGames: [String] = [
+        "The Legend of Zelda: Ocarina of Time", // 0
+        "Tony Hawk's Pro Skater 2", // 1
+        "Grand Theft Auto IV", // 2
+        "SoulCalibur", // 3
+        "The Legend of Zelda: Breath of the Wild", // 4
+        "Super Mario Galaxy", // 5
+        "Super Mario Galaxy 2", // 6
+        "Grand Theft Auto V", // 7
+        "Tony Hawk's Pro Skater 3", // 8
+        "Perfect Dark", // 9
+        "Metroid Prime", // 10
+        "Grand Theft Auto III", // 11
+        "Halo: Combat Evolved", // 12
+        "NFL 2K1", // 13
+        "Half-Life 2", // 14
+        "BioShock", // 15
+        "GoldenEye 007", // 16
+        "Uncharted 2: Among Thieves", // 17
+        "Resident Evil 4", // 18
+        "Batman: Arkham City", // 19
+        "Tekken 3", // 20
+        "Mass Effect 2", // 21
+        "The Legend of Zelda: Twilight Princess", // 22
+        "The Elder Scrolls V: Skyrim", // 23
+        "Half-Life", // 24
+        "The Legend of Zelda: The Wind Waker", // 25
+        "Gran Turismo", // 26
+        "Metal Gear Solid 2: Sons of Liberty", // 27
+        "Baldur's Gate II: Shadows of Amn", // 28
+        "Grand Theft Auto: San Andreas", // 29
+        "Grand Theft Auto: Vice City", // 30
+        "LittleBigPlanet", // 31
+        "Red Dead Redemption", // 32
+        "Gran Turismo 3: A-Spec", // 33
+        "Halo 2", // 34
+        "The Legend of Zelda: A Link to the Past", // 35
+        "The Legend of Zelda: Majora's Mask", // 36
+        "The Last of Us", // 37
+        "Madden NFL", // 38
+        "Portal 2", // 39
+        "Metal Gear Solid V: The Phantom Pain", // 40
+        "World of Goo", // 41
+        "BioShock Infinite", // 42
+        "Final Fantasy IX", // 43
+        "Call of Duty: Modern Warfare 2", // 44
+        "Tony Hawk's Pro Skater 4", // 45
+        "Devil May Cry", // 46
+        "Call of Duty 4: Modern Warfare", // 47
+        "Madden NFL 2002", // 48
+        "Chrono Cross" // 49
+    ]
+    
 }
 
 
