@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        playButton.setImage(#imageLiteral(resourceName: "StartButtonHighlighted"), for: .highlighted)
         logoImageView.alpha = 0
         
         showLogo()
