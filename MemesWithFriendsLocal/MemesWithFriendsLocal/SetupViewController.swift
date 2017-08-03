@@ -40,6 +40,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var sixthPlayerTextField: UITextField!
     @IBOutlet weak var randomTopicButton: UIButton!
     @IBOutlet weak var numberOfPlayersTextField: UITextField!//FIXME: - We Can delete this right?
+    @IBOutlet weak var playerPicker: UIPickerView!
     
     //MARK: - IBActions
     
@@ -66,7 +67,8 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= keyboardSize.height
+                self.view.frame.origin.y -= keyboardSize.height - 12 // Added - 12
+                self.playerPicker.isHidden = true
             }
         }
     }
@@ -74,7 +76,8 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += keyboardSize.height
+                self.view.frame.origin.y += keyboardSize.height - 12 // Added - 12
+                self.playerPicker.isHidden = false
             }
         }
     }

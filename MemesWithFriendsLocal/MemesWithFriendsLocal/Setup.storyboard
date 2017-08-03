@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTh-xR-y6Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTh-xR-y6Y">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -435,6 +435,7 @@
                         <outlet property="fifthPlayerTextField" destination="HGv-aT-jhP" id="Rz1-32-8n9"/>
                         <outlet property="firstPlayerTextField" destination="H7j-r1-UNA" id="ZaM-BY-bhZ"/>
                         <outlet property="fourthPlayerTextField" destination="1rG-3q-8PN" id="Jeo-0q-8Dy"/>
+                        <outlet property="playerPicker" destination="YFL-jk-VcY" id="au5-y7-ayG"/>
                         <outlet property="randomTopicButton" destination="NlY-jN-6Tq" id="bst-Uk-RBH"/>
                         <outlet property="secondPlayerTextField" destination="0X8-2W-qX8" id="bpR-Lo-dcb"/>
                         <outlet property="sixthPlayerTextField" destination="N7Z-NF-Qdd" id="ELu-23-nVl"/>
