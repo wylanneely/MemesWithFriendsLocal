@@ -10,12 +10,9 @@ import UIKit
 
 class MemeVoteCollectionViewCell: UICollectionViewCell {
     
-    
     //MARK: - IBOutlets
     
     @IBOutlet weak var topTextLabel: UILabel!
     @IBOutlet weak var bottomTextLabel: UILabel!
     @IBOutlet weak var memeImage: UIImageView!
-    
-    
 }

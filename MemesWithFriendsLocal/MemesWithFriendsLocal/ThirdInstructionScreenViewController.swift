@@ -8,16 +8,13 @@
 
 import UIKit
 
-
 extension ThirdInstructionScreenViewController {
     static let ThirdScreenWillDisappear = Notification.Name("ThirdViewWillDisapear")
 }
 
 class ThirdInstructionScreenViewController: UIViewController {
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.post(name: ThirdInstructionScreenViewController.ThirdScreenWillDisappear, object: self)
     }
-
-
 }

@@ -13,9 +13,8 @@ extension SecondInstructionScreenViewController {
 }
 
 class SecondInstructionScreenViewController: UIViewController {
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.post(name: SecondInstructionScreenViewController.SecondScreenWillDisappear, object: self)
     }
-
 }

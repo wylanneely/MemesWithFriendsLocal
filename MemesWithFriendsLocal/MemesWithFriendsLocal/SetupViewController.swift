@@ -218,7 +218,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: StoredTopics.topics.count)
         return StoredTopics.topics[randomNumber]
     }
-
+    
     //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

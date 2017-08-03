@@ -9,7 +9,7 @@
 import UIKit
 
 class PickMemeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MemeImageSelectedDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +24,7 @@ class PickMemeViewController: UIViewController, UICollectionViewDelegate, UIColl
             }
         }
     }
-
+    
     //MARK: - Properties
     var image: UIImage?
     

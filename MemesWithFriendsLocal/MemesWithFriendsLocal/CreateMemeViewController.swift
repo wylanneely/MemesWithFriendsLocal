@@ -34,7 +34,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     var image: UIImage?
     var counter = 0
     var person: String = ""
-
+    
     //MARK: - Keyboard Functions
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -86,7 +86,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     }
     
     //MARK: - TextField Delegates
-
+    
     func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -162,7 +162,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     
     
     @IBAction func createMemeButtonTapped(_ sender: Any) {
-
+        
         if counter == 0 {
             createMemeWithoutRemoval()
         } else {
@@ -181,14 +181,14 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
             // Segue Back
             performSegue(withIdentifier: "backToMemeSelection", sender: self)
         }
-
+        
     }
     
     //MARK: - Create Meme Functions
     
     func createMemeWithRemoval() {
         print("With removal called")
-
+        
         guard let firstText = firstTextField.text,
             let secondText = secondTextFiled.text,
             let image = memeImageView.image else { return }
@@ -211,10 +211,10 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
             let image = memeImageView.image else { return }
         
         MemeController.shared.createMeme(image: image, firstText: firstText, secondText: secondText, voteCount: 0, memeTextColor: currentColor, playerName: GameController.shared.person)
-
+        
         
         self.counter += 1
         clearMeme()
     }
-
+    
 }

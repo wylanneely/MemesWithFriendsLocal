@@ -10,7 +10,7 @@ import UIKit
 import GameKit
 
 class ResultsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         calculateWinner()

@@ -12,6 +12,7 @@ import GameKit
 class GameController {
     
     //MARK: - Properties
+    
     static let shared = GameController()
     var game: Game?
     
@@ -26,6 +27,7 @@ class GameController {
     }
     
     //MARK: - Randomizer
+    
     func randomWinner() -> String {
         let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: CreateMemeViewController.currentPlayerArray.count)
         return CreateMemeViewController.currentPlayerArray[randomNumber]

@@ -10,20 +10,12 @@ import UIKit
 
 class FirstInstructionScreenViewController: UIViewController {
     
-    @IBOutlet weak var goalsTitleLabel: UILabel!
-    @IBOutlet weak var goalOneLabel: UILabel!
-    @IBOutlet weak var thenLabel: UILabel!
-    @IBOutlet weak var goalTwoLabel: UILabel!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var backToHomeButton: UIButton!
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(setUIAlphaBackToOne), name: ThirdInstructionScreenViewController.ThirdScreenWillDisappear, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(setUIAlphaBackToOne), name: SecondInstructionScreenViewController.SecondScreenWillDisappear, object: nil)
+        
         goalsTitleLabel.alpha = 0
         backToHomeButton.alpha = 0
         goalOneLabel.alpha = 0
@@ -31,10 +23,19 @@ class FirstInstructionScreenViewController: UIViewController {
         goalTwoLabel.alpha = 0
         nextButton.alpha = 0
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         showAnimations(withDuration: 1.5)
     }
     
+    //MARK: - IBOutlets
+    
+    @IBOutlet weak var goalsTitleLabel: UILabel!
+    @IBOutlet weak var goalOneLabel: UILabel!
+    @IBOutlet weak var thenLabel: UILabel!
+    @IBOutlet weak var goalTwoLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backToHomeButton: UIButton!
     
     func setUIAlphaBackToOne() {
         goalsTitleLabel.alpha = 1

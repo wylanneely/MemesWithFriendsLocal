@@ -11,6 +11,7 @@ import Foundation
 class Game {
     
     //MARK: - Properties
+    
     let numberOfPlayers: Int
     var currentPlayers: [String]?
     
