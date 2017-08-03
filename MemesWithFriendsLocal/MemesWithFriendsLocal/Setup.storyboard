@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTh-xR-y6Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTh-xR-y6Y">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -259,10 +259,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g50-VV-w4M">
-                                <rect key="frame" x="0.0" y="74.5" width="320" height="419.5"/>
+                                <rect key="frame" x="0.0" y="72.5" width="320" height="423.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-jA-o5e">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="419.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-jA-o5e">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="423.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o4D-MD-3UD">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="114.5"/>
@@ -290,7 +290,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jgT-w1-fGJ">
-                                                <rect key="frame" x="0.0" y="124.5" width="320" height="295"/>
+                                                <rect key="frame" x="0.0" y="128.5" width="320" height="295"/>
                                                 <subviews>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFL-jk-VcY">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
@@ -371,8 +371,9 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-9m-YhV" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                                <rect key="frame" x="144" y="502" width="32" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-9m-YhV" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                                <rect key="frame" x="135" y="520" width="50" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="15"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -415,9 +416,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="2Vk-9m-YhV" firstAttribute="centerX" secondItem="HdK-1Y-kum" secondAttribute="centerX" id="8zk-QH-vZj"/>
                             <constraint firstItem="g50-VV-w4M" firstAttribute="centerX" secondItem="HdK-1Y-kum" secondAttribute="centerX" id="QS0-Rg-xPe"/>
-                            <constraint firstItem="2Vk-9m-YhV" firstAttribute="top" secondItem="g50-VV-w4M" secondAttribute="bottom" constant="8" id="Wpq-0y-C15"/>
                             <constraint firstItem="g50-VV-w4M" firstAttribute="centerY" secondItem="HdK-1Y-kum" secondAttribute="centerY" id="gOX-P2-K7L"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -450,7 +449,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="500" y="501"/>
+            <point key="canvasLocation" x="498.75" y="500.7042253521127"/>
         </scene>
     </scenes>
     <resources>

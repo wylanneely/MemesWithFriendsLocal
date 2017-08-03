@@ -17,9 +17,11 @@ class ColorPicker: UIView {
     var selectedColor: UIColor!
     var delegate: ColorDelegate!
     
+    
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
+        
         UIColor.black.set()
         var tempYPlace = self.currentSelectionX
         if (tempYPlace < CGFloat (0.0)) {
