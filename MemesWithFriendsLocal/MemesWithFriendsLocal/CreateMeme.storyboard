@@ -65,7 +65,7 @@
                                     <constraint firstAttribute="width" secondItem="sBp-GM-BRh" secondAttribute="height" multiplier="253:56" id="tz4-DJ-eDM"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="pGo-br-6Pq" id="z7J-t4-sl6"/>
@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="width" secondItem="Pzf-Q1-7DR" secondAttribute="height" multiplier="242:51" id="bAE-rZ-nlf"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="pGo-br-6Pq" id="RO7-DQ-Hap"/>
@@ -123,6 +123,24 @@
                                     <segue destination="UFc-hM-M6v" kind="show" identifier="backToMemeSelection" id="TIG-Yv-Seg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-ty-Mit">
+                                <rect key="frame" x="263" y="426" width="46" height="30"/>
+                                <state key="normal" title="Black">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="blackColorButtonTapped:" destination="pGo-br-6Pq" eventType="touchUpInside" id="iFl-fA-Rqo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlY-nu-dww">
+                                <rect key="frame" x="62" y="426" width="46" height="30"/>
+                                <state key="normal" title="White">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="whiteColorButtonTapped:" destination="pGo-br-6Pq" eventType="touchUpInside" id="5Vb-Ey-Mjh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <gestureRecognizers/>
@@ -135,9 +153,12 @@
                             <constraint firstItem="Jon-OR-dYg" firstAttribute="top" secondItem="Kbg-0i-6tg" secondAttribute="bottom" constant="26" id="Gil-e2-ebD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pzf-Q1-7DR" secondAttribute="trailing" constant="50" id="Gx2-ap-Lwg"/>
                             <constraint firstItem="uJE-Q3-WKH" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="H0S-m0-fhI"/>
+                            <constraint firstItem="mlY-nu-dww" firstAttribute="top" secondItem="Kbg-0i-6tg" secondAttribute="bottom" constant="34" id="JXz-Sa-7nK"/>
                             <constraint firstItem="sBp-GM-BRh" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="45" id="RJS-Aa-fP8"/>
                             <constraint firstItem="Pzf-Q1-7DR" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="51" id="SeL-nU-AbZ"/>
+                            <constraint firstItem="Jon-OR-dYg" firstAttribute="leading" secondItem="mlY-nu-dww" secondAttribute="trailing" constant="8" id="WCa-Cz-v61"/>
                             <constraint firstAttribute="bottomMargin" secondItem="3EZ-RN-wkz" secondAttribute="bottom" constant="1" id="XTs-oh-PNt"/>
+                            <constraint firstItem="2hf-ty-Mit" firstAttribute="top" secondItem="Kbg-0i-6tg" secondAttribute="bottom" constant="34" id="ZFb-U6-FVd"/>
                             <constraint firstItem="Pzf-Q1-7DR" firstAttribute="top" secondItem="HQl-r7-9yc" secondAttribute="top" constant="260" id="ZmP-6D-Jbo"/>
                             <constraint firstItem="Pzf-Q1-7DR" firstAttribute="centerX" secondItem="Jon-OR-dYg" secondAttribute="centerX" id="c3n-Cq-yJ9"/>
                             <constraint firstItem="uJE-Q3-WKH" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="21" id="c76-X7-1aH"/>
@@ -145,6 +166,7 @@
                             <constraint firstItem="Kbg-0i-6tg" firstAttribute="top" secondItem="Pzf-Q1-7DR" secondAttribute="bottom" constant="31" id="iVQ-if-vSV"/>
                             <constraint firstItem="Pzf-Q1-7DR" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="iuc-En-w9L"/>
                             <constraint firstItem="Jon-OR-dYg" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="100" id="tHm-jq-yDf"/>
+                            <constraint firstItem="2hf-ty-Mit" firstAttribute="leading" secondItem="Jon-OR-dYg" secondAttribute="trailing" constant="4" id="vgZ-mB-FQy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sBp-GM-BRh" secondAttribute="trailing" constant="45" id="wIo-d6-awG"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

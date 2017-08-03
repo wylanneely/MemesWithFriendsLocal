@@ -167,6 +167,18 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     }
     
     
+    @IBAction func blackColorButtonTapped(_ sender: UIButton) {
+        firstTextField.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        secondTextFiled.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        currentColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+    }
+    
+    @IBAction func whiteColorButtonTapped(_ sender: UIButton) {
+        firstTextField.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        secondTextFiled.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        currentColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+    }
+    
     @IBAction func createMemeButtonTapped(_ sender: Any) {
         
         if counter == 0 {

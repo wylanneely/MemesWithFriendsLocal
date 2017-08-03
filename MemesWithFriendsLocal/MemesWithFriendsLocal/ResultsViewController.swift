@@ -79,8 +79,9 @@ class ResultsViewController: UIViewController {
     //MARK: - IBActions
     
     @IBAction func restartGameButtonTapped(_ sender: Any) {
-        feedbackGenerator?.impactOccurred()
+        feedbackGenerator?.prepare()
         GameController.shared.game = nil
         MemeController.shared.memes = []
+        feedbackGenerator?.impactOccurred()
     }
 }
