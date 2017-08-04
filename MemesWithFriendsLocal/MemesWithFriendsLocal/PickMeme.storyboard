@@ -27,29 +27,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kx2-wz-HkB">
-                                <rect key="frame" x="16" y="133" width="343" height="400"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kx2-wz-HkB">
+                                <rect key="frame" x="16" y="133" width="343" height="525"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n7N-cd-sv7">
-                                    <size key="itemSize" width="315" height="378"/>
+                                    <size key="itemSize" width="249" height="223"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memeImageCell" id="8mL-lB-THx" customClass="MemeImagesCollectionViewCell" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="0.0" width="315" height="378"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="47" y="0.0" width="249" height="223"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="315" height="378"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="249" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eg3-G9-vEj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="378"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="249" height="223"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFf-8h-Qdc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="378"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="249" height="223"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <size key="titleShadowOffset" width="1" height="1"/>
                                                     <state key="normal">
@@ -106,12 +107,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Kpr-9H-e7n" firstAttribute="top" secondItem="nUD-cb-WKY" secondAttribute="bottom" id="DvI-ci-BC2"/>
-                            <constraint firstItem="Kx2-wz-HkB" firstAttribute="centerY" secondItem="Tri-lR-gY5" secondAttribute="centerY" id="IIu-1x-1u1"/>
-                            <constraint firstItem="Kx2-wz-HkB" firstAttribute="centerX" secondItem="Tri-lR-gY5" secondAttribute="centerX" id="VYe-I3-pVU"/>
-                            <constraint firstItem="Kx2-wz-HkB" firstAttribute="trailing" secondItem="Tri-lR-gY5" secondAttribute="trailingMargin" id="a9f-0e-xyb"/>
                             <constraint firstItem="nUD-cb-WKY" firstAttribute="trailing" secondItem="Tri-lR-gY5" secondAttribute="trailingMargin" id="bh3-4S-1WX"/>
-                            <constraint firstItem="Kx2-wz-HkB" firstAttribute="top" secondItem="5p3-zC-aAL" secondAttribute="bottom" constant="113" id="iKU-VF-CGz"/>
-                            <constraint firstItem="Kx2-wz-HkB" firstAttribute="leading" secondItem="Tri-lR-gY5" secondAttribute="leadingMargin" id="sPA-ES-IZI"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
