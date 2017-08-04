@@ -12,25 +12,32 @@ import UIKit
 class StoredTopics {
     
     static var images: [UIImage] = [
-    #imageLiteral(resourceName: "movies"),
-    #imageLiteral(resourceName: "Game"),
-    #imageLiteral(resourceName: "actor")
+        #imageLiteral(resourceName: "Comics"),
+        #imageLiteral(resourceName: "movies"),
+        #imageLiteral(resourceName: "Game"),
+        #imageLiteral(resourceName: "Football"),
+        #imageLiteral(resourceName: "Question"),
+        #imageLiteral(resourceName: "actor")
     ]
     
     
     static var names: [String] = [
+    "Comics",
     "Movies",
     "Video Games",
-    "Actors"]
+    "Sports",
+    "Other",
+    "Actors"
+    ]
     
     /*********************************************************
      * Topics -                                              *
      *          Comics                                       *
      *          Movies                                       *
      *          Video Games                                  *
-     *                                                       *
-     *                                                       *
-     *                                                       *
+     *          Sports                                       *
+     *          Other                                        *
+     *          Actors                                       *
      *                                                       *
      *                                                       *
      *                                                       *
