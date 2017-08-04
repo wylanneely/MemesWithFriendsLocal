@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        feedbackGenerator = UISelectionFeedbackGenerator()
+//        feedbackGenerator = UISelectionFeedbackGenerator()
 
         
         playButton.setImage(#imageLiteral(resourceName: "StartButtonHighlighted"), for: .highlighted)
@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
     }
     
     //MARK: - Properties
-    var feedbackGenerator: UISelectionFeedbackGenerator? = nil
+//    var feedbackGenerator: UISelectionFeedbackGenerator? = nil
     
     //MARK: - IBOutlets
     
@@ -38,11 +38,11 @@ class MainViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        feedbackGenerator?.selectionChanged()
+        GameController.shared.feedbackGenerator?.impactOccurred()
     }
     
     @IBAction func instructionButtonTapped(_ sender: UIButton) {
-        feedbackGenerator?.selectionChanged()
+        GameController.shared.feedbackGenerator?.impactOccurred()
     }
     
     

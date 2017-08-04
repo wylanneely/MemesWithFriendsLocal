@@ -15,6 +15,7 @@ class GameController {
     
     static let shared = GameController()
     var game: Game?
+    var feedbackGenerator: UIImpactFeedbackGenerator? = nil
     
     var person: String = ""
     var currentPlayerArray: [String] = []

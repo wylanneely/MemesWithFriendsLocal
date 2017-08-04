@@ -14,7 +14,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+//        feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
         
         // Keyboard Notifications for pushup view
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
@@ -35,7 +35,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var playerArray: [String] = []
     var topic: String = "No Topic"
     let pickerArray: [String] = ["3", "4", "5", "6"]
-    var feedbackGenerator: UIImpactFeedbackGenerator? = nil
+//    var feedbackGenerator: UIImpactFeedbackGenerator? = nil
     
     //MARK: - IBOutlets
     
@@ -69,7 +69,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        feedbackGenerator?.impactOccurred()
+        GameController.shared.feedbackGenerator?.impactOccurred()
     }
     
     
