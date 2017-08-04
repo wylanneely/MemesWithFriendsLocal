@@ -39,7 +39,7 @@ class StoredTopics {
         "Technology" // 10
     ]
     
-    static let comicsTopics: [String] = [
+    static let comicTopics: [String] = [
         "Batman", // 0
         "Superman", // 1
         "Spider-Man", // 2
@@ -271,7 +271,7 @@ class StoredTopics {
         "My Fair Lady" // 121
     ]
     
-    static let videoGames: [String] = [
+    static let videoGameTopics: [String] = [
         "The Legend of Zelda: Ocarina of Time", // 0
         "Tony Hawk's Pro Skater 2", // 1
         "Grand Theft Auto IV", // 2
@@ -327,6 +327,18 @@ class StoredTopics {
         "Warcraft", // 52
         "Starcraft", // 53
         "Hearthstone", // 54
+    ]
+    
+    static let sportTopics: [String] = [
+    
+        //FIXME: - Put Sports Stuff Here
+    
+    ]
+    
+    static let otherTopics: [String] = [
+    
+        //FIXME: - Put Other Topics here, For example that time at band camp, at the bar, highschool, ect
+    
     ]
     
 }
