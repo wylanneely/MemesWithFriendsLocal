@@ -21,15 +21,14 @@ class StoredTopics {
         #imageLiteral(resourceName: "Politics")
     ]
     
-    
     static var names: [String] = [
-    "Comics",
-    "Movies",
-    "Video Games",
-    "Sports",
-    "Other",
-    "Actors",
-    "Politics"
+        "Comics",
+        "Movies",
+        "Video Games",
+        "Sports",
+        "Other",
+        "Actors",
+        "Politics"
     ]
     
     /*********************************************************
@@ -403,108 +402,108 @@ class StoredTopics {
         "Duke", //48
         "UCLA", //49
         "Oregon" //50
-    
+        
     ]
     
     static let otherTopics: [String] = [
-    
+        "Last Night at the Bar" // 0
     ]
     
     static let politics: [String] = [
-    "Donald Trump", // 0
-    "Donald Trump Jr.", // 1
-    "Hillary Clinton", // 3
-    "George Bush", // 4
-    "Bill Clinton", // 5
-    "The White House", // 6
-    "Attorney General", // 7
-    "Launch Codes", // 8
-    "Washington D.C.", // 9
-    "Senate", // 10
-    "House of Representatives", // 11
-    "Congress", // 12
-    "Captial Hill", // 13
-    "Fox News", // 14
-    "CNN", // 15
-    "Ronald Reagan", // 16
-    "Nancy Reagan", // 17
-    "Richard Nixon", // 18
-    "John F. Kennedy", // 19
-    "The Pentagon", // 20
-    "Campaign", // 21
-    "Economy", // 22
-    "Jobs, Jobs, Jobs", // 23
-    "Wall Street", // 24
-    "Health Care", // 25
-    "Gun Control", // 26
-    "Environment", // 27
-    "Religious Freedom", // 28
-    "The Constiution", // 29
-    "Deregulation", // 30
-    "Regulation", // 31
-    "Death Penalty", // 32
-    "Build the Wall!", // 33
-    "Immigration", // 34
-    "Democrats", // 35
-    "Republicans" // 36
+        "Donald Trump", // 0
+        "Donald Trump Jr.", // 1
+        "Hillary Clinton", // 3
+        "George Bush", // 4
+        "Bill Clinton", // 5
+        "The White House", // 6
+        "Attorney General", // 7
+        "Launch Codes", // 8
+        "Washington D.C.", // 9
+        "Senate", // 10
+        "House of Representatives", // 11
+        "Congress", // 12
+        "Captial Hill", // 13
+        "Fox News", // 14
+        "CNN", // 15
+        "Ronald Reagan", // 16
+        "Nancy Reagan", // 17
+        "Richard Nixon", // 18
+        "John F. Kennedy", // 19
+        "The Pentagon", // 20
+        "Campaign", // 21
+        "Economy", // 22
+        "Jobs, Jobs, Jobs", // 23
+        "Wall Street", // 24
+        "Health Care", // 25
+        "Gun Control", // 26
+        "Environment", // 27
+        "Religious Freedom", // 28
+        "The Constiution", // 29
+        "Deregulation", // 30
+        "Regulation", // 31
+        "Death Penalty", // 32
+        "Build the Wall!", // 33
+        "Immigration", // 34
+        "Democrats", // 35
+        "Republicans" // 36
     ]
     
     static let actorTopics: [String] = [
-    "Tom Hanks", // 0
-    "Meryl Streep", // 1
-    "Leonardo DiCaprio", // 2
-    "Denzel Washington", // 3
-    "Morgan Freeman", // 4
-    "Sean Penn", // 5
-    "Christian Bale", // 6
-    "Robert De Niro", // 7
-    "Jennifer Lawrence", // 8
-    "Kevin Spacey", // 9
-    "Cate Blanchett", // 10
-    "Matthew McConaughey", // 11
-    "Brie Larson", // 12
-    "Michael Fassbender", // 13
-    "Jared Leto", // 14
-    "Kate Winslet", // 15
-    "Amy Adams", // 16
-    "Eddie Redmayne", // 17
-    "Michelle Williams", // 18
-    "Colin Firth", // 19
-    "George Clooney", // 20
-    "Julianne Moore", // 21
-    "Matt Damon", // 22
-    "Anthony Hopkins", // 23
-    "Bradley Cooper", // 24
-    "Christoph Waltz", // 25
-    "The Rock", // 26
-    "Bryan Cranston", // 27
-    "Alicia Vikander", // 28
-    "Steve Carell", // 29
-    "Jamie Foxx", // 30
-    "Tom Hardy", // 31
-    "Charlize Theron", // 32
-    "Johnny Depp", // 33
-    "Gary Oldman", // 34
-    "Jim Carrey", // 35
-    "Eddie Murphy", // 36
-    "Will Ferrell", // 37
-    "Adam Sandler", // 38
-    "Ben Stiller", // 39
-    "Bill Murray", // 40
-    "Jonah Hill", // 41
-    "Seth Rogen", // 42
-    "Steve Martin", // 43
-    "Zack Galifianakis", // 44
-    "Zac Efron", // 45
-    "Vin Diesel", // 46
-    "Jason Statham", // 47
-    "Michelle Rodriguez", // 48
-    "Scott Eastwood", // 49
-    "Kurt Russell", // 50
-    "Ludacris", // 51
-    "Lucas Black", // 52
-    "Charlize Theron", // 53
-    "Megan Fox" // 54
+        "Tom Hanks", // 0
+        "Meryl Streep", // 1
+        "Leonardo DiCaprio", // 2
+        "Denzel Washington", // 3
+        "Morgan Freeman", // 4
+        "Sean Penn", // 5
+        "Christian Bale", // 6
+        "Robert De Niro", // 7
+        "Jennifer Lawrence", // 8
+        "Kevin Spacey", // 9
+        "Cate Blanchett", // 10
+        "Matthew McConaughey", // 11
+        "Brie Larson", // 12
+        "Michael Fassbender", // 13
+        "Jared Leto", // 14
+        "Kate Winslet", // 15
+        "Amy Adams", // 16
+        "Eddie Redmayne", // 17
+        "Michelle Williams", // 18
+        "Colin Firth", // 19
+        "George Clooney", // 20
+        "Julianne Moore", // 21
+        "Matt Damon", // 22
+        "Anthony Hopkins", // 23
+        "Bradley Cooper", // 24
+        "Christoph Waltz", // 25
+        "The Rock", // 26
+        "Bryan Cranston", // 27
+        "Alicia Vikander", // 28
+        "Steve Carell", // 29
+        "Jamie Foxx", // 30
+        "Tom Hardy", // 31
+        "Charlize Theron", // 32
+        "Johnny Depp", // 33
+        "Gary Oldman", // 34
+        "Jim Carrey", // 35
+        "Eddie Murphy", // 36
+        "Will Ferrell", // 37
+        "Adam Sandler", // 38
+        "Ben Stiller", // 39
+        "Bill Murray", // 40
+        "Jonah Hill", // 41
+        "Seth Rogen", // 42
+        "Steve Martin", // 43
+        "Zack Galifianakis", // 44
+        "Zac Efron", // 45
+        "Vin Diesel", // 46
+        "Jason Statham", // 47
+        "Michelle Rodriguez", // 48
+        "Scott Eastwood", // 49
+        "Kurt Russell", // 50
+        "Ludacris", // 51
+        "Lucas Black", // 52
+        "Charlize Theron", // 53
+        "Megan Fox" // 54
     ]
     
 }
