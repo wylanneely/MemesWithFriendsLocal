@@ -18,13 +18,13 @@
                         <viewControllerLayoutGuide type="top" id="imN-da-beH"/>
                         <viewControllerLayoutGuide type="bottom" id="ESc-So-g2o"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JhX-c4-l5q">
+                    <view key="view" contentMode="scaleToFill" id="JhX-c4-l5q" customClass="AppBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aVk-Ix-Nmx">
                                 <rect key="frame" x="16" y="54" width="343" height="579"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JIB-kN-Jjo">
                                     <size key="itemSize" width="340" height="203"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -86,6 +86,14 @@
                             <constraint firstItem="ESc-So-g2o" firstAttribute="top" secondItem="aVk-Ix-Nmx" secondAttribute="bottom" constant="34" id="j38-7m-LOf"/>
                             <constraint firstItem="aVk-Ix-Nmx" firstAttribute="top" secondItem="imN-da-beH" secondAttribute="bottom" constant="34" id="yBV-co-dIS"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="topicsCollectionView" destination="aVk-Ix-Nmx" id="W6h-US-sHc"/>
