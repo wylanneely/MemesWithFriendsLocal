@@ -37,7 +37,7 @@ class TopicsCollectionViewCell: UICollectionViewCell {
             StoredTopics.topics = StoredTopics.sportTopics
             NotificationCenter.default.post(name: .Segue, object: nil)
         case #imageLiteral(resourceName: "Question"):
-            StoredTopics.topics = StoredTopics.otherTopics
+            StoredTopics.topics = StoredTopics.politics
             NotificationCenter.default.post(name: .Segue, object: nil)
         default:
             return

@@ -25,6 +25,9 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         fourthPlayerTextField.alpha = 0
         fifthPlayerTextField.alpha = 0
         sixthPlayerTextField.alpha = 0
+        
+        self.topic = randomTopic()
+        randomTopicButton.setTitle("\(self.topic)", for: .normal)
     }
     
     
