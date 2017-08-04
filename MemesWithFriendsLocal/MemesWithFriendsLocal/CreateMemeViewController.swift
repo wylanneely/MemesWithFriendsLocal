@@ -17,9 +17,12 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
         super.viewDidLoad()
         
         self.memeImageView.image = image
-//        feedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
         
         submitButton.setImage(#imageLiteral(resourceName: "SubmitHighlighted Copy"), for: .highlighted)
+        whiteButton.setImage(#imageLiteral(resourceName: "WhiteColorButtonHighlighted"), for: .highlighted)
+        blackButton.setImage(#imageLiteral(resourceName: "BlackColorButtonHighlighted"), for: .highlighted)
+        
+        colorButtonFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
         
         colorPicker.delegate = self
         
@@ -37,7 +40,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     var image: UIImage?
     var counter = 0
     var person: String = ""
-//    var feedbackGenerator: UIImpactFeedbackGenerator? = nil
+    var colorButtonFeedbackGenerator: UIImpactFeedbackGenerator? = nil
     
     //MARK: - Keyboard Functions
     
@@ -148,6 +151,8 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextFiled: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var whiteButton: UIButton!
+    @IBOutlet weak var blackButton: UIButton!
     
     
     //MARK: - Clear Memes
@@ -168,15 +173,19 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     
     
     @IBAction func blackColorButtonTapped(_ sender: UIButton) {
+        colorButtonFeedbackGenerator?.prepare()
         firstTextField.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
         secondTextFiled.textColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
         currentColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        colorButtonFeedbackGenerator?.impactOccurred()
     }
     
     @IBAction func whiteColorButtonTapped(_ sender: UIButton) {
+        colorButtonFeedbackGenerator?.prepare()
         firstTextField.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         secondTextFiled.textColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         currentColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        colorButtonFeedbackGenerator?.impactOccurred()
     }
     
     @IBAction func createMemeButtonTapped(_ sender: Any) {
