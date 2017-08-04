@@ -17,7 +17,8 @@ class StoredTopics {
         #imageLiteral(resourceName: "Game"),
         #imageLiteral(resourceName: "Football"),
         #imageLiteral(resourceName: "Question"),
-        #imageLiteral(resourceName: "actor")
+        #imageLiteral(resourceName: "actor"),
+        #imageLiteral(resourceName: "Politics")
     ]
     
     
@@ -27,7 +28,8 @@ class StoredTopics {
     "Video Games",
     "Sports",
     "Other",
-    "Actors"
+    "Actors",
+    "Politics"
     ]
     
     /*********************************************************
@@ -352,6 +354,10 @@ class StoredTopics {
     static let sportTopics: [String] = [
     
         //FIXME: - Put Sports Stuff Here
+    
+    ]
+    
+    static let otherTopics: [String] = [
     
     ]
     
