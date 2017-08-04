@@ -406,7 +406,7 @@ class StoredTopics {
     ]
     
     static let otherTopics: [String] = [
-        "Last Night at the Bar"
+        "Last Night at the Bar" // 0
     ]
     
     static let politics: [String] = [
