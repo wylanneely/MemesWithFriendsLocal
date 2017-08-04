@@ -17,7 +17,8 @@ class StoredTopics {
         #imageLiteral(resourceName: "Game"),
         #imageLiteral(resourceName: "Football"),
         #imageLiteral(resourceName: "Question"),
-        #imageLiteral(resourceName: "actor")
+        #imageLiteral(resourceName: "actor"),
+        #imageLiteral(resourceName: "Politics")
     ]
     
     
@@ -27,7 +28,8 @@ class StoredTopics {
     "Video Games",
     "Sports",
     "Other",
-    "Actors"
+    "Actors",
+    "Politics"
     ]
     
     /*********************************************************
@@ -350,8 +352,61 @@ class StoredTopics {
     ]
     
     static let sportTopics: [String] = [
+        "Superbowl 50", //0
+        "Tom Brady", //1
+        "Atlanta Falcons", //2
+        "Lebron James", //3
+        "Kyrie Irving", //4
+        "Dallas Cowboys", //5
+        "Golden State", //6
+        "Steph Curry", //7
+        "Kevin Durant", //8
+        "NBA Finals", //9
+        "Lionel Messi", //10
+        "Paul Pomba", //11
+        "Cristiano Ronaldo", //12
+        "Hall of Fame", //13
+        "World Series", //14
+        "All Time Greats", //15
+        "Draft Bust", //16
+        "Michael Jordan", //17
+        "PrimeTime", //18
+        "Deion Sanders", //19
+        "OJ Simpson", //20
+        "G.O.A.T", //21
+        "New England Patriots", //22
+        "Chicago Bulls", //23
+        "Los Angeles Lakers", //24
+        "49ers", //25
+        "Randy Moss", //26
+        "Kobe Bryant", //27
+        "Pittsburg Steelers", //28
+        "Tiger Woods", //29
+        "World Cup", //30
+        "Russel Westbrook", //31
+        "Mark Sanchez", //32
+        "Seattle Seahawks", //33
+        "Marshawn Lynch", //34
+        "Muhammad Ali", //35
+        "Connor Mcgregor", //36
+        "Floyd Mayweather", //37
+        "Mike Tyson", //38
+        "Serena Willams", //39
+        "Derek Jeter", //40
+        "Barry Bonds", //41
+        "Babe Ruth", //42
+        "Nike", //43
+        "Ray Lewis", //44
+        "Tony Romo", //45
+        "Alabama Sooners", //46
+        "Villanova", //47
+        "Duke", //48
+        "UCLA", //49
+        "Oregon" //50
     
-        //FIXME: - Put Sports Stuff Here
+    ]
+    
+    static let otherTopics: [String] = [
     
     ]
     
