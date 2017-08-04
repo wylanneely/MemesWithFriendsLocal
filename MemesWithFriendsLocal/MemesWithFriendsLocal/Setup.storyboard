@@ -410,6 +410,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="choosePlayersLabel" destination="3G9-PH-49u" id="iCn-nN-Hym"/>
                         <outlet property="fifthPlayerTextField" destination="HGv-aT-jhP" id="Rz1-32-8n9"/>
                         <outlet property="firstPlayerTextField" destination="H7j-r1-UNA" id="ZaM-BY-bhZ"/>
                         <outlet property="fourthPlayerTextField" destination="1rG-3q-8PN" id="Jeo-0q-8Dy"/>

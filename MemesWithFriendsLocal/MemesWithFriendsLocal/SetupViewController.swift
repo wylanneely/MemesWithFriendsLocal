@@ -52,6 +52,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var numberOfPlayersTextField: UITextField!//FIXME: - We Can delete this right?
     @IBOutlet weak var playerPicker: UIPickerView!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var choosePlayersLabel: UILabel!
     
     //MARK: - IBActions
     
@@ -84,7 +85,10 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
                 self.view.frame.origin.y -= keyboardSize.height - 12 // Added - 12
-                self.playerPicker.isHidden = true
+                DispatchQueue.main.async {
+                    self.playerPicker.isHidden = true
+                    self.choosePlayersLabel.text = "Enter Player Name."
+                }
             }
         }
     }
@@ -93,7 +97,10 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
                 self.view.frame.origin.y += keyboardSize.height - 12 // Added - 12
-                self.playerPicker.isHidden = false
+                DispatchQueue.main.async {
+                    self.playerPicker.isHidden = false
+                    self.choosePlayersLabel.text = "Choose between 3 - 6 players."
+                }
             }
         }
     }
