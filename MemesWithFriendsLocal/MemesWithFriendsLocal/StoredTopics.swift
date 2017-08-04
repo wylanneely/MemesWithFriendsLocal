@@ -7,8 +7,21 @@
 //
 
 import Foundation
+import UIKit
 
 class StoredTopics {
+    
+    static var images: [UIImage] = [
+    #imageLiteral(resourceName: "movies"),
+    #imageLiteral(resourceName: "Game"),
+    #imageLiteral(resourceName: "actor")
+    ]
+    
+    
+    static var names: [String] = [
+    "Movies",
+    "Video Games",
+    "Actors"]
     
     /*********************************************************
      * Topics -                                              *
@@ -25,7 +38,7 @@ class StoredTopics {
      *                                                       *
      *********************************************************/
     
-    static let topics: [String] = [
+    static var topics: [String] = [
         "Comics", // 0
         "Art", // 1
         "Country", // 2
@@ -401,7 +414,9 @@ class StoredTopics {
     
 }
 
-
+extension Notification.Name {
+    static let Segue = Notification.Name("Segue")
+}
 
 
 
