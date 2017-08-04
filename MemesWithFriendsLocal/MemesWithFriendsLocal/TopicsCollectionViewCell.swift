@@ -30,6 +30,18 @@ class TopicsCollectionViewCell: UICollectionViewCell {
         case #imageLiteral(resourceName: "actor"):
             StoredTopics.topics = StoredTopics.actorTopics
             NotificationCenter.default.post(name: .Segue, object: nil)
+        case #imageLiteral(resourceName: "Comics"):
+            StoredTopics.topics = StoredTopics.comicTopics
+            NotificationCenter.default.post(name: .Segue, object: nil)
+        case #imageLiteral(resourceName: "Football"):
+            StoredTopics.topics = StoredTopics.sportTopics
+            NotificationCenter.default.post(name: .Segue, object: nil)
+        case #imageLiteral(resourceName: "Question"):
+            StoredTopics.topics = StoredTopics.otherTopics
+            NotificationCenter.default.post(name: .Segue, object: nil)
+        case #imageLiteral(resourceName: "Politics"):
+            StoredTopics.topics = StoredTopics.politics
+            NotificationCenter.default.post(name: .Segue, object: nil)
         default:
             return
         }

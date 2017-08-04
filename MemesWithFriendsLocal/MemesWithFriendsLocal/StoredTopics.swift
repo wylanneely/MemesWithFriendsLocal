@@ -12,25 +12,34 @@ import UIKit
 class StoredTopics {
     
     static var images: [UIImage] = [
-    #imageLiteral(resourceName: "movies"),
-    #imageLiteral(resourceName: "Game"),
-    #imageLiteral(resourceName: "actor")
+        #imageLiteral(resourceName: "Comics"),
+        #imageLiteral(resourceName: "movies"),
+        #imageLiteral(resourceName: "Game"),
+        #imageLiteral(resourceName: "Football"),
+        #imageLiteral(resourceName: "Question"),
+        #imageLiteral(resourceName: "actor"),
+        #imageLiteral(resourceName: "Politics")
     ]
     
     
     static var names: [String] = [
+    "Comics",
     "Movies",
     "Video Games",
-    "Actors"]
+    "Sports",
+    "Other",
+    "Actors",
+    "Politics"
+    ]
     
     /*********************************************************
      * Topics -                                              *
      *          Comics                                       *
      *          Movies                                       *
      *          Video Games                                  *
-     *                                                       *
-     *                                                       *
-     *                                                       *
+     *          Sports                                       *
+     *          Other                                        *
+     *          Actors                                       *
      *                                                       *
      *                                                       *
      *                                                       *
@@ -399,8 +408,45 @@ class StoredTopics {
     
     static let otherTopics: [String] = [
     
-        //FIXME: - Put Other Topics here, For example that time at band camp, at the bar, highschool, ect
+    ]
     
+    static let politics: [String] = [
+    "Donald Trump", // 0
+    "Donald Trump Jr.", // 1
+    "Hillary Clinton", // 3
+    "George Bush", // 4
+    "Bill Clinton", // 5
+    "The White House", // 6
+    "Attorney General", // 7
+    "Launch Codes", // 8
+    "Washington D.C.", // 9
+    "Senate", // 10
+    "House of Representatives", // 11
+    "Congress", // 12
+    "Captial Hill", // 13
+    "Fox News", // 14
+    "CNN", // 15
+    "Ronald Reagan", // 16
+    "Nancy Reagan", // 17
+    "Richard Nixon", // 18
+    "John F. Kennedy", // 19
+    "The Pentagon", // 20
+    "Campaign", // 21
+    "Economy", // 22
+    "Jobs, Jobs, Jobs", // 23
+    "Wall Street", // 24
+    "Health Care", // 25
+    "Gun Control", // 26
+    "Environment", // 27
+    "Religious Freedom", // 28
+    "The Constiution", // 29
+    "Deregulation", // 30
+    "Regulation", // 31
+    "Death Penalty", // 32
+    "Build the Wall!", // 33
+    "Immigration", // 34
+    "Democrats", // 35
+    "Republicans" // 36
     ]
     
     static let actorTopics: [String] = [
