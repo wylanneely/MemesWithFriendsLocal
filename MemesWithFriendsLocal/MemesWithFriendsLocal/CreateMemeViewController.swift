@@ -31,6 +31,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     }
     
     //MARK: - Properties
+    
     static var currentPlayerArray: [String] = [] {
         didSet {
             print(currentPlayerArray.count)
@@ -89,7 +90,7 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
     func pickedColor(color: UIColor) {
         firstTextField.textColor = color
         secondTextFiled.textColor = color
-        currentColor = color// I added this, good addition?
+        currentColor = color
     }
     
     //MARK: - TextField Delegates
@@ -248,4 +249,15 @@ class CreateMemeViewController: UIViewController, UITextFieldDelegate, ColorDele
         clearMeme()
     }
     
+}
+
+extension UITextField{
+    @IBInspectable var placeHolderColor: UIColor? {
+        get {
+            return self.placeHolderColor
+        }
+        set {
+            self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSForegroundColorAttributeName: newValue!])
+        }
+    }
 }

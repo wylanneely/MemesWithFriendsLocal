@@ -13,7 +13,6 @@ class Meme: Equatable {
     // File that Stores the images
     let Images = StoredImages()
     
-    
     //MARK: - Properties
     
     let image: UIImage?
@@ -22,7 +21,6 @@ class Meme: Equatable {
     var voteCount: Int
     var memeTextColor: UIColor?
     var playerName: String?
-    
     
     //MARK: - Initializers
     

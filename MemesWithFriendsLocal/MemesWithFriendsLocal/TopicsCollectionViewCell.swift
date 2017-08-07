@@ -14,7 +14,6 @@ class TopicsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var topicsImageView: UIImageView!
     
-    
     //MARK: - IBActions
     
     @IBAction func topicButtonTapped(_ sender: Any) {
@@ -45,9 +44,5 @@ class TopicsCollectionViewCell: UICollectionViewCell {
         default:
             return
         }
-        
-        
     }
-    
-    
 }
