@@ -124,6 +124,7 @@
                         <outlet property="secondTextLabel" destination="dwC-A1-9Zs" id="oEH-4E-O4j"/>
                         <outlet property="votesLabel" destination="fGz-sx-AP2" id="202-zU-DC6"/>
                         <outlet property="winnerImageView" destination="zlt-mp-11N" id="Jeu-nW-t2Z"/>
+                        <outlet property="winnerLabel" destination="Rb3-wr-6AK" id="4HT-bP-jVL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FUA-Jw-OD6" userLabel="First Responder" sceneMemberID="firstResponder"/>

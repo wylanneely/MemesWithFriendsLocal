@@ -15,8 +15,9 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         calculateWinner()
         restartButton.setImage(#imageLiteral(resourceName: "RestartButtonHighlighted"), for: .highlighted)
+        snowCrownsAnimation()
     }
-    
+
     //MARK: - Properties
     
     var winnerCount: Int = 0 {
@@ -38,7 +39,14 @@ class ResultsViewController: UIViewController {
     }
     var memes: [Meme] = []
     
-    //MARK: - Winner
+    //MARK: - Functions
+    
+    func snowCrownsAnimation() {
+        let emitter = Emitter.get(with: #imageLiteral(resourceName: "CrownVectorSmall"))
+        emitter.emitterPosition = CGPoint(x: view.frame.width / 2, y: 0)
+        emitter.emitterSize = CGSize(width: view.frame.width, height: 1)
+        view.layer.insertSublayer(emitter, below: winnerLabel.layer)
+    }
     
     func calculateWinner() {
         
@@ -74,6 +82,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var winnerImageView: UIImageView!
     @IBOutlet weak var votesLabel: UILabel!
     @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var winnerLabel: UILabel!
     
     //MARK: - IBActions
     
