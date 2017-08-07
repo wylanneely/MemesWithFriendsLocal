@@ -67,11 +67,21 @@ class GameViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //MARK: - Generic Alert Controller
     
     func presentAlertController() {
-        let alert = UIAlertController(title: "\(self.person)'s turn to vote", message: "Please pass device to this person", preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true)
+        if self.person == "" {
+            let alert = UIAlertController(title: "Next Person's turn to vote", message: "Please pass device to this person", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+        } else {
+            
+            let alert = UIAlertController(title: "\(self.person)'s turn to vote", message: "Please pass device to this person", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+        }
     }
     
     //MARK: - Randomizer

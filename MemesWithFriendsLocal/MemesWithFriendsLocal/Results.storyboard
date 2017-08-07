@@ -32,14 +32,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zlt-mp-11N">
-                                <rect key="frame" x="0.0" y="132" width="319" height="319"/>
+                                <rect key="frame" x="0.5" y="132" width="319" height="319"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="319" id="ANG-qn-2MH"/>
                                     <constraint firstAttribute="width" constant="319" id="RlX-h2-ftQ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-A1-9Zs">
-                                <rect key="frame" x="16" y="396" width="287" height="50"/>
+                                <rect key="frame" x="16.5" y="396" width="287" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dwC-A1-9Zs" secondAttribute="height" multiplier="287:50" id="gT9-s3-GXh"/>
                                 </constraints>
@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxJ-LV-kGt">
-                                <rect key="frame" x="16" y="131" width="287" height="95"/>
+                                <rect key="frame" x="16.5" y="131" width="287" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mxJ-LV-kGt" secondAttribute="height" multiplier="287:95" id="epc-Aa-j8J"/>
                                 </constraints>
