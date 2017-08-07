@@ -14,8 +14,6 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
-        
         // Keyboard Notifications for pushup view
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
@@ -30,15 +28,12 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         randomTopicButton.setTitle("\(self.topic)", for: .normal)
     }
     
-    
-    
     //MARK: - Properties
     
     var numberOfPlayersForGame: String = "3"
     var playerArray: [String] = []
     var topic: String = "No Topic"
     let pickerArray: [String] = ["3", "4", "5", "6"]
-//    var feedbackGenerator: UIImpactFeedbackGenerator? = nil
     
     //MARK: - IBOutlets
     
@@ -75,8 +70,6 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func startButtonTapped(_ sender: UIButton) {
         GameController.shared.feedbackGenerator?.impactOccurred()
     }
-    
-    
     
     //MARK: - Spencer's Keyboard Functions
     
