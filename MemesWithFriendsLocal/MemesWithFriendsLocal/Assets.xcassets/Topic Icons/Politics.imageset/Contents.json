@@ -7,10 +7,12 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "004-capitol-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "004-capitol-2.png",
       "scale" : "3x"
     }
   ],
