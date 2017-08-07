@@ -23,10 +23,18 @@ class PickMemeViewController: UIViewController, UICollectionViewDelegate, UIColl
                 CreateMemeViewController.currentPlayerArray.remove(at: personIndex)
             }
         }
+        
+        yourTopicLabel.text = GameController.shared.currentTopic
+        
     }
     
     //MARK: - Properties
+    
     var image: UIImage?
+    
+    //MARK: - Outlets
+    
+    @IBOutlet weak var yourTopicLabel: UILabel!
     
     //MARK: - CollectionView Methods
     

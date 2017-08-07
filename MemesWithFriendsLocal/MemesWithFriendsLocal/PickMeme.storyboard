@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kx2-wz-HkB">
-                                <rect key="frame" x="16" y="133" width="343" height="525"/>
+                                <rect key="frame" x="16" y="203" width="343" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n7N-cd-sv7">
@@ -103,11 +103,35 @@
                                 <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J4S-xU-WsV">
+                                <rect key="frame" x="20" y="108" width="334" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your topic is: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EfL-eS-5JJ">
+                                        <rect key="frame" x="83.5" y="0.0" width="167" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.21462970889999999" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="\(topic)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHL-BR-PBW">
+                                        <rect key="frame" x="137.5" y="36.5" width="59" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="17"/>
+                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.2146297089041096" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Kpr-9H-e7n" firstAttribute="top" secondItem="nUD-cb-WKY" secondAttribute="bottom" id="DvI-ci-BC2"/>
+                            <constraint firstItem="J4S-xU-WsV" firstAttribute="top" secondItem="Tri-lR-gY5" secondAttribute="top" constant="108" id="Plb-18-pox"/>
                             <constraint firstItem="nUD-cb-WKY" firstAttribute="trailing" secondItem="Tri-lR-gY5" secondAttribute="trailingMargin" id="bh3-4S-1WX"/>
+                            <constraint firstItem="J4S-xU-WsV" firstAttribute="centerX" secondItem="Tri-lR-gY5" secondAttribute="centerX" id="f0i-Qe-c3T"/>
+                            <constraint firstItem="J4S-xU-WsV" firstAttribute="leading" secondItem="Tri-lR-gY5" secondAttribute="leadingMargin" constant="4" id="jWN-CD-YkY"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
@@ -119,6 +143,9 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="yourTopicLabel" destination="RHL-BR-PBW" id="6mX-74-UTH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwM-2u-2dO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

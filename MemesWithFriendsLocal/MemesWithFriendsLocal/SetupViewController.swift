@@ -34,6 +34,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var playerArray: [String] = []
     var topic: String = "No Topic"
     let pickerArray: [String] = ["3", "4", "5", "6"]
+    var currentTopic: String = ""
     
     //MARK: - IBOutlets
     
@@ -70,6 +71,8 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func startButtonTapped(_ sender: UIButton) {
         GameController.shared.feedbackGenerator?.impactOccurred()
     }
+    
+    
     
     //MARK: - Spencer's Keyboard Functions
     
@@ -245,6 +248,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if segue.identifier == "segueToCreateMeme" {
             
             if let _ = segue.destination as? PickMemeViewController {
+                GameController.shared.currentTopic = self.topic
                 createPlayersForGame()
             }
         }
