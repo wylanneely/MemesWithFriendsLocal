@@ -83,7 +83,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0{
+            if self.view.frame.origin.y == 0 {
                 self.view.frame.origin.y -= keyboardSize.height - 12 // Added - 12
                 DispatchQueue.main.async {
                     self.playerPicker.isHidden = true
@@ -95,7 +95,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0{
+            if self.view.frame.origin.y != 0 {
                 self.view.frame.origin.y += keyboardSize.height - 12 // Added - 12
                 DispatchQueue.main.async {
                     self.playerPicker.isHidden = false
