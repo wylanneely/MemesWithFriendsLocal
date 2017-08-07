@@ -59,11 +59,20 @@ class PickMemeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func presentAlertController() {
+        
+        if GameController.shared.person == ""  {
+            let alert = UIAlertController(title: "Next Person's turn", message: "Please pass device to this person", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+        } else {
         let alert = UIAlertController(title: "\(GameController.shared.person)'s turn", message: "Please pass device to this person", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true)
+        }
     }
     
     //MARK: - Segue Methods
