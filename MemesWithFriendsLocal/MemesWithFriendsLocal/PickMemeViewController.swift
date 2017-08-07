@@ -26,6 +26,7 @@ class PickMemeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     //MARK: - Properties
+    
     var image: UIImage?
     
     //MARK: - CollectionView Methods

@@ -12,31 +12,22 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        feedbackGenerator = UISelectionFeedbackGenerator()
-
         
         playButton.setImage(#imageLiteral(resourceName: "StartButtonHighlighted"), for: .highlighted)
         instructionsButton.setImage(#imageLiteral(resourceName: "InstructionButtonHighlighted"), for: .highlighted)
         logoImageView.alpha = 0
         
-        
-        
         showLogo()
     }
     
-    //MARK: - Properties
-//    var feedbackGenerator: UISelectionFeedbackGenerator? = nil
-    
     //MARK: - IBOutlets
-    
-    
     
     @IBOutlet weak var instructionsButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var logoImageView: UILabel!
     
     //MARK: - IBActions
+    
     @IBAction func startButtonTapped(_ sender: UIButton) {
         GameController.shared.feedbackGenerator?.impactOccurred()
     }
@@ -44,7 +35,6 @@ class MainViewController: UIViewController {
     @IBAction func instructionButtonTapped(_ sender: UIButton) {
         GameController.shared.feedbackGenerator?.impactOccurred()
     }
-    
     
     //MARK: - Animate Methods
     

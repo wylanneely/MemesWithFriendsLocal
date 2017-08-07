@@ -19,7 +19,7 @@ class MemeImagesCollectionViewCell: UICollectionViewCell {
     @IBAction func imageButtonTapped(_ sender: UIButton) {
         delegate?.memeImageButtonTappped(cell: self)
     }
-
+    
     weak var delegate: MemeImageSelectedDelegate?
     
 }

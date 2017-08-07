@@ -233,6 +233,7 @@ class SetupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     //MARK: - Randomizer
+    
     func randomTopic() -> String {
         let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: StoredTopics.topics.count)
         return StoredTopics.topics[randomNumber]

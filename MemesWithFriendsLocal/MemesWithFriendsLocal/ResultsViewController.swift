@@ -13,13 +13,12 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        feedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
         calculateWinner()
         restartButton.setImage(#imageLiteral(resourceName: "RestartButtonHighlighted"), for: .highlighted)
     }
     
     //MARK: - Properties
-//    var feedbackGenerator: UIImpactFeedbackGenerator? = nil
+    
     var winnerCount: Int = 0 {
         didSet {
             NSLog("Winner count: \(winnerCount)")
