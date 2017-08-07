@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MemeController{
+class MemeController {
     
     // MARK: - Properties
     
