@@ -17,6 +17,8 @@
 		2DD383EF1F30DA7400B3967B /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD383EE1F30DA7400B3967B /* AppButton.swift */; };
 		2DD383F11F30E6E700B3967B /* Scriptorama Tradeshow JF Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD383F01F30E6E700B3967B /* Scriptorama Tradeshow JF Regular.ttf */; };
 		2DF80F261F3916B1006CAFCB /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF80F251F3916B1006CAFCB /* Emitter.swift */; };
+		2DF80F291F391EC4006CAFCB /* Credits.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF80F281F391EC4006CAFCB /* Credits.storyboard */; };
+		2DF80F2B1F391EDB006CAFCB /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF80F2A1F391EDB006CAFCB /* CreditsViewController.swift */; };
 		6B1010F81F2F866A00D5C40E /* Instructions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1010F71F2F866A00D5C40E /* Instructions.storyboard */; };
 		6B2D57C41F31109C007B0442 /* StoredTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D57C31F31109C007B0442 /* StoredTopics.swift */; };
 		6BB29B5F1F2BE332009BF446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB29B5E1F2BE332009BF446 /* AppDelegate.swift */; };
@@ -59,6 +61,8 @@
 		2DD383EE1F30DA7400B3967B /* AppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		2DD383F01F30E6E700B3967B /* Scriptorama Tradeshow JF Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Scriptorama Tradeshow JF Regular.ttf"; sourceTree = "<group>"; };
 		2DF80F251F3916B1006CAFCB /* Emitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		2DF80F281F391EC4006CAFCB /* Credits.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Credits.storyboard; sourceTree = "<group>"; };
+		2DF80F2A1F391EDB006CAFCB /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		6B1010F71F2F866A00D5C40E /* Instructions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Instructions.storyboard; sourceTree = "<group>"; };
 		6B2D57C31F31109C007B0442 /* StoredTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredTopics.swift; sourceTree = "<group>"; };
 		6BB29B5B1F2BE332009BF446 /* MemesWithFriendsLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemesWithFriendsLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +128,15 @@
 				2DD383E81F30D48000B3967B /* Impact.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		2DF80F271F391E98006CAFCB /* CreditsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DF80F281F391EC4006CAFCB /* Credits.storyboard */,
+				2DF80F2A1F391EDB006CAFCB /* CreditsViewController.swift */,
+			);
+			name = CreditsViewController;
 			sourceTree = "<group>";
 		};
 		6B1010F61F2F865000D5C40E /* InstructionsViewController */ = {
@@ -200,8 +213,9 @@
 		6BB29B751F2BE3E9009BF446 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6B1010F61F2F865000D5C40E /* InstructionsViewController */,
 				6BB29B721F2BE3D1009BF446 /* MainViewController */,
+				6B1010F61F2F865000D5C40E /* InstructionsViewController */,
+				2DF80F271F391E98006CAFCB /* CreditsViewController */,
 				6BB5B37C1F34CF6500A62CEC /* TopicViewController */,
 				6BB29B841F2BE4CE009BF446 /* SetupViewController */,
 				6BFA85DB1F32286700732AC2 /* PickMemeViewController */,
@@ -378,6 +392,7 @@
 				6BB29B861F2BE4DD009BF446 /* Setup.storyboard in Resources */,
 				6BB29B771F2BE402009BF446 /* MainView.storyboard in Resources */,
 				6BB5B37E1F34CF8200A62CEC /* Topics.storyboard in Resources */,
+				2DF80F291F391EC4006CAFCB /* Credits.storyboard in Resources */,
 				6BB29B831F2BE4BC009BF446 /* CreateMeme.storyboard in Resources */,
 				6BFA85DD1F32288F00732AC2 /* PickMeme.storyboard in Resources */,
 				2DD383F11F30E6E700B3967B /* Scriptorama Tradeshow JF Regular.ttf in Resources */,
@@ -405,6 +420,7 @@
 				2D98D04A1F2F888400D37B9A /* InstructionBackgroundView.swift in Sources */,
 				6BB5B3821F34D04F00A62CEC /* TopicsCollectionViewCell.swift in Sources */,
 				2DD383ED1F30D95200B3967B /* AppBackgroundView.swift in Sources */,
+				2DF80F2B1F391EDB006CAFCB /* CreditsViewController.swift in Sources */,
 				2DD383EF1F30DA7400B3967B /* AppButton.swift in Sources */,
 				6BBE34851F2BF152000E32F4 /* ColorPicker.swift in Sources */,
 				6BB5B3801F34CF9D00A62CEC /* TopicsViewController.swift in Sources */,

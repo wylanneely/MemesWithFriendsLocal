@@ -27,8 +27,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO7-dB-vd4">
-                                <rect key="frame" x="140" y="493" width="95" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="140" y="329" width="95" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                 <state key="normal" image="InstructionButtonNatural">
                                     <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -48,13 +48,23 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-w5-Ufl">
                                 <rect key="frame" x="146" y="252" width="83" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                 <state key="normal" image="StartButtonNatural">
                                     <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="NbT-DK-aOc" eventType="touchUpInside" id="RZ8-Xq-P3W"/>
                                     <segue destination="JkF-gL-WBh" kind="show" id="RIl-zx-pxi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdb-rC-J2z">
+                                <rect key="frame" x="146" y="416" width="83" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                <state key="normal" image="AboutUsButtonNatural">
+                                    <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Rzs-px-KJJ" kind="show" id="imj-QR-qzu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,10 +102,19 @@
                 <viewControllerPlaceholder storyboardName="Instructions" id="l9Q-lT-Qzf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6r-eQ-A4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="354"/>
+            <point key="canvasLocation" x="966" y="220"/>
+        </scene>
+        <!--Credits-->
+        <scene sceneID="wAv-Ce-rXj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Credits" id="Rzs-px-KJJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RL5-3X-bIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="294"/>
         </scene>
     </scenes>
     <resources>
+        <image name="AboutUsButtonNatural" width="95" height="46"/>
         <image name="InstructionButtonNatural" width="95" height="46"/>
         <image name="StartButtonNatural" width="95" height="46"/>
     </resources>
