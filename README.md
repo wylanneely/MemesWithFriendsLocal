@@ -2,14 +2,14 @@
 
 # Technologies
 * Swift
-* CloudKit
 * Core Animation
+* GameKit
 * UIKit
 
 # Overview
 * The ultimate Meme creation app! Need a fun group activity to play with family and friends? Memes With Friends can disintegrate any spell of boredom. Pit your own Meme creation against one another, and finally see who is the Meme king. 
 
-Choose from a selection of topics, pick an \(image) from our preselected photo album, then vote to see which Meme garners the most laughs. Infinite re-playability, quick and easy to set up, and fun for the whole family!
+* Choose from a selection of topics, pick an image from our preselected photo album, then vote to see which Meme garners the most laughs. Infinite re-playability, quick and easy to set up, and fun for the whole family!
 
 # Contributors
 * Bradley Gilmore(me): [Github](https://github.com/BCtopics) | [LinkedIn](https://www.linkedin.com/in/gilmorebradley/)
