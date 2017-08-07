@@ -333,7 +333,7 @@
 				TargetAttributes = {
 					6BB29B5A1F2BE332009BF446 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = NUA68XBCNX;
+						DevelopmentTeam = N8EMAYLL43;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.iCloud = {
@@ -536,7 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NUA68XBCNX;
+				DEVELOPMENT_TEAM = N8EMAYLL43;
 				INFOPLIST_FILE = MemesWithFriendsLocal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradleygilmore.MemesWithFriendsLocal;
@@ -549,7 +549,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NUA68XBCNX;
+				DEVELOPMENT_TEAM = N8EMAYLL43;
 				INFOPLIST_FILE = MemesWithFriendsLocal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradleygilmore.MemesWithFriendsLocal;
