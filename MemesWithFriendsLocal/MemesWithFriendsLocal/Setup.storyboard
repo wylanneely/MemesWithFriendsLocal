@@ -259,13 +259,13 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g50-VV-w4M">
-                                <rect key="frame" x="0.0" y="72.5" width="320" height="423.5"/>
+                                <rect key="frame" x="0.0" y="59.5" width="320" height="450.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-jA-o5e">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="423.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="450.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o4D-MD-3UD">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="114.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="141.5"/>
                                                 <subviews>
                                                     <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Game Setup" translatesAutoresizingMaskIntoConstraints="NO" id="Dyz-KU-3sr">
                                                         <rect key="frame" x="10" y="0.0" width="300" height="65"/>
@@ -274,9 +274,20 @@
                                                             <constraint firstAttribute="width" constant="300" id="ttR-oJ-Kz8"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Topic is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8az-CS-WNr">
+                                                        <rect key="frame" x="105.5" y="65" width="109" height="24.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="18"/>
+                                                        <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" red="0.88817590479999997" green="0.43297579879999998" blue="0.34515717629999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlY-jN-6Tq" customClass="AppButton" customModule="MemesWithFriendsLocal" customModuleProvider="target">
-                                                        <rect key="frame" x="70.5" y="65" width="179" height="30"/>
-                                                        <state key="normal" title="Tap Me For Random Topic"/>
+                                                        <rect key="frame" x="70" y="89.5" width="180" height="32"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                        <state key="normal" title="Tap Me For Random Topic">
+                                                            <color key="titleColor" red="0.63064873219999995" green="0.87866544719999995" blue="0.47058179970000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                 <real key="value" value="0.0"/>
@@ -290,15 +301,15 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose between 3 - 6 players." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3G9-PH-49u">
-                                                        <rect key="frame" x="56" y="95" width="208.5" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                        <rect key="frame" x="55.5" y="121.5" width="209" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="15"/>
                                                         <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jgT-w1-fGJ">
-                                                <rect key="frame" x="0.0" y="128.5" width="320" height="295"/>
+                                                <rect key="frame" x="0.0" y="155.5" width="320" height="295"/>
                                                 <subviews>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFL-jk-VcY">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
