@@ -506,6 +506,28 @@ class StoredTopics {
         "Megan Fox" // 54
     ]
     
+    static let musicTopics = [
+        "Michael Jackon",
+        "Beyonce",
+        "Jay-Z",
+        "Kanye West",
+        "Bono",
+        "David Bowie",
+        "Bob Dylan",
+        "Neil Young",
+        "Prince",
+        "Iggy Pop",
+        "Dr. Dre",
+        "Madonna",
+        "B.B. King",
+        "Paul McCartney",
+        "Hip Hop Music",
+        "Rock Music",
+        "Classical Music",
+        "Country Music"
+        
+    ]
+    
 }
 
 extension Notification.Name {
