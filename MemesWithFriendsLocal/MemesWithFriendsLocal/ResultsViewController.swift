@@ -15,14 +15,10 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         calculateWinner()
         restartButton.setImage(#imageLiteral(resourceName: "RestartButtonHighlighted"), for: .highlighted)
-        
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (_) in
-    
-            self.snowCrownsAnimation()
-        }
-        
+        self.snowCrownsAnimation()
+  
     }
-
+    
     //MARK: - Properties
     
     var winnerCount: Int = 0 {
