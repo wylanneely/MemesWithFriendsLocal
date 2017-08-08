@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="487.5" y="492.25352112676057"/>
         </scene>
-        <!--Setup-->
+        <!--Topics-->
         <scene sceneID="fai-8A-66k">
             <objects>
-                <viewControllerPlaceholder storyboardName="Setup" id="aZe-sa-wGq" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Topics" id="aZe-sa-wGq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y71-iH-Nzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="493"/>
