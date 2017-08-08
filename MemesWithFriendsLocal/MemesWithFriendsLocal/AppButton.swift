@@ -10,7 +10,6 @@ import UIKit
 
 class AppButton: UIButton {
 
-    
     enum FromDirection:Int {
         case Top = 0
         case Right = 1

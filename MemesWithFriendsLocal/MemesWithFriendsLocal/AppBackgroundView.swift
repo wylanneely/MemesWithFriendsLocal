@@ -11,7 +11,6 @@ import UIKit
 @IBDesignable
 class AppBackgroundView: UIView {
 
-    
     // MARK: - Gradient
     
     @IBInspectable var firstColor: UIColor = UIColor.white {
