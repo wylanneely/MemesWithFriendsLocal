@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z7T-2l-AJP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Waiting Room Table View Controller-->
+        <scene sceneID="e27-fJ-TrQ">
+            <objects>
+                <tableViewController id="z7T-2l-AJP" customClass="WaitingRoomTableViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4zC-ff-dRi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="EtD-ih-OPM">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="zTM-LU-DK7">
+                                    <barButtonItem key="leftBarButtonItem" style="plain" id="U9T-v8-X2D">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0rK-h4-Rf6">
+                                            <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Start"/>
+                                            <connections>
+                                                <action selector="startButtonTapped:" destination="z7T-2l-AJP" eventType="touchUpInside" id="lEg-kx-DJu"/>
+                                                <segue destination="WSR-ab-ulF" kind="show" id="bWP-HF-cTj"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="Refresh" id="GCC-8T-eU7">
+                                        <connections>
+                                            <action selector="refreshButtonTapped:" destination="z7T-2l-AJP" id="5r7-J5-lcx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="waitingCell" id="DUf-ec-4bK">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DUf-ec-4bK" id="K5i-bm-95T">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="z7T-2l-AJP" id="rjw-Zq-uYr"/>
+                            <outlet property="delegate" destination="z7T-2l-AJP" id="r60-Zq-jcH"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="navigationTitle" destination="zTM-LU-DK7" id="jbD-rE-t4Q"/>
+                        <outlet property="waitingRoomTableView" destination="4zC-ff-dRi" id="7e3-SF-0Qd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C0y-nY-YMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847" y="994"/>
+        </scene>
+        <!--MPMemeSelection-->
+        <scene sceneID="GqV-I4-ut8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MPMemeSelection" id="WSR-ab-ulF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZQ-cg-dHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="948"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NbT-DK-aOc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Scriptorama Tradeshow JF Regular.ttf">
+            <string>ScriptoramaTradeshowJF</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="5Kz-3m-3EQ">
+            <objects>
+                <viewController id="NbT-DK-aOc" customClass="MainViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VSa-Kj-lZA"/>
+                        <viewControllerLayoutGuide type="bottom" id="coC-YV-vmh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iX5-fD-zdB" customClass="AppBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OO7-dB-vd4">
+                                <rect key="frame" x="140" y="493" width="95" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="InstructionButtonNatural">
+                                    <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="instructionButtonTapped:" destination="NbT-DK-aOc" eventType="touchUpInside" id="3f7-KX-ilZ"/>
+                                    <segue destination="l9Q-lT-Qzf" kind="show" id="jg4-UP-nbc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meme's with Friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="czi-lY-dkY">
+                                <rect key="frame" x="57" y="20" width="260" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="54"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaR-w5-Ufl">
+                                <rect key="frame" x="146" y="252" width="83" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <state key="normal" image="StartButtonNatural">
+                                    <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="NbT-DK-aOc" eventType="touchUpInside" id="RZ8-Xq-P3W"/>
+                                    <segue destination="JkF-gL-WBh" kind="show" id="RIl-zx-pxi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQd-EX-dww">
+                                <rect key="frame" x="149" y="318" width="76" height="30"/>
+                                <state key="normal" title="Multiplayer"/>
+                                <connections>
+                                    <segue destination="7fL-QT-jKj" kind="show" id="pWt-fx-cnj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wQd-EX-dww" firstAttribute="centerY" secondItem="iX5-fD-zdB" secondAttribute="centerY" id="0Rn-fn-EXh"/>
+                            <constraint firstItem="wQd-EX-dww" firstAttribute="centerX" secondItem="iX5-fD-zdB" secondAttribute="centerX" id="ZnC-Ao-rtE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="instructionsButton" destination="OO7-dB-vd4" id="cLw-eX-5jx"/>
+                        <outlet property="logoImageView" destination="czi-lY-dkY" id="ivU-PI-7H6"/>
+                        <outlet property="playButton" destination="zaR-w5-Ufl" id="Sim-JN-gPB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGl-8y-d1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325.60000000000002" y="187.55622188905548"/>
+        </scene>
+        <!--Topics-->
+        <scene sceneID="Txb-4a-kHP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Topics" id="JkF-gL-WBh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8t7-1h-ake" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="101"/>
+        </scene>
+        <!--MPStartMenu-->
+        <scene sceneID="fiS-Oq-jjq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MPStartMenu" id="7fL-QT-jKj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bb1-o2-ibR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="206"/>
+        </scene>
+        <!--Instructions-->
+        <scene sceneID="AH8-5h-YAa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Instructions" id="l9Q-lT-Qzf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6r-eQ-A4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="354"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="InstructionButtonNatural" width="95" height="46"/>
+        <image name="StartButtonNatural" width="95" height="46"/>
+    </resources>
+</document>

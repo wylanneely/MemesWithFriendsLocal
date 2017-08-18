@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L1R-0J-HWq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Join Game Table View Controller-->
+        <scene sceneID="URF-gx-w0v">
+            <objects>
+                <tableViewController id="L1R-0J-HWq" customClass="MPJoinGameTableViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4g0-7q-EtV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="joinGameCell" id="ZUT-gy-ABr" customClass="PlayerTableViewCell" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZUT-gy-ABr" id="NK4-Be-yci">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0k-na-VdP">
+                                            <rect key="frame" x="337" y="6" width="30" height="30"/>
+                                            <state key="normal" title="Join"/>
+                                            <connections>
+                                                <action selector="joinGameButtonTapped:" destination="ZUT-gy-ABr" eventType="touchUpInside" id="Qe0-6X-9aW"/>
+                                                <segue destination="JBd-Z2-20l" kind="show" identifier="joinGame" id="0nS-iW-ye3"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efN-C5-hUb">
+                                            <rect key="frame" x="16" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="E0k-na-VdP" firstAttribute="centerY" secondItem="NK4-Be-yci" secondAttribute="centerY" id="2Uz-Jr-CnB"/>
+                                        <constraint firstItem="efN-C5-hUb" firstAttribute="centerY" secondItem="NK4-Be-yci" secondAttribute="centerY" id="NXT-B8-YoU"/>
+                                        <constraint firstAttribute="trailing" secondItem="E0k-na-VdP" secondAttribute="trailing" constant="8" id="SqB-eo-PRZ"/>
+                                        <constraint firstItem="efN-C5-hUb" firstAttribute="leading" secondItem="NK4-Be-yci" secondAttribute="leadingMargin" constant="8" id="u2f-T1-sx4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playerNameLabel" destination="efN-C5-hUb" id="dSk-Fo-lb2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="L1R-0J-HWq" id="K8k-ZQ-q9j"/>
+                            <outlet property="delegate" destination="L1R-0J-HWq" id="cRa-bF-Bdg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQn-i2-hbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479" y="-24"/>
+        </scene>
+        <!--MPWaitingRoom-->
+        <scene sceneID="VqA-St-96c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MPWaitingRoom" id="JBd-Z2-20l" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icl-ex-dbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278" y="-261"/>
+        </scene>
+    </scenes>
+</document>

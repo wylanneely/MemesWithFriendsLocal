@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="77F-qc-tiF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Menu View Controller-->
+        <scene sceneID="5sO-IP-pmJ">
+            <objects>
+                <viewController id="77F-qc-tiF" customClass="MPStartMenuViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="55y-sx-wTf"/>
+                        <viewControllerLayoutGuide type="bottom" id="mnI-nl-eqG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XTE-PX-RF8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te7-Bm-hL8">
+                                <rect key="frame" x="172" y="116" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createButtonTapped:" destination="77F-qc-tiF" eventType="touchUpInside" id="WgU-Kz-MME"/>
+                                    <segue destination="Rta-Ub-b1E" kind="show" id="eko-Ls-vNC"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fWI-te-quV">
+                                <rect key="frame" x="107.5" y="303.5" width="160" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FORCE USERNAME" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Vj-Ug-MJn">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYo-xo-k9Y">
+                                        <rect key="frame" x="65" y="30" width="30" height="30"/>
+                                        <state key="normal" title="Join"/>
+                                        <connections>
+                                            <action selector="joinGameButtonTapped:" destination="77F-qc-tiF" eventType="touchUpInside" id="3Mr-LV-W9B"/>
+                                            <segue destination="0ct-u0-RZj" kind="show" id="vt6-bS-CCP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="6Tm-DY-NgP"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Vj-Ug-MJn" secondAttribute="trailing" id="BeU-y7-7OM"/>
+                                    <constraint firstItem="8Vj-Ug-MJn" firstAttribute="leading" secondItem="fWI-te-quV" secondAttribute="leading" id="FZ7-Qx-Xou"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fWI-te-quV" firstAttribute="centerY" secondItem="XTE-PX-RF8" secondAttribute="centerY" id="F1X-bf-EzR"/>
+                            <constraint firstItem="fWI-te-quV" firstAttribute="centerX" secondItem="XTE-PX-RF8" secondAttribute="centerX" id="y6V-GO-IQT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerNameTextField" destination="8Vj-Ug-MJn" id="Bsd-ZW-waD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAx-W3-v1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.799999999999997" y="143.47826086956522"/>
+        </scene>
+        <!--MPGameSetup-->
+        <scene sceneID="XFz-4I-rcX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MPGameSetup" id="Rta-Ub-b1E" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpk-IL-3Ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="-26"/>
+        </scene>
+        <!--MPJoinGame-->
+        <scene sceneID="Ylk-bm-rcN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MPJoinGame" id="0ct-u0-RZj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NA2-T4-c5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="371"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U0C-SW-BzN">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-MediumItalic</string>
+        </array>
+        <array key="Impact.ttf">
+            <string>Impact</string>
+        </array>
+        <array key="Scriptorama Tradeshow JF Regular.ttf">
+            <string>ScriptoramaTradeshowJF</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Results View Controller-->
+        <scene sceneID="05H-2z-RKh">
+            <objects>
+                <viewController id="U0C-SW-BzN" customClass="ResultsViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d3B-Sd-bP5"/>
+                        <viewControllerLayoutGuide type="bottom" id="I5I-Mr-P2W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ox5-Gt-CZS" customClass="AppBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zlt-mp-11N">
+                                <rect key="frame" x="0.5" y="132" width="319" height="319"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="319" id="ANG-qn-2MH"/>
+                                    <constraint firstAttribute="width" constant="319" id="RlX-h2-ftQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwC-A1-9Zs">
+                                <rect key="frame" x="16.5" y="396" width="287" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dwC-A1-9Zs" secondAttribute="height" multiplier="287:50" id="gT9-s3-GXh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxJ-LV-kGt">
+                                <rect key="frame" x="16.5" y="131" width="287" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mxJ-LV-kGt" secondAttribute="height" multiplier="287:95" id="epc-Aa-j8J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winner!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rb3-wr-6AK">
+                                <rect key="frame" x="16" y="20" width="288" height="59"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="41"/>
+                                <color key="textColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-aE-upa">
+                                <rect key="frame" x="7" y="76" width="306" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="24"/>
+                                <color key="textColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGz-sx-AP2">
+                                <rect key="frame" x="19" y="459" width="280" height="45"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ScriptoramaTradeshowJF" family="ScriptoramaTradeshowJF" pointSize="31"/>
+                                <color key="textColor" red="0.71333747719999996" green="0.56217588399999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhL-nO-50B">
+                                <rect key="frame" x="113" y="510" width="95" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" image="RestartButtonNatural">
+                                    <color key="titleColor" red="0.71333747719999996" green="0.56217588399999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.98000299930000001" green="0.92574799060000001" blue="0.90981364249999996" alpha="0.50347816780821919" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartGameButtonTapped:" destination="U0C-SW-BzN" eventType="touchUpInside" id="EQk-ML-DlP"/>
+                                    <segue destination="aZe-sa-wGq" kind="show" id="U6G-Hi-TbA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dwC-A1-9Zs" firstAttribute="width" secondItem="zlt-mp-11N" secondAttribute="width" multiplier="0.9" id="01U-4k-hbb"/>
+                            <constraint firstItem="mxJ-LV-kGt" firstAttribute="top" secondItem="zlt-mp-11N" secondAttribute="top" multiplier="0.99" id="Jhb-0k-Y0F"/>
+                            <constraint firstItem="mxJ-LV-kGt" firstAttribute="width" secondItem="zlt-mp-11N" secondAttribute="width" multiplier="0.9" id="QJB-bD-lDO"/>
+                            <constraint firstItem="dwC-A1-9Zs" firstAttribute="bottom" secondItem="zlt-mp-11N" secondAttribute="bottom" multiplier="0.99" id="YbW-Yh-YYs"/>
+                            <constraint firstItem="mxJ-LV-kGt" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="c5B-ga-1Zv"/>
+                            <constraint firstItem="dwC-A1-9Zs" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="mvk-ev-G6e"/>
+                            <constraint firstItem="mxJ-LV-kGt" firstAttribute="top" secondItem="d3B-Sd-bP5" secondAttribute="bottom" constant="111" id="qhu-wj-T31"/>
+                            <constraint firstItem="zlt-mp-11N" firstAttribute="centerX" secondItem="Ox5-Gt-CZS" secondAttribute="centerX" id="yoF-fe-p2l"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="firstTextLabel" destination="mxJ-LV-kGt" id="gxL-LU-DPN"/>
+                        <outlet property="playerLabel" destination="pfP-aE-upa" id="gqW-9v-I4m"/>
+                        <outlet property="restartButton" destination="EhL-nO-50B" id="ldA-9v-MmU"/>
+                        <outlet property="secondTextLabel" destination="dwC-A1-9Zs" id="oEH-4E-O4j"/>
+                        <outlet property="votesLabel" destination="fGz-sx-AP2" id="202-zU-DC6"/>
+                        <outlet property="winnerImageView" destination="zlt-mp-11N" id="Jeu-nW-t2Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUA-Jw-OD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487.5" y="492.25352112676057"/>
+        </scene>
+        <!--Setup-->
+        <scene sceneID="fai-8A-66k">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setup" id="aZe-sa-wGq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y71-iH-Nzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190" y="493"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RestartButtonNatural" width="95" height="46"/>
+    </resources>
+</document>

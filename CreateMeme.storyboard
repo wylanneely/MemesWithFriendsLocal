@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pGo-br-6Pq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Impact.ttf">
+            <string>Impact</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--PickMeme-->
+        <scene sceneID="271-ZQ-GDE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PickMeme" id="UFc-hM-M6v" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Mh-XQ-Rtj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-245" y="674"/>
+        </scene>
+        <!--Create Meme View Controller-->
+        <scene sceneID="BGB-no-MZg">
+            <objects>
+                <viewController id="pGo-br-6Pq" customClass="CreateMemeViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c68-Q4-JaG"/>
+                        <viewControllerLayoutGuide type="bottom" id="5h2-75-NzI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HQl-r7-9yc" customClass="AppBackgroundView" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EZ-RN-wkz">
+                                <rect key="frame" x="357" y="665" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="ClC-G7-BHk"/>
+                                    <constraint firstAttribute="height" constant="1" id="zlx-lT-WZ3"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="SBC-MN-ds9" kind="show" identifier="gameView" id="4Vr-6P-UEI"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kbg-0i-6tg" customClass="ColorPicker" customModule="MemesWithFriendsLocal" customModuleProvider="target">
+                                <rect key="frame" x="50" y="342" width="275" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kbg-0i-6tg" secondAttribute="height" multiplier="11:2" id="dGG-KG-VKi"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uJE-Q3-WKH">
+                                <rect key="frame" x="37" y="20" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="SS4-Bi-gec"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Top text..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBp-GM-BRh">
+                                <rect key="frame" x="61" y="28" width="253" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sBp-GM-BRh" secondAttribute="height" multiplier="253:56" id="tz4-DJ-eDM"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="pGo-br-6Pq" id="z7J-t4-sl6"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bottom text..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pzf-Q1-7DR">
+                                <rect key="frame" x="67" y="260" width="242" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pzf-Q1-7DR" secondAttribute="height" multiplier="242:51" id="bAE-rZ-nlf"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="pGo-br-6Pq" id="RO7-DQ-Hap"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jon-OR-dYg">
+                                <rect key="frame" x="116" y="418" width="142" height="46"/>
+                                <state key="normal" image="SubmitButtonNatural">
+                                    <color key="titleColor" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createMemeButtonTapped:" destination="pGo-br-6Pq" eventType="touchUpInside" id="ZrW-nj-9ZA"/>
+                                    <segue destination="UFc-hM-M6v" kind="show" identifier="backToMemeSelection" id="TIG-Yv-Seg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-ty-Mit">
+                                <rect key="frame" x="290" y="424" width="35" height="35"/>
+                                <state key="normal" image="BlackColorButton">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="blackColorButtonTapped:" destination="pGo-br-6Pq" eventType="touchUpInside" id="iFl-fA-Rqo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlY-nu-dww">
+                                <rect key="frame" x="50" y="424" width="35" height="35"/>
+                                <state key="normal" image="WhiteColorButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="whiteColorButtonTapped:" destination="pGo-br-6Pq" eventType="touchUpInside" id="5Vb-Ey-Mjh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kbg-0i-6tg" secondAttribute="trailing" constant="34" id="4Gb-7b-o7B"/>
+                            <constraint firstItem="mlY-nu-dww" firstAttribute="top" secondItem="Kbg-0i-6tg" secondAttribute="bottom" constant="32" id="7ZO-RZ-zku"/>
+                            <constraint firstItem="uJE-Q3-WKH" firstAttribute="top" secondItem="c68-Q4-JaG" secondAttribute="bottom" id="993-dL-j6g"/>
+                            <constraint firstItem="Kbg-0i-6tg" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="34" id="AGV-a5-FZ1"/>
+                            <constraint firstItem="2hf-ty-Mit" firstAttribute="top" secondItem="Kbg-0i-6tg" secondAttribute="bottom" constant="32" id="Bm8-Yw-gFz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jon-OR-dYg" secondAttribute="trailing" constant="101" id="Bmm-Zg-Chq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3EZ-RN-wkz" secondAttribute="trailing" constant="1" id="D6D-Bt-0LF"/>
+                            <constraint firstItem="Jon-OR-dYg" firstAttribute="top" secondItem="Kbg-0i-6tg" secondAttribute="bottom" constant="26" id="Gil-e2-ebD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pzf-Q1-7DR" secondAttribute="trailing" constant="50" id="Gx2-ap-Lwg"/>
+                            <constraint firstItem="uJE-Q3-WKH" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="H0S-m0-fhI"/>
+                            <constraint firstItem="Jon-OR-dYg" firstAttribute="leading" secondItem="mlY-nu-dww" secondAttribute="trailing" constant="32" id="JPV-47-HfU"/>
+                            <constraint firstItem="sBp-GM-BRh" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="45" id="RJS-Aa-fP8"/>
+                            <constraint firstItem="Pzf-Q1-7DR" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="51" id="SeL-nU-AbZ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3EZ-RN-wkz" secondAttribute="bottom" constant="1" id="XTs-oh-PNt"/>
+                            <constraint firstItem="Pzf-Q1-7DR" firstAttribute="top" secondItem="HQl-r7-9yc" secondAttribute="top" constant="260" id="ZmP-6D-Jbo"/>
+                            <constraint firstItem="Pzf-Q1-7DR" firstAttribute="centerX" secondItem="Jon-OR-dYg" secondAttribute="centerX" constant="1" id="c3n-Cq-yJ9"/>
+                            <constraint firstItem="uJE-Q3-WKH" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="21" id="c76-X7-1aH"/>
+                            <constraint firstItem="sBp-GM-BRh" firstAttribute="top" secondItem="c68-Q4-JaG" secondAttribute="bottom" constant="8" id="g3y-bG-bFl"/>
+                            <constraint firstItem="Kbg-0i-6tg" firstAttribute="top" secondItem="Pzf-Q1-7DR" secondAttribute="bottom" constant="31" id="iVQ-if-vSV"/>
+                            <constraint firstItem="Pzf-Q1-7DR" firstAttribute="centerX" secondItem="HQl-r7-9yc" secondAttribute="centerX" id="iuc-En-w9L"/>
+                            <constraint firstItem="2hf-ty-Mit" firstAttribute="leading" secondItem="Jon-OR-dYg" secondAttribute="trailing" constant="32" id="kdp-bV-cHi"/>
+                            <constraint firstItem="Jon-OR-dYg" firstAttribute="leading" secondItem="HQl-r7-9yc" secondAttribute="leadingMargin" constant="100" id="tHm-jq-yDf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sBp-GM-BRh" secondAttribute="trailing" constant="45" id="wIo-d6-awG"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.74117647060000003" green="0.51372549020000002" blue="0.92156862750000001" alpha="0.81771725169999998" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.87058823529999996" green="0.36078431370000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xsd-zv-5ig" appends="YES" id="PSI-DO-EZp"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="blackButton" destination="2hf-ty-Mit" id="8fv-lv-43i"/>
+                        <outlet property="colorPicker" destination="Kbg-0i-6tg" id="dSv-yY-rPi"/>
+                        <outlet property="firstTextField" destination="sBp-GM-BRh" id="3dE-cK-gH9"/>
+                        <outlet property="memeImageView" destination="uJE-Q3-WKH" id="V3e-HF-xcO"/>
+                        <outlet property="secondTextFiled" destination="Pzf-Q1-7DR" id="vmk-lb-d3X"/>
+                        <outlet property="submitButton" destination="Jon-OR-dYg" id="pKL-fU-nQs"/>
+                        <outlet property="whiteButton" destination="mlY-nu-dww" id="4UF-cE-Kz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W6e-Fm-zUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xsd-zv-5ig">
+                    <connections>
+                        <action selector="tapGestureButtonTapped:" destination="pGo-br-6Pq" id="YEF-9Y-nLU"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="488.80000000000001" y="492.50374812593708"/>
+        </scene>
+        <!--GameView-->
+        <scene sceneID="Z74-Bg-kZC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameView" id="SBC-MN-ds9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDU-q4-b2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="476"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlackColorButton" width="42" height="44"/>
+        <image name="SubmitButtonNatural" width="95" height="46"/>
+        <image name="WhiteColorButton" width="42" height="44"/>
+    </resources>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SrO-Ix-9jY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Setup View Controller-->
+        <scene sceneID="cvc-Yb-6gq">
+            <objects>
+                <viewController id="SrO-Ix-9jY" customClass="MPGameSetupViewController" customModule="MemesWithFriendsLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gwI-FW-qFd"/>
+                        <viewControllerLayoutGuide type="bottom" id="JMh-t6-HLF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j6i-kO-w9I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5j-np-ZUg">
+                                <rect key="frame" x="24" y="28" width="327" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Of Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq6-XZ-ADg">
+                                <rect key="frame" x="139" y="154" width="97" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3 or more..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3eR-Ez-xRE">
+                                <rect key="frame" x="139" y="176.5" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMI-uP-Ee9">
+                                <rect key="frame" x="164" y="520" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="SrO-Ix-9jY" eventType="touchUpInside" id="swd-3l-rDS"/>
+                                    <segue destination="Aug-FZ-oOB" kind="show" id="uFu-60-xzq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tda-Vk-1E2">
+                                <rect key="frame" x="133" y="304.5" width="109" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da3-z8-BJf">
+                                        <rect key="frame" x="7.5" y="0.0" width="94.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5e-ge-fW0">
+                                        <rect key="frame" x="0.0" y="28.5" width="109" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O5j-np-ZUg" firstAttribute="leading" secondItem="j6i-kO-w9I" secondAttribute="leadingMargin" constant="8" id="1sh-y9-KbZ"/>
+                            <constraint firstItem="Tda-Vk-1E2" firstAttribute="centerX" secondItem="j6i-kO-w9I" secondAttribute="centerX" id="FJf-9q-Gbp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3eR-Ez-xRE" secondAttribute="trailing" constant="123" id="K0Y-yZ-yTE"/>
+                            <constraint firstItem="3eR-Ez-xRE" firstAttribute="leading" secondItem="j6i-kO-w9I" secondAttribute="leadingMargin" constant="123" id="Lly-Vp-n0w"/>
+                            <constraint firstItem="3eR-Ez-xRE" firstAttribute="top" secondItem="Zq6-XZ-ADg" secondAttribute="bottom" constant="2" id="ToH-bK-l4M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O5j-np-ZUg" secondAttribute="trailing" constant="8" id="Xd6-77-tXr"/>
+                            <constraint firstItem="Tda-Vk-1E2" firstAttribute="centerY" secondItem="j6i-kO-w9I" secondAttribute="centerY" id="YNn-x2-Kf3"/>
+                            <constraint firstItem="3eR-Ez-xRE" firstAttribute="width" secondItem="Zq6-XZ-ADg" secondAttribute="width" id="eG0-dG-MAJ"/>
+                            <constraint firstItem="Zq6-XZ-ADg" firstAttribute="centerX" secondItem="j6i-kO-w9I" secondAttribute="centerX" id="egQ-ri-pIK"/>
+                            <constraint firstItem="Zq6-XZ-ADg" firstAttribute="top" secondItem="O5j-np-ZUg" secondAttribute="bottom" constant="97" id="o7P-LO-UYJ"/>
+                            <constraint firstItem="O5j-np-ZUg" firstAttribute="top" secondItem="gwI-FW-qFd" secondAttribute="bottom" constant="8" id="rT7-Jn-gVO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameNameTextField" destination="G5e-ge-fW0" id="bql-Od-ez4"/>
+                        <outlet property="numberOfPlayersTextField" destination="3eR-Ez-xRE" id="8i6-sB-K5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DsD-bx-iVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477.60000000000002" y="-116.49175412293854"/>
+        </scene>
+        <!--MPWaitingRoom-->
+        <scene sceneID="Xx4-G6-9KK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MPWaitingRoom" id="Aug-FZ-oOB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2F-PP-8PG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150" y="-148"/>
+        </scene>
+    </scenes>
+</document>
