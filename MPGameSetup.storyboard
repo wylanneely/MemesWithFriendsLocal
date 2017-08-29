@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SrO-Ix-9jY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SrO-Ix-9jY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,18 +28,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Of Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq6-XZ-ADg">
-                                <rect key="frame" x="139" y="154" width="97" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3 or more..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3eR-Ez-xRE">
-                                <rect key="frame" x="139" y="176.5" width="97" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMI-uP-Ee9">
                                 <rect key="frame" x="164" y="520" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -71,20 +59,13 @@
                         <constraints>
                             <constraint firstItem="O5j-np-ZUg" firstAttribute="leading" secondItem="j6i-kO-w9I" secondAttribute="leadingMargin" constant="8" id="1sh-y9-KbZ"/>
                             <constraint firstItem="Tda-Vk-1E2" firstAttribute="centerX" secondItem="j6i-kO-w9I" secondAttribute="centerX" id="FJf-9q-Gbp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3eR-Ez-xRE" secondAttribute="trailing" constant="123" id="K0Y-yZ-yTE"/>
-                            <constraint firstItem="3eR-Ez-xRE" firstAttribute="leading" secondItem="j6i-kO-w9I" secondAttribute="leadingMargin" constant="123" id="Lly-Vp-n0w"/>
-                            <constraint firstItem="3eR-Ez-xRE" firstAttribute="top" secondItem="Zq6-XZ-ADg" secondAttribute="bottom" constant="2" id="ToH-bK-l4M"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O5j-np-ZUg" secondAttribute="trailing" constant="8" id="Xd6-77-tXr"/>
                             <constraint firstItem="Tda-Vk-1E2" firstAttribute="centerY" secondItem="j6i-kO-w9I" secondAttribute="centerY" id="YNn-x2-Kf3"/>
-                            <constraint firstItem="3eR-Ez-xRE" firstAttribute="width" secondItem="Zq6-XZ-ADg" secondAttribute="width" id="eG0-dG-MAJ"/>
-                            <constraint firstItem="Zq6-XZ-ADg" firstAttribute="centerX" secondItem="j6i-kO-w9I" secondAttribute="centerX" id="egQ-ri-pIK"/>
-                            <constraint firstItem="Zq6-XZ-ADg" firstAttribute="top" secondItem="O5j-np-ZUg" secondAttribute="bottom" constant="97" id="o7P-LO-UYJ"/>
                             <constraint firstItem="O5j-np-ZUg" firstAttribute="top" secondItem="gwI-FW-qFd" secondAttribute="bottom" constant="8" id="rT7-Jn-gVO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gameNameTextField" destination="G5e-ge-fW0" id="bql-Od-ez4"/>
-                        <outlet property="numberOfPlayersTextField" destination="3eR-Ez-xRE" id="8i6-sB-K5i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsD-bx-iVf" userLabel="First Responder" sceneMemberID="firstResponder"/>

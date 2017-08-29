@@ -22,6 +22,7 @@ class CKMeme: Equatable {
     var firstText: String
     var secondText: String
     var textColor: UIColor
+    
     var textColorData: Data {
         return NSKeyedArchiver.archivedData(withRootObject: textColor)
     }

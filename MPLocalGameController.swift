@@ -34,9 +34,9 @@ class MPLocalGameController {
     //MARK: - CRUD Functions
     
     //Crate
-    func createNewGame(name: String, numberOfPlayers: Int) {
+    func createNewGame(name: String) {
         guard let creator = localPlayerName else {return}
-        let game = CKGame(name: name, numberOfPlayers: numberOfPlayers, creator: creator)
+        let game = CKGame(name: name, creatorUUIDS: creator)
         let localPlayer = CKPlayer(name: creator, gameRefrence: game.cloudKidRecord)
         
         self.game = game
@@ -55,6 +55,10 @@ class MPLocalGameController {
             if let error = error {NSLog("Error Saving 'Player' to CLOUDKIT: \(error.localizedDescription)")}
         }
     }
+    func start(game: CKGame){
+        game.isGameActive = true
+    }
+    
     func createMeme(gameRecord: CKRecord, image: UIImage, firstText: String, secondText: String, textColor: UIColor, creator: String) {
         let meme = CKMeme(image: image, firstText: firstText, secondText: secondText, gameReference: gameRecord, textColor: textColor, creator: creator)
         CKContainer.default().publicCloudDatabase.save(meme.cloudKitRecord) { (record, error) in
@@ -66,6 +70,12 @@ class MPLocalGameController {
         CKContainer.default().publicCloudDatabase.save(meme.cloudKitRecord) { (record, error) in
             if let error = error {NSLog("Error Saving 'BestMeme' to CLOUDKIT: \(error.localizedDescription)")}
         }
+    }
+    
+    func createNewPlayer(displayName: String) {
+        
+        CKContainer.default().create
+        
     }
     
     //Read
@@ -84,11 +94,12 @@ class MPLocalGameController {
     func getPendingGames() {
         var pendingGames: [CKGame] = []
         for game in self.allGames {
-            
+            if game.isGameActive == false {
+                pendingGames.append(game)
+            }
         }
-        
+        self.pendingGames = pendingGames
     }
-    
     func loadSpecificGame(gameRecordId: UUID) {
         let recordID = CKRecordID(recordName: gameRecordId.uuidString)
         CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { (ckGameRecord, error) in
