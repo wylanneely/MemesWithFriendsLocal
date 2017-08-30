@@ -51,7 +51,7 @@ class MPCeateAMemeViewController: UIViewController, CKMemeImageSelectedDelegate,
         return true
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
         self.firstTextLabel.text = self.firstTextField.text
         self.secondTextLabel.text = self.secondTextFiled.text

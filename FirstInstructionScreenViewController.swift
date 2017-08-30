@@ -37,7 +37,7 @@ class FirstInstructionScreenViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var backToHomeButton: UIButton!
     
-    func setUIAlphaBackToOne() {
+    @objc func setUIAlphaBackToOne() {
         goalsTitleLabel.alpha = 1
         goalOneLabel.alpha = 1
         thenLabel.alpha = 1

@@ -20,17 +20,12 @@ class WaitingRoomTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.waitingRoomTableView.reloadData()
             }
-            
-            if MPLocalGameController.shared.players.count == MPLocalGameController.shared.game?.numberOfPlayers {
-                
-                self.startButtonTapped(Any.self)
-            }
         }
         navigationTitle.title = MPLocalGameController.shared.game?.name
         NotificationCenter.default.addObserver(self, selector: #selector(updateGame), name: MPLocalGameController.GamesWereUpdatedNotification, object: nil)
     }
     
-    func updateGame(){
+    @objc func updateGame(){
         
     }
     @IBAction func startButtonTapped(_ sender: Any) {

@@ -50,7 +50,7 @@ class MPResultsViewController: UIViewController {
             }
         }
         
-        let sortedMemes = bestMemesCount.flatMap({$0}).sorted{ $0.0.1 < $0.1.1 }
+        let sortedMemes = bestMemesCount.flatMap({$0}).sorted{ $0.1 < $1.1 }
         
         for meme in bestMemes {
             if meme.combinedText == sortedMemes[0].key {

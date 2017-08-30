@@ -30,7 +30,7 @@ class TopicsViewController: UIViewController, UICollectionViewDelegate, UICollec
         return cell
     }
     
-    func segue() {
+    @objc func segue() {
         performSegue(withIdentifier: "setupSegue", sender: self)
     }
     

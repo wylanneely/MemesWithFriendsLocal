@@ -74,7 +74,7 @@ class MPLocalGameController {
     
     func createNewPlayer(displayName: String) {
         
-        CKContainer.default().create
+       // CKContainer.default().create
         
     }
     

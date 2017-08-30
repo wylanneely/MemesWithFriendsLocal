@@ -12,14 +12,11 @@ import CloudKit
 
 class MPGameSetupViewController: UIViewController {
 
-    @IBOutlet weak var numberOfPlayersTextField: UITextField!
     @IBOutlet weak var gameNameTextField: UITextField!
     
     @IBAction func startButtonTapped(_ sender: Any) {
-        guard let name = gameNameTextField.text,
-            let numberOfPlayes = Int(numberOfPlayersTextField.text!) else {return}
-        
-        MPLocalGameController.shared.createNewGame(name: name, numberOfPlayers: numberOfPlayes)
+        guard let name = gameNameTextField.text else {return}
+        MPLocalGameController.shared.createNewGame(name: name)
     }
     
 }
