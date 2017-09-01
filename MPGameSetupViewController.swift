@@ -15,8 +15,10 @@ class MPGameSetupViewController: UIViewController {
     @IBOutlet weak var gameNameTextField: UITextField!
     
     @IBAction func startButtonTapped(_ sender: Any) {
-        guard let name = gameNameTextField.text else {return}
+        guard let name = gameNameTextField.text, name != "" else {return}
         MPLocalGameController.shared.createNewGame(name: name)
+        performSegue(withIdentifier: "toWaitingRoom", sender: self)
     }
+    
     
 }

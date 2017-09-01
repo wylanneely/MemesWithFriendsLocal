@@ -34,7 +34,6 @@
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="SrO-Ix-9jY" eventType="touchUpInside" id="swd-3l-rDS"/>
-                                    <segue destination="Aug-FZ-oOB" kind="show" id="uFu-60-xzq"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tda-Vk-1E2">
@@ -54,14 +53,22 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKg-rY-H6i">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <connections>
+                                    <segue destination="Aug-FZ-oOB" kind="show" identifier="toWaitingRoom" id="WnM-d6-H8E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="O5j-np-ZUg" firstAttribute="leading" secondItem="j6i-kO-w9I" secondAttribute="leadingMargin" constant="8" id="1sh-y9-KbZ"/>
                             <constraint firstItem="Tda-Vk-1E2" firstAttribute="centerX" secondItem="j6i-kO-w9I" secondAttribute="centerX" id="FJf-9q-Gbp"/>
+                            <constraint firstItem="EKg-rY-H6i" firstAttribute="top" secondItem="j6i-kO-w9I" secondAttribute="top" id="Vr5-Qo-nyD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O5j-np-ZUg" secondAttribute="trailing" constant="8" id="Xd6-77-tXr"/>
                             <constraint firstItem="Tda-Vk-1E2" firstAttribute="centerY" secondItem="j6i-kO-w9I" secondAttribute="centerY" id="YNn-x2-Kf3"/>
                             <constraint firstItem="O5j-np-ZUg" firstAttribute="top" secondItem="gwI-FW-qFd" secondAttribute="bottom" constant="8" id="rT7-Jn-gVO"/>
+                            <constraint firstItem="EKg-rY-H6i" firstAttribute="leading" secondItem="j6i-kO-w9I" secondAttribute="leading" id="uGz-3P-XYE"/>
                         </constraints>
                     </view>
                     <connections>
